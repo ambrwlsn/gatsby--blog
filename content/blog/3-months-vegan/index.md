@@ -1,6 +1,6 @@
 ---
 title: 3 Months Vegan
-date: "2018-05-01T22:12:03.284Z"
+date: "2017-09-05T22:12:03.284Z"
 ---
 
 I watched the documentary “What the Earth” three months ago and became vegan the very next day – totally cold turkey – no meat, no milk, no cheese, no eggs, no honey…
