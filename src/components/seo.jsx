@@ -7,10 +7,10 @@ import favicon from '../../content/assets/me.jpg'
 function SEO({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
+      // eslint-disable-next-line
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || data.site.siteMetadata.description
         return (
           <Helmet
             htmlAttributes={{
@@ -18,9 +18,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            link={[
-              { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
-            ]}
+            link={[{ rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` }]}
             meta={[
               {
                 name: 'description',

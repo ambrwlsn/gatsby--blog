@@ -5,6 +5,7 @@ import Image from 'gatsby-image'
 function Bio() {
   return (
     <StaticQuery
+      // eslint-disable-next-line
       query={bioQuery}
       render={data => {
         const { author, social } = data.site.siteMetadata
@@ -25,11 +26,9 @@ function Bio() {
             />
             &nbsp;
             <p>
-              Written by <strong>{author}</strong> who lives and works in Berlin
-              building useful things.{' '}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow her on Twitter
-              </a>
+              Written by <strong>{author}</strong> who lives and works in Berlin building useful
+              things.{' '}
+              <a href={`https://twitter.com/${social.twitter}`}>You should follow her on Twitter</a>
               .
             </p>
           </div>
