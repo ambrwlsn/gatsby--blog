@@ -49,6 +49,12 @@ const BlogPostTemplate = props => {
 
 export default BlogPostTemplate
 
+/* https://github.com/gatsbyjs/gatsby/tree/master/packages/
+ * gatsby-transformer-remark
+ *
+ * Each Markdown file is parsed into a node of type MarkdownRemark.
+ */
+
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
