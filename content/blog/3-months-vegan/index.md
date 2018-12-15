@@ -1,6 +1,6 @@
 ---
 title: 3 Months Vegan
-date: "2017-09-05T22:12:03.284Z"
+date: "2017-09-05"
 published: 5th September 2017
 keywords: vegan
 ---
