@@ -4,13 +4,16 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../../content/assets/me.jpg'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, slug }) {
   return (
     <StaticQuery
       // eslint-disable-next-line
       query={detailsQuery}
       render={data => {
         const metaDescription = description || data.site.siteMetadata.description
+        const metaAuthor = data.site.siteMetadata.author
+        const siteUrl = data.site.siteMetadata.siteUrl
+        const blogPostUrl = `${siteUrl}blog${slug}`
         return (
           <Helmet
             htmlAttributes={{
@@ -19,50 +22,39 @@ function SEO({ description, lang, meta, keywords, title }) {
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             link={[{ rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` }]}
-            meta={[
-              {
-                name: 'description',
-                content: metaDescription,
-              },
-              {
-                property: 'og:title',
-                content: title,
-              },
-              {
-                property: 'og:description',
-                content: metaDescription,
-              },
-              {
-                property: 'og:type',
-                content: 'website',
-              },
-              {
-                name: 'twitter:card',
-                content: 'summary',
-              },
-              {
-                name: 'twitter:creator',
-                content: data.site.siteMetadata.author,
-              },
-              {
-                name: 'twitter:title',
-                content: title,
-              },
-              {
-                name: 'twitter:description',
-                content: metaDescription,
-              },
-            ]
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: 'keywords',
-                      content: keywords.join(', '),
-                    }
-                  : []
-              )
-              .concat(meta)}
-          />
+          >
+            <meta name="author" content={metaAuthor} />
+            <meta name="publisher" content={metaAuthor} />
+            <meta name="copyright" content={metaAuthor} />
+            <meta name="description" content={metaDescription} />
+            <meta name="keywords" content={keywords} />
+
+            <meta name="robots" content="index,follow" />
+            <link rel="canonical" href={blogPostUrl} />
+            <link rel="shortcut icon" href="/public/icon-48x48.png" />
+            <meta name="DC.Title" content={title} />
+            <meta name="DC.Creator" content={metaAuthor} />
+            <meta name="DC.Rights" content={metaAuthor} />
+            <meta name="DC.Publisher" content={metaAuthor} />
+            <meta name="DC.Description" content={metaDescription} />
+            <meta property="og:title" content={title} />
+            <meta property="og:type" content="website" />
+            <meta property="og:description" content={metaDescription} />
+            {/* <meta property="og:image" content="/workspace.jpg/" /> */}
+            <meta property="og:url" content={blogPostUrl} />
+
+            <meta itemProp="name" content={title} />
+            <meta itemProp="description" content={metaDescription} />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:image" property="og:image" content="/content/assets/me.jpg" />
+            <meta name="twitter:site" content="@ambrwlsn90" />
+            <meta name="twitter:site:id" content="790735158" />
+            <meta name="twitter:creator" content="@ambrwlsn90" />
+            <meta name="twitter:creator:id" content="790735158" />
+            <meta name="twitter:url" property="og:url" content={siteUrl} />
+            <meta name="twitter:title" property="og:title" content={metaAuthor} />
+            <meta name="twitter:description" property="og:description" content={metaDescription} />
+          </Helmet>
         )
       }}
     />
@@ -92,6 +84,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteUrl
       }
     }
   }

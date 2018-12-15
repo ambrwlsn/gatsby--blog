@@ -9,13 +9,23 @@ const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
-
   return (
     <Layout location={props.location} title={siteTitle}>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.date}</p>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.excerpt}
+        keywords={[post.frontmatter.keywords]}
+        slug={post.fields.slug}
+      />
+      <h1 className="p-name">{post.frontmatter.title}</h1>
+      <time className="dt-published" dateTime={post.frontmatter.date}>
+        {post.frontmatter.published}
+      </time>
+      <section className="h-entry">
+        <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
+        <p>Wordcount: {post.wordCount.words}</p>
+        <div className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+      </section>
       <hr />
       <Bio />
 
@@ -67,9 +77,18 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      timeToRead
+      wordCount {
+        words
+      }
+      fields {
+        slug
+      }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date
+        published
+        keywords
       }
     }
   }

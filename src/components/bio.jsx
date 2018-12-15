@@ -26,10 +26,10 @@ function Bio() {
             />
             &nbsp;
             <p>
-              Written by <strong>{author}</strong> who lives and works in Berlin building useful
-              things.{' '}
+              Written by <strong className="p-author">{author}</strong> who lives and works in
+              Berlin building useful things.{' '}
               <a href={`https://twitter.com/${social.twitter}`}>You should follow her on Twitter</a>
-              .
+              . © 2018
             </p>
           </div>
         )
