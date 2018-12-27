@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Tags from '../components/tags'
 
 const Blog = props => {
   console.log(props)
@@ -14,12 +15,13 @@ const Blog = props => {
     <Layout location={props.location} title={siteTitle}>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Bio />
+      <Tags />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <div key={node.fields.slug}>
             <h3>
-              <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+              <Link style={{ boxShadow: 'none' }} to={`blog${node.fields.slug}`}>
                 {title}
               </Link>
             </h3>
