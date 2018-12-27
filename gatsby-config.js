@@ -33,7 +33,8 @@ module.exports = {
             options: {
               maxWidth: 890,
               withWebp: true,
-              wrapperStyle: `border: 1px solid red;`,
+              wrapperStyle: `border: 1px solid red;
+              margin-bottom: 1.0725rem`,
             },
           },
           {
