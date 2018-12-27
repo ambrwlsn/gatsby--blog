@@ -4,7 +4,6 @@ date: "2018-04-28"
 published: 28th April 2018
 keywords: amber wilson,photography,sunset,photos,photo,camera,photoshop,edited,tempelhof field,berlin,germany,tempelhofs
 tags: ["photography", "germany", "pixel"]
-path: tempelhof-sunset
 ---
 
 I love how photography allows you to be as creative as you like. I had some fun taking pics at [Tempelhof Field](https://en.wikipedia.org/wiki/Berlin_Tempelhof_Airport) today.
