@@ -33,24 +33,6 @@ const TagsPage = ({
   </div>
 )
 
-// TagsPage.propTypes = {
-//   data: PropTypes.shape({
-//     allMarkdownRemark: PropTypes.shape({
-//       group: PropTypes.arrayOf(
-//         PropTypes.shape({
-//           fieldValue: PropTypes.string.isRequired,
-//           totalCount: PropTypes.number.isRequired,
-//         }).isRequired
-//       ),
-//     }),
-//     site: PropTypes.shape({
-//       siteMetadata: PropTypes.shape({
-//         title: PropTypes.string.isRequired,
-//       }),
-//     }),
-//   }),
-// }
-
 export default TagsPage
 
 export const pageQuery = graphql`
@@ -60,7 +42,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(limit: 2000, filter: { frontmatter: { published: { ne: "" } } }) {
+    allMarkdownRemark(limit: 1000) {
       group(field: frontmatter___tags) {
         fieldValue
         totalCount
