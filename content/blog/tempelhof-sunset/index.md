@@ -3,7 +3,7 @@ title: Tempelhof Sunset
 date: "2018-04-28"
 published: 28th April 2018
 keywords: amber wilson,photography,sunset,photos,photo,camera,photoshop,edited,tempelhof field,berlin,germany,tempelhofs
-tags: photography
+tags: ["photography", "germany", "pixel"]
 path: tempelhof-sunset
 ---
 
