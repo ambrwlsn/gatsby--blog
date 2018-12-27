@@ -1,3 +1,10 @@
+---
+title: Books
+date: "2018-03-23T20:02:09Z"
+published: 23rd March 2018
+keywords: amber wilson,books,reading,what i have read,review,reviews,bookreview,opinions
+---
+
 I am starting this post almost 4 months too late, but I want it here so I can be kept (at least a little) accountable for starting (and finishing!) as many books as I can.
 
 Most of the books I read are recommended by friends. Any others will either be completely random or based on my interest in science, design, psychology or philisophy. Some will be about things that I really think I should know more about, like politics.
