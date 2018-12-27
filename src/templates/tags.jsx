@@ -7,16 +7,19 @@ const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`
+  // const site = data.site
 
   return (
     <div>
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
-          const { path, title } = node.frontmatter
+          const { title } = node.frontmatter
+          const { slug } = node.fields
+          const blogPostUrl = `blog${slug}`
           return (
-            <li key={path}>
-              <Link to={path}>{title}</Link>
+            <li key={slug}>
+              <Link to={blogPostUrl}>{title}</Link>
             </li>
           )
         })}
@@ -30,6 +33,11 @@ export default Tags
 
 export const pageQuery = graphql`
   query($tag: String) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     allMarkdownRemark(
       limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
@@ -38,9 +46,11 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
-            path
           }
         }
       }
