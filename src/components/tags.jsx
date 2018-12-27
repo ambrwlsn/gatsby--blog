@@ -21,7 +21,9 @@ function Tags() {
   )
 }
 
-export const tagQuery = graphql`
+export default Tags
+
+const tagQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -36,5 +38,3 @@ export const tagQuery = graphql`
     }
   }
 `
-
-export default Tags
