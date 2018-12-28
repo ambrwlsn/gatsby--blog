@@ -19,7 +19,7 @@ const BlogPostTemplate = props => {
       />
       <h1 className="p-name">{post.frontmatter.title}</h1>
       <time className="dt-published" dateTime={post.frontmatter.date}>
-        {post.frontmatter.published}
+        {post.frontmatter.date}
       </time>
       <section className="h-entry">
         <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
