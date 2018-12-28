@@ -1,6 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 
+// Utilities
+import format from 'date-fns/format'
+
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -9,6 +12,7 @@ const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
+  const nicelyFormattedDate = format(new Date(post.frontmatter.date), 'Do MMMM YYYY')
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO
@@ -19,7 +23,7 @@ const BlogPostTemplate = props => {
       />
       <h1 className="p-name">{post.frontmatter.title}</h1>
       <time className="dt-published" dateTime={post.frontmatter.date}>
-        {post.frontmatter.date}
+        {nicelyFormattedDate}
       </time>
       <section className="h-entry">
         <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
@@ -40,14 +44,14 @@ const BlogPostTemplate = props => {
       >
         <li>
           {previous && (
-            <Link to={previous.fields.slug} rel="prev">
+            <Link to={`blog/${previous.fields.slug}`} rel="prev">
               ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link to={next.fields.slug} rel="next">
+            <Link to={`blog/${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}
