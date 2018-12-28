@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../../content/assets/me.jpg'
 
-function SEO({ description, lang, meta, keywords, title, slug }) {
+function SEO({ description, lang, meta, keywords, title, slug, tags }) {
   return (
     <StaticQuery
       // eslint-disable-next-line
@@ -27,7 +27,7 @@ function SEO({ description, lang, meta, keywords, title, slug }) {
             <meta name="publisher" content={metaAuthor} />
             <meta name="copyright" content={metaAuthor} />
             <meta name="description" content={metaDescription} />
-            <meta name="keywords" content={keywords} />
+            <meta name="keywords" content={keywords.concat(tags).toString()} />
 
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
@@ -85,6 +85,15 @@ const detailsQuery = graphql`
         description
         author
         siteUrl
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          frontmatter {
+            tags
+          }
+        }
       }
     }
   }

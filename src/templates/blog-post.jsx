@@ -20,6 +20,7 @@ const BlogPostTemplate = props => {
         description={post.excerpt}
         keywords={[post.frontmatter.keywords]}
         slug={post.fields.slug}
+        tags={post.frontmatter.tags}
       />
       <h1 className="p-name">{post.frontmatter.title}</h1>
       <time className="dt-published" dateTime={post.frontmatter.date}>
@@ -91,8 +92,8 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date
-        published
         keywords
+        tags
       }
     }
   }
