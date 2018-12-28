@@ -31,10 +31,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 890,
+              maxWidth: 400,
               withWebp: true,
-              wrapperStyle: `border: 1px solid red;
-              margin-bottom: 1.0725rem`,
+              // wrapperStyle: {},
             },
           },
           {
