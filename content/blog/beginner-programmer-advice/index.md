@@ -1,8 +1,8 @@
 ---
 title: Beginner Programmer Advice
-date: "2018-03-13T19:11:09Z"
-published: 13th March 2018
-keywords: amber wilson,javascript,software engineering,web development, coding, advice
+date: "2018-03-13"
+keywords: amber wilson, javascript, software engineering, web development, coding, advice
+tags: [dev tips, advice]
 ---
 
 I realised I published [Newbie Dev Tips](https://amberwilson.co.uk/blog/newbie-dev-tips/) nearly seven months ago. I found it super interesting to reflect on my opinions then versus now :)

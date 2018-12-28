@@ -1,8 +1,8 @@
 ---
 title: Books
-date: "2018-03-23T20:02:09Z"
-published: 23rd March 2018
-keywords: amber wilson,books,reading,what i have read,review,reviews,bookreview,opinions
+date: "2018-03-23"
+keywords: amber wilson, books, reading, what i have read, review, reviews, bookreview, opinions
+tags: [book review]
 ---
 
 I am starting this post almost 4 months too late, but I want it here so I can be kept (at least a little) accountable for starting (and finishing!) as many books as I can.

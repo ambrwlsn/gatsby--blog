@@ -1,8 +1,8 @@
 ---
 title: January, Journey, Job, and Germs and Self-Care
 date: "2018-01-27"
-published: 27th January 2018
 keywords: job, reflection, goals, self-care
+tags: [self-care]
 ---
 
 This post details how my January has gone so far, my reflections on it, and has an important message at the end.

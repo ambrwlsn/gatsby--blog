@@ -1,8 +1,8 @@
 ---
 title: Apart From Code
-date: "2018-04-28T08:28:11Z"
-published: 28th April 2018
+date: "2018-04-28"
 keywords: amber wilson,javascript,software engineering,web development, coding
+tags: [mentor, learning]
 ---
 <p>
     <blockquote class="twitter-tweet" data-lang="en">
