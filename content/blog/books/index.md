@@ -1,7 +1,7 @@
 ---
 title: Books
 date: "2018-03-23"
-keywords: amber wilson, books, reading, what i have read, review, reviews, bookreview, opinions
+keywords: [amber wilson, books, reading, what i have read, review, reviews, bookreview, opinions]
 tags: [book review]
 ---
 

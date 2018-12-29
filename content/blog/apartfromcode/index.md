@@ -1,7 +1,7 @@
 ---
 title: Apart From Code
 date: "2018-04-28"
-keywords: amber wilson,javascript,software engineering,web development, coding
+keywords: [amber wilson,javascript,software engineering,web development, coding]
 tags: [mentor, learning]
 ---
 <p>

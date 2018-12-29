@@ -1,7 +1,7 @@
 ---
 title: January, Journey, Job, and Germs and Self-Care
 date: "2018-01-27"
-keywords: job, reflection, goals, self-care
+keywords: [job, reflection, goals, self-care]
 tags: [self-care]
 ---
 

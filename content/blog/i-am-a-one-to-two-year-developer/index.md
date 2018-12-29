@@ -1,7 +1,7 @@
 ---
 title: I am a 1-2 year developer
 date: "2018-10-15"
-keywords: amber wilson, javascript, software engineering, web development, coding, junior developer
+keywords: [amber wilson, javascript, software engineering, web development, coding, junior developer]
 tags: [advice, dev tips]
 ---
 

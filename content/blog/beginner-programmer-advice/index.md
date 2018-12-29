@@ -1,7 +1,7 @@
 ---
 title: Beginner Programmer Advice
 date: "2018-03-13"
-keywords: amber wilson, javascript, software engineering, web development, coding, advice
+keywords: [amber wilson, javascript, software engineering, web development, coding, advice]
 tags: [dev tips, advice]
 ---
 

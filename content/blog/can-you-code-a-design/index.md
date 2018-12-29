@@ -1,7 +1,7 @@
 ---
 title: Can You Code A Design?
 date: "2018-10-31"
-keywords: amber wilson, javascript, software engineering, web development, coding, design,communication, communicate, documentation, document
+keywords: [amber wilson, javascript, software engineering, web development, coding, design,communication, communicate, documentation, document]
 tags: [design, dev tips]
 ---
 

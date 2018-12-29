@@ -1,7 +1,7 @@
 ---
 title: Playing with Pixels
 date: "2018-08-08"
-keywords: amber wilson, javascript, software engineering, web development, coding, pixels, pixel art, graffiti
+keywords: [amber wilson, javascript, software engineering, web development, coding, pixels, pixel art, graffiti]
 tags: 
     - pixel 
     - graffiti
