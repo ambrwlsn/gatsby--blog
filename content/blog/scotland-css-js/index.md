@@ -104,20 +104,23 @@ I believe the technology community and related events can learn a lot from Scotl
 
 I think Frederic did a good job explaining why.
 
-> Resting up after an intense week of [@ScotlandCSS](https://twitter.com/ScotlandCSS?ref_src=twsrc%5Etfw) and [@ScotlandJS](https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw).  
-> ☕️🛋🎶  
->   
-> Thanks so much to [@jiggy_pete](https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw) & team for fostering a community that’s equally inclusive and transformative for long-time industry experts, as well as total beginners, and everyone in between.
-> 
-> — Frederic Marx (@fredericmarx) [July 22, 2018](https://twitter.com/fredericmarx/status/1021026409903423490?ref_src=twsrc%5Etfw)
+<blockquote class="twitter-tweet" data-lang="en">
+    <p lang="en" dir="ltr">Resting up after an intense week of <a href="https://twitter.com/ScotlandCSS?ref_src=twsrc%5Etfw">@ScotlandCSS</a>                                    and <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@ScotlandJS</a>.<br>☕️🛋🎶<br><br>Thanks
+        so much to <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a>                                    &amp; team for fostering a community that’s equally inclusive and transformative for
+        long-time industry experts, as well as total beginners, and everyone in between.</p>&mdash;
+    Frederic Marx (@fredericmarx) <a href="https://twitter.com/fredericmarx/status/1021026409903423490?ref_src=twsrc%5Etfw">July 22, 2018</a>
+</blockquote>
 
 Scotland CSS and JS is created and curated by [Peter Aitken](https://twitter.com/jiggy_pete). The community Peter works so hard to build (not only at these conferences) is _inclusive_ and _transformative_ for _everyone_, no matter what their level. At some conferences, I have felt left out in favour of developers who are much more established. I didn't feel like that for a second at Peter's conferences. On the contrary, I felt safe, welcome, and included.
 
 I am thrilled that so many others seemed to have a similar experience.
 
-> [@ScotlandJS](https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw) is the first Tech conference in 10 years in Europe, where I felt that people like myself, and [@CodeYourFuture_](https://twitter.com/CodeYourFuture_?ref_src=twsrc%5Etfw) students, are first-class citizens. Thank you [@jiggy_pete](https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw) for making a Tech event that is genuinely and sincerely welcoming and inclusive to *others* 1/3
-> 
-> — Mozafar (@kabaros) [July 23, 2018](https://twitter.com/kabaros/status/1021516957810675723?ref_src=twsrc%5Etfw)
+<blockquote class="twitter-tweet" data-lang="en">
+    <p lang="en" dir="ltr"><a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@ScotlandJS</a> is the first Tech
+        conference in 10 years in Europe, where I felt that people like myself, and <a href="https://twitter.com/CodeYourFuture_?ref_src=twsrc%5Etfw">@CodeYourFuture_</a>                                students, are first-class citizens. Thank you <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a>                                for making a Tech event that is genuinely and sincerely welcoming and inclusive to *others*
+        1/3
+    </p>&mdash; Mozafar (@kabaros) <a href="https://twitter.com/kabaros/status/1021516957810675723?ref_src=twsrc%5Etfw">July 23, 2018</a>
+</blockquote>
 
 On the first day of the conferences, at Scotland CSS, the first thing we all saw was one of the code of conduct banners. The other banner (not shown here) had the short AND long version of the code of conduct written on it. We were also introduced to our lovely code of conduct team - Evelyn, Katie, Nicki and Peter. I've never seen or experienced the code of conduct being enforced in such a diligent or more organised way. It made me feel very safe and I hope it did the same for others.
 
@@ -135,11 +138,12 @@ On the first day of the conferences, at Scotland CSS, the first thing we all saw
 
 The youngest attendee, Connie, was 10 years old. Peter introduced her to us and all the great work she's already done. I was lucky to get to speak (and dance!) with her. I heard about the adventures she's been on with coding so far, saw some of her work and chatted with her about Harry Potter. She is a Gryffindor.
 
-> So pleased to welcome our youngest attendee to [#scotlandjs](https://twitter.com/hashtag/scotlandjs?src=hash&ref_src=twsrc%5Etfw)  
->   
-> We’re glad you had an amazing time and can’t wait to find out what you create in the future 💛 [https://t.co/HlX3xPT106](https://t.co/HlX3xPT106)
-> 
-> — Scotland JS (@ScotlandJS) [July 21, 2018](https://twitter.com/ScotlandJS/status/1020631634524196864?ref_src=twsrc%5Etfw)
+<blockquote class="twitter-tweet" data-lang="en">
+    <p lang="en" dir="ltr">So pleased to welcome our youngest attendee to <a href="https://twitter.com/hashtag/scotlandjs?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs</a>                                <br><br>We’re glad you had an amazing time and can’t wait to find out what you create in
+        the future 💛
+        <a href="https://t.co/HlX3xPT106">https://t.co/HlX3xPT106</a>
+    </p>&mdash; Scotland JS (@ScotlandJS) <a href="https://twitter.com/ScotlandJS/status/1020631634524196864?ref_src=twsrc%5Etfw">July 21, 2018</a>
+</blockquote>
 
 Connie was also [Upfront](http://weareupfront.com/). Other people were too, including my good friend Anwen. I first learned about being Upfront last year at UX London where I met the great Lauren Currie. She is from Scotland and has done a tonne of amazing work - check it out [here](http://www.redjotter.com/). She wanted a way for people to get experience being on stage without having to speak. What happens is a few chairs are set up on one side of the stage, and aspiring speakers sit down while a speaker gives their talk. Lauren hopes these people gain enough confidence to speak one day. I am on the Upfront [blog](http://weareupfront.com/blog/) :-)
 
@@ -147,13 +151,13 @@ As I mentioned in the first section of this post, there was a low stage, and als
 
 Some things weren't as obvious as inclusive measures at first glance, but they were there. For example, Peter convinced the venue to add gender-neutral toilets. He took the advice of [Nat Tarnoff](http://tarnoff.info/) on adding animation warnings for those with vestibular disorders, and also added warnings about flashing lights and loud videos. There was plenty of vegan and vegetarian food and snacks. Based on past feedback, Peter set a board game evening up to run alongside gin and whisky tasting for those who didn't want to drink.
 
-> Scotland CSS & Scotland JS was certainly a team effort: organizers, volunteers, speakers, even attendees (who, as ticketholders, got to vote & decide on the final lineup) — worked together tirelessly to make it happen…  
->   
-> BUT.  
->   
-> I need to leave this here: [https://t.co/M4ToVpPou7](https://t.co/M4ToVpPou7)
-> 
-> — 𝔣𝔩𝔞𝔨𝔦 (@slsoftworks) [July 23, 2018](https://twitter.com/slsoftworks/status/1021434833292222465?ref_src=twsrc%5Etfw)
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en">
+    <p lang="en" dir="ltr">Scotland CSS &amp; Scotland JS was certainly a team effort: organizers, volunteers, speakers,
+        even attendees (who, as ticketholders, got to vote &amp; decide on the final lineup) — worked
+        together tirelessly to make it happen…<br><br>BUT.<br><br>I need to leave this here:
+        <a href="https://t.co/M4ToVpPou7">https://t.co/M4ToVpPou7</a></p>&mdash; 𝔣𝔩𝔞𝔨𝔦 (@slsoftworks)
+    <a href="https://twitter.com/slsoftworks/status/1021434833292222465?ref_src=twsrc%5Etfw">July 23, 2018</a>
+</blockquote>
 
 This conference feels different to any I've been to before, and by now I have been to quite a few. This feeling began even before the conference began, with a video call from Peter. He took time to have a face-to-face conversation with me to tell me all about what volunteering would involve. After I'd agreed to volunteer (not a hard decision at all), Peter arranged for [Katie](http://www.katiefenn.co.uk/) and [Alan](https://twitter.com/mr_urf) to have a video call with all volunteers. On this call, we were able to learn more about the code of conduct and how to help out speakers on the day. At all times before, during and after the conference, Peter would reply to questions quickly and enthusiastically.
 
@@ -181,5 +185,4 @@ It was hard to fight back the tears when Peter's family came on stage to hug him
 
  <p>
     <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The Floss <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@scotlandjs</a> <a href="https://twitter.com/hashtag/scotlandjs2018?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs2018</a> edition <a href="https://twitter.com/hashtag/Floss?src=hash&amp;ref_src=twsrc%5Etfw">#Floss</a> <a href="https://twitter.com/hashtag/flossing?src=hash&amp;ref_src=twsrc%5Etfw">#flossing</a> <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a> <a href="https://twitter.com/waffles193?ref_src=twsrc%5Etfw">@waffles193</a> <a href="https://twitter.com/herecomesjaycee?ref_src=twsrc%5Etfw">@herecomesjaycee</a> <a href="https://t.co/KFvyl7QNOq">pic.twitter.com/KFvyl7QNOq</a></p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/1019969967586934784?ref_src=twsrc%5Etfw">July 19, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </p>
