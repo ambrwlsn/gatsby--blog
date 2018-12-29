@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../../content/assets/me.jpg'
-import StructuredJSON from '../components/jsonld'
+// import JsonLd from '../components/jsonld'
 
 function SEO({ description, lang, meta, keywords, title, slug, tags }) {
   return (
@@ -17,6 +17,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
         const blogPostUrl = `${siteUrl}blog${slug}`
         const allKeywords = keywords || []
         const allTags = tags || []
+
         return (
           <Helmet
             htmlAttributes={{
@@ -58,12 +59,8 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta name="twitter:url" property="og:url" content={siteUrl} />
             <meta name="twitter:title" property="og:title" content={metaAuthor} />
             <meta name="twitter:description" property="og:description" content={metaDescription} />
-            <StructuredJSON
-              name={metaAuthor}
-              title={title}
-              keywords={allKeywords}
-              url={blogPostUrl}
-            />
+            {/* <JsonLd data={jsonLdData} /> */}
+            {/* <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script> */}
           </Helmet>
         )
       }}
