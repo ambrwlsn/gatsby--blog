@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../../content/assets/me.jpg'
+import StructuredJSON from '../components/jsonld'
 
 function SEO({ description, lang, meta, keywords, title, slug, tags }) {
   return (
@@ -34,6 +35,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
             <link rel="shortcut icon" href="/public/icon-48x48.png" />
+            <link rel="me" href="mailto:ambrwlsn90@gmail.com" />
             <meta name="DC.Title" content={title} />
             <meta name="DC.Creator" content={metaAuthor} />
             <meta name="DC.Rights" content={metaAuthor} />
@@ -56,6 +58,12 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta name="twitter:url" property="og:url" content={siteUrl} />
             <meta name="twitter:title" property="og:title" content={metaAuthor} />
             <meta name="twitter:description" property="og:description" content={metaDescription} />
+            <StructuredJSON
+              name={metaAuthor}
+              title={title}
+              keywords={allKeywords}
+              url={blogPostUrl}
+            />
           </Helmet>
         )
       }}
