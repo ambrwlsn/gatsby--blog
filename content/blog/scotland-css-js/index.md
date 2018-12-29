@@ -1,6 +1,6 @@
 ---
 title: Scotland CSS | Scotland JS
-date: "2018-30-07"
+date: "2018-07-30"
 tags: [conference]
 keywords: [amber wilson,javascript,software engineering,web development, coding, scotland, scotland css, scotland js, final, privilege]
 ---
