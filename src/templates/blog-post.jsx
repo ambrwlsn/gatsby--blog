@@ -22,6 +22,9 @@ const BlogPostTemplate = props => {
         slug={post.fields.slug}
         tags={post.frontmatter.tags}
       />
+      <Link to="/blog" rel="prev">
+        {/* ← {previous.frontmatter.title} */}← blog home
+      </Link>
       <h1 className="p-name">{post.frontmatter.title}</h1>
       <time className="dt-published" dateTime={post.frontmatter.date}>
         {nicelyFormattedDate}
