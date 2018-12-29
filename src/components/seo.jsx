@@ -14,6 +14,8 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
         const metaAuthor = data.site.siteMetadata.author
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}blog${slug}`
+        const allKeywords = keywords || []
+        const allTags = tags || []
         return (
           <Helmet
             htmlAttributes={{
@@ -27,7 +29,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta name="publisher" content={metaAuthor} />
             <meta name="copyright" content={metaAuthor} />
             <meta name="description" content={metaDescription} />
-            <meta name="keywords" content={keywords.concat(tags).toString()} />
+            <meta name="keywords" content={allKeywords.concat(allTags).toString()} />
 
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
@@ -65,6 +67,7 @@ SEO.defaultProps = {
   lang: 'en',
   meta: [],
   keywords: [],
+  tags: [],
 }
 
 SEO.propTypes = {
@@ -72,6 +75,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
+  tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 }
 
