@@ -179,6 +179,7 @@ A third surprise awaited us. Peter got onto the stage once more to announce that
 
 It was hard to fight back the tears when Peter's family came on stage to hug him and his wife said she is really proud of him. It must be safe to say that we are all endlessly proud of Peter, and the genuine enthusiasm, kindness and tireless hard work he puts into what he does. _Thank you_, Peter Aitken!
 
- > The Floss [@scotlandjs](https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw) [#scotlandjs2018](https://twitter.com/hashtag/scotlandjs2018?src=hash&ref_src=twsrc%5Etfw) edition [#Floss](https://twitter.com/hashtag/Floss?src=hash&ref_src=twsrc%5Etfw) [#flossing](https://twitter.com/hashtag/flossing?src=hash&ref_src=twsrc%5Etfw) [@jiggy_pete](https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw) [@waffles193](https://twitter.com/waffles193?ref_src=twsrc%5Etfw) [@herecomesjaycee](https://twitter.com/herecomesjaycee?ref_src=twsrc%5Etfw) [pic.twitter.com/KFvyl7QNOq](https://t.co/KFvyl7QNOq)
-> 
-> — Amber Wilson (@ambrwlsn90) [July 19, 2018](https://twitter.com/ambrwlsn90/status/1019969967586934784?ref_src=twsrc%5Etfw)
+ <p>
+    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The Floss <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@scotlandjs</a> <a href="https://twitter.com/hashtag/scotlandjs2018?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs2018</a> edition <a href="https://twitter.com/hashtag/Floss?src=hash&amp;ref_src=twsrc%5Etfw">#Floss</a> <a href="https://twitter.com/hashtag/flossing?src=hash&amp;ref_src=twsrc%5Etfw">#flossing</a> <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a> <a href="https://twitter.com/waffles193?ref_src=twsrc%5Etfw">@waffles193</a> <a href="https://twitter.com/herecomesjaycee?ref_src=twsrc%5Etfw">@herecomesjaycee</a> <a href="https://t.co/KFvyl7QNOq">pic.twitter.com/KFvyl7QNOq</a></p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/1019969967586934784?ref_src=twsrc%5Etfw">July 19, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
