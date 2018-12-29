@@ -1,3 +1,10 @@
+---
+title: Scotland CSS | Scotland JS
+date: "2018-30-07"
+tags: [conference]
+keywords: [amber wilson,javascript,software engineering,web development, coding, scotland, scotland css, scotland js, final, privilege]
+---
+
 This post is split into three parts. Click and choose!
 
 1.  [Diary](#diary) of my time in Scotland
@@ -8,7 +15,11 @@ I will post a link to the official photos once they are out! (hint: they are goo
 
 See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant article on the conferences [here](https://www.katiefenn.co.uk/scotland-js-retrospective/).
 
-# Diary [#](#diary) [![Back to top toggle](/img/back-to-top.svg)](#)
+<div id="diary">
+    <h1>Diary<a href="#diary"> # </a><a class="link__top-of-page" href="#">
+    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
+    </a></h1>
+</div>
 
 At 12.58pm on 17th July I stepped off the train into Edinburgh station. It was sunny! I noticed the architecture immediately - very beautiful and old. It wasn't long before I got to meet up with a very good web friend of mine, Flaki. We found the longest staircase we could and took our suitcases up it on our way to our accommodation. Once there we met up with two more good friends, Pilar and Ramón. After this, I met up with an old friend for dinner at The Castle Arms, before we all made our way to a Ceilidh dance [Peter](https://twitter.com/jiggy_pete) invited us to. This was a _blast_ and a perfect way to begin the great things to come!
 
@@ -44,7 +55,8 @@ The quality of the talks at Scotland CSS were, in Peter's words, _beyond phenome
 
 ![Outdoor discussion with Meara Charnetzki at Scotland JS](img/discussion.jpg)
 
-<figcaption class="item2">Speaker discussion with Meara Charnetzki (photo / © <a href="https://www.scottlogic.com/">Scott Logic</a>)</figcaption>
+<figcaption class="item2">Speaker discussion with Meara Charnetzki (photo / © <a href="https://www.scottlogic.com/">Scott Logic</a>)
+</figcaption>
 
 ![Trishul Goel speaking at Scotland JS](img/lowstage.jpg)
 
@@ -86,7 +98,11 @@ The last day of the conference began a little later at 9am. It was just as good 
 
 The last night of the conferences was spent again at Hemma, amongst friends. And amonst fish and chips because Edinburgh restaurants are _really_ busy on Friday nights! I was very glad that I was staying in Scotland for one more day so I could walk around beautiful Edinburgh. I miss it and my web friends already - until next time :-)
 
-# Tips [#](#tips) [![Back to top toggle](/img/back-to-top.svg)](#)
+<div id="tips">
+    <h1>Tips<a href="#tips"> # </a><a class="link__top-of-page" href="#">
+    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
+    </a></h1>
+</div>
 
 I used tips from speakers in this blog post, because the material was just _so_ good! I wasn't able to see every speaker, but I'll watch all the videos once they are out :-) All tips are from Scotland CSS, as I'm not using any JavaScript on my site:
 
@@ -98,7 +114,12 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 
 *   [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
 
-# Why this conference is special [# ](#special)[![Back to top toggle](/img/back-to-top.svg)](#) 
+<div id="isspecial">
+    <h1>Why this conference is special <a href="#isspecial"> # </a><a class="link__top-of-page" href="#">
+    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
+    </a>
+    </h1>
+</div>
 
 I believe the technology community and related events can learn a lot from Scotland CSS and Scotland JS.
 
