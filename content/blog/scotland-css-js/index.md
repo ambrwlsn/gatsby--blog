@@ -44,7 +44,7 @@ The quality of the talks at Scotland CSS were, in Peter's words, _beyond phenome
 
 ![Outdoor discussion with Meara Charnetzki at Scotland JS](img/discussion.jpg)
 
-<figcaption class="item2">Speaker discussion with Meara Charnetzki (photo / © [Scott Logic](https://scottlogic.com) )</figcaption>
+<figcaption class="item2">Speaker discussion with Meara Charnetzki (photo / © <a href="https://www.scottlogic.com/">Scott Logic</a>)</figcaption>
 
 ![Trishul Goel speaking at Scotland JS](img/lowstage.jpg)
 
@@ -128,11 +128,11 @@ On the first day of the conferences, at Scotland CSS, the first thing we all saw
 
 ![Code of Conduct banner](img/cocbanner.jpg)
 
-<figcaption class="item2">Code of Conduct banner (photo / © [Julie Broadfoot](https://www.juliebee.co.uk/))</figcaption>
+<figcaption class="item2">Code of Conduct banner (photo / <a href="https://www.juliebee.co.uk/">Julie Broadfoot</a>)</figcaption>
 
 ![Code of Conduct team at Scotland CSS](img/cocteam.jpg)
 
-<figcaption class="item4">Code of Conduct team (photo / © [Julie Broadfoot](https://www.juliebee.co.uk/))</figcaption>
+<figcaption class="item4">Code of Conduct team (photo / <a href="https://www.juliebee.co.uk/">Julie Broadfoot</a>)</figcaption>
 
 </figure>
 
@@ -169,13 +169,16 @@ Peter surpised us with an unexpected speaker at the end of Scotland JS. [Kim Cra
 
 ![Kim Crayton speaking at Scotland JS](img/kimcrayton.jpg)
 
+
 <figcaption class="item2">
-[Kim Crayton](http://www.kimcrayton.com/) 
-(photo / Flaki)</figcaption>
+<a href="http://www.kimcrayton.com/">Kim Crayton</a> (photo / Flaki)
+</figcaption>
 
 ![Global CFP Day Berlin edition](img/cfpday.jpg)
 
-<figcaption class="item4">CFP day in Berlin (photo / [Priyanka Naik](https://twitter.com/priyankanaik625))</figcaption>
+<figcaption class="item4">
+CFP day in Berlin (photo / <a href="https://twitter.com/priyankanaik625">Priyanka Naik</a>)
+</figcaption>
 
 </figure>
 
