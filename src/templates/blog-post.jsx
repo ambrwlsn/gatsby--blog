@@ -18,7 +18,7 @@ const BlogPostTemplate = props => {
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
-        keywords={[post.frontmatter.keywords]}
+        keywords={post.frontmatter.keywords}
         slug={post.fields.slug}
         tags={post.frontmatter.tags}
       />
@@ -46,14 +46,15 @@ const BlogPostTemplate = props => {
         <li>
           {previous && (
             <Link to={`blog/${previous.fields.slug}`} rel="prev">
-              ← {previous.frontmatter.title}
+              {/* ← {previous.frontmatter.title} */}← previous
             </Link>
           )}
         </li>
         <li>
           {next && (
             <Link to={`blog/${next.fields.slug}`} rel="next">
-              {next.frontmatter.title} →
+              {/* {next.frontmatter.title} → */}
+              next →
             </Link>
           )}
         </li>
