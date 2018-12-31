@@ -1,8 +1,8 @@
 ---
 title: Tempelhof Sunset
 date: "2018-04-28"
-tags: ["photography", "germany", "tempelhof field"]
-keywords: [sunset, photos, photo, camera, photoshop, edited, berlin]
+tags: ["photography", "germany"]
+keywords: [sunset, photos, photo, camera, photoshop, edited, berlin, tempelhof field]
 ---
 
 I love how photography allows you to be as creative as you like. I had some fun taking pics at [Tempelhof Field](https://en.wikipedia.org/wiki/Berlin_Tempelhof_Airport) today.
