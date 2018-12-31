@@ -31,7 +31,7 @@ const BlogPostTemplate = props => {
       </time>
       <section className="h-entry">
         <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
-        <p>Wordcount: {post.wordCount.words}</p>
+        {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
         <div className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
       </section>
       <hr />
