@@ -52,6 +52,11 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta itemProp="description" content={metaDescription} />
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:image" property="og:image" content="/content/assets/me.jpg" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta
+              name="twitter:image"
+              content={`${data.site.siteMetadata.siteUrl}${slug}twitter-card.jpg`}
+            />
             <meta name="twitter:site" content="@ambrwlsn90" />
             <meta name="twitter:site:id" content="790735158" />
             <meta name="twitter:creator" content="@ambrwlsn90" />
