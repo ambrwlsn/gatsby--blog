@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import styled from 'styled-components'
 
 // Utilities
 import format from 'date-fns/format'
@@ -7,6 +8,10 @@ import format from 'date-fns/format'
 import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+const Title = styled.h1`
+  color: pink;
+`
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
@@ -25,7 +30,7 @@ const BlogPostTemplate = props => {
       <Link to="/blog" rel="prev">
         {/* ← {previous.frontmatter.title} */}← blog home
       </Link>
-      <h1 className="p-name">{post.frontmatter.title}</h1>
+      <Title className="p-name">{post.frontmatter.title}</Title>
       <time className="dt-published" dateTime={post.frontmatter.date}>
         {nicelyFormattedDate}
       </time>
