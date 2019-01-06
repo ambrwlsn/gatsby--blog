@@ -28,8 +28,8 @@ function Bio() {
             <p>
               Written by <strong className="p-author">{author}</strong> who lives and works in
               Berlin building useful things.{' '}
-              <a href={`https://twitter.com/${social.twitter}`}>You should follow her on Twitter</a>
-              . © 2018
+              <a href={`https://twitter.com/${social.twitter}`}>You can follow her on Twitter</a> or
+              send her an email <a href="mailto:ambrwlsn90@gmail.com">here</a>. © 2018
             </p>
           </div>
         )
