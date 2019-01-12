@@ -5,17 +5,15 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const Learning = props => {
-  const siteTitle = props.data.site.siteMetadata.title
+const Learning = props => (
+  // const siteTitle = props.data.site.siteMetadata.title
 
-  return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
-      <p>Here are my learning achievements.</p>
-      <Bio />
-    </Layout>
-  )
-}
+  <Layout location={props.location}>
+    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
+    <p>Here are my learning achievements.</p>
+    <Bio />
+  </Layout>
+)
 
 export default Learning
 
