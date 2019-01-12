@@ -14,7 +14,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
         const metaDescription = description || data.site.siteMetadata.description
         const metaAuthor = data.site.siteMetadata.author
         const siteUrl = data.site.siteMetadata.siteUrl
-        const blogPostUrl = `${siteUrl}blog${slug}`
+        const blogPostUrl = `${siteUrl}/blog${slug}`
         const allKeywords = keywords || []
         const allTags = tags || []
 
@@ -32,7 +32,6 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta name="copyright" content={metaAuthor} />
             <meta name="description" content={metaDescription} />
             <meta name="keywords" content={allKeywords.concat(allTags).toString()} />
-
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
             <link rel="shortcut icon" href="/public/icon-48x48.png" />
