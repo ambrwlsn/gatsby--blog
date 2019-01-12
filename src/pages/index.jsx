@@ -8,23 +8,21 @@ import Twitter from './img/twitter.svg'
 import Github from './img/github.svg'
 import Linkedin from './img/linkedin.svg'
 
-const Index = props => {
-  const siteTitle = props.data.site.siteMetadata.title
+const Index = props => (
+  // const siteTitle = props.data.site.siteMetadata.title
 
-  return (
-    <Layout location={props.location} title={siteTitle}>
-      <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
-      <p>
-        See my blog posts <Link to="/blog/">here</Link>.
-      </p>
-      <img src={Twitter} alt="twitter" />
-      <img src={Github} alt="github" />
-      <img src={Linkedin} alt="linkedin" />
+  <Layout location={props.location}>
+    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
+    <p>
+      See my blog posts <Link to="/blog/">here</Link>.
+    </p>
+    <img src={Twitter} alt="twitter" />
+    <img src={Github} alt="github" />
+    <img src={Linkedin} alt="linkedin" />
 
-      <Bio />
-    </Layout>
-  )
-}
+    <Bio />
+  </Layout>
+)
 
 export default Index
 

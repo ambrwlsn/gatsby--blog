@@ -7,11 +7,11 @@ import SEO from '../components/seo'
 import Tags from '../components/tags'
 
 const Blog = props => {
-  const siteTitle = props.data.site.siteMetadata.title
+  // const siteTitle = props.data.site.siteMetadata.title
   const posts = props.data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location}>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Bio />
       <Tags />

@@ -9,8 +9,17 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+const Wrapper = styled.div`
+  padding: 0 8em;
+`
 const Title = styled.h1`
-  color: pink;
+  font-family: 'Courgette', cursive;
+  font-size: 3em;
+`
+const Content = styled.div`
+  font-family: 'Quattrocento', sans-serif;
+  line-height: 1.7;
+  font-size: 1.25em;
 `
 
 const BlogPostTemplate = props => {
@@ -19,7 +28,7 @@ const BlogPostTemplate = props => {
   const { previous, next } = props.pageContext
   const nicelyFormattedDate = format(new Date(post.frontmatter.date), 'Do MMMM YYYY')
   return (
-    <Layout location={props.location} title={siteTitle}>
+    <Layout location={props.location}>
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
@@ -30,43 +39,45 @@ const BlogPostTemplate = props => {
       <Link to="/blog" rel="prev">
         {/* ← {previous.frontmatter.title} */}← blog home
       </Link>
-      <Title className="p-name">{post.frontmatter.title}</Title>
-      <time className="dt-published" dateTime={post.frontmatter.date}>
-        {nicelyFormattedDate}
-      </time>
-      <section className="h-entry">
-        <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
-        {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
-        <div className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-      </section>
-      <hr />
-      <Bio />
+      <Wrapper>
+        <Title className="p-name">{post.frontmatter.title}</Title>
+        <time className="dt-published" dateTime={post.frontmatter.date}>
+          {nicelyFormattedDate}
+        </time>
+        <section className="h-entry">
+          <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
+          {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
+          <Content className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+        </section>
+        <hr />
+        <Bio />
 
-      <ul
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-between',
-          listStyle: 'none',
-          padding: 0,
-        }}
-      >
-        <li>
-          {previous && (
-            <Link to={`blog/${previous.fields.slug}`} rel="prev">
-              {/* ← {previous.frontmatter.title} */}← previous
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={`blog/${next.fields.slug}`} rel="next">
-              {/* {next.frontmatter.title} → */}
-              next →
-            </Link>
-          )}
-        </li>
-      </ul>
+        <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            listStyle: 'none',
+            padding: 0,
+          }}
+        >
+          <li>
+            {previous && (
+              <Link to={`blog/${previous.fields.slug}`} rel="prev">
+                {/* ← {previous.frontmatter.title} */}← previous
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={`blog/${next.fields.slug}`} rel="next">
+                {/* {next.frontmatter.title} → */}
+                next →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </Wrapper>
     </Layout>
   )
 }
