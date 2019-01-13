@@ -11,7 +11,7 @@ const Logo = styled.div`
   box-shadow: none;
   color: #000;
 `
-const Layout = ({ location, children }) => {
+const Layout = ({ children }) => {
   // eslint-disable-next-line
   const rootPath = `${__PATH_PREFIX__}/`
 

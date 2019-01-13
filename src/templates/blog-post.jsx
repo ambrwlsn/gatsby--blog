@@ -5,7 +5,7 @@ import styled from 'styled-components'
 // Utilities
 import format from 'date-fns/format'
 
-import Bio from '../components/bio'
+// import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -24,7 +24,7 @@ const Content = styled.div`
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
-  const siteTitle = props.data.site.siteMetadata.title
+  // const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
   const nicelyFormattedDate = format(new Date(post.frontmatter.date), 'Do MMMM YYYY')
   return (
@@ -50,7 +50,7 @@ const BlogPostTemplate = props => {
           <Content className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
         </section>
         <hr />
-        <Bio />
+        {/* <Bio /> */}
 
         <ul
           style={{
