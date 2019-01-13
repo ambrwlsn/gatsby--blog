@@ -11,7 +11,7 @@ import Linkedin from './img/linkedin.svg'
 const Index = props => (
   // const siteTitle = props.data.site.siteMetadata.title
 
-  <Layout location={props.location}>
+  <Layout>
     <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
     <p>
       See my blog posts <Link to="/blog/">here</Link>.

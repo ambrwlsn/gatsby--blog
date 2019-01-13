@@ -102,7 +102,7 @@ const WordsContainer = styled.section`
 `
 
 const WordBubblePost = props => (
-  <Layout location={props.location}>
+  <Layout>
     <SEO
         title='Words'
         description='Blending my love of words, the web, and psychology'

@@ -11,7 +11,7 @@ const Blog = props => {
   const posts = props.data.allMarkdownRemark.edges
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Bio />
       <Tags />

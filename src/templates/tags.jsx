@@ -10,7 +10,7 @@ const Tags = ({ pageContext, data, props }) => {
   // const site = data.site
 
   return (
-    <Layout location={props.location}>
+    <Layout>
       <div>
         <h1>{tagHeader}</h1>
         <ul>

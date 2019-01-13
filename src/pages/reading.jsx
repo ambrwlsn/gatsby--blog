@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const Reading = props => (
   // const siteTitle = props.data.site.siteMetadata.title
 
-  <Layout location={props.location}>
+  <Layout>
     <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
     <p>Here are my reading achievements.</p>
     <Bio />

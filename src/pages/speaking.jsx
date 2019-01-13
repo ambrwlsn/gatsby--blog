@@ -8,7 +8,7 @@ import SEO from '../components/seo'
 const Speaking = props => (
   // const siteTitle = props.data.site.siteMetadata.title
 
-  <Layout location={props.location}>
+  <Layout>
     <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
     <p>Here are my speaking achievements.</p>
     <Bio />

@@ -28,7 +28,7 @@ const BlogPostTemplate = props => {
   const { previous, next } = props.pageContext
   const nicelyFormattedDate = format(new Date(post.frontmatter.date), 'Do MMMM YYYY')
   return (
-    <Layout location={props.location}>
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.excerpt}
