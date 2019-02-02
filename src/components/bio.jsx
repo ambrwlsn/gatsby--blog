@@ -26,10 +26,9 @@ function Bio() {
             />
             &nbsp;
             <p>
-              Written by <strong className="p-author">{author}</strong> who lives and works in
-              Berlin building useful things.{' '}
-              <a href={`https://twitter.com/${social.twitter}`}>You can follow her on Twitter</a> or
-              send her an email <a href="mailto:ambrwlsn90@gmail.com">here</a>. © 2018
+              <strong className="p-author">{author}</strong>, a web developer in Berlin. You can
+              follow her on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> or send
+              her an email <a href="mailto:ambrwlsn90@gmail.com">here</a>. © 2019
             </p>
           </div>
         )

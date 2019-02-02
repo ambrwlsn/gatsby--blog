@@ -124,8 +124,8 @@ const WordBubblePost = props => (
         </Date> Hi, my name is Amber and I like words. Words
                 like cognizant, parallel, and stupefy. English is my native language and I enjoy its
                 nuances. I also enjoy other languages, especially German. I can't explain where my
-                love of language came from. I didn't enjoy English classNamees at school and I took
-                German classNamees on a whim. Playing with language makes me happy, no matter which
+                love of language came from. I didn't enjoy English classes at school and I took
+                German classes on a whim. Playing with language makes me happy, no matter which
                 one it is. Reeling off long, complicated sentences is fun - even more so when you
                 have a friend to bounce them back at you. Is nothing in this world free? Words seem
                 to be.
@@ -541,7 +541,7 @@ const WordBubblePost = props => (
                 <Date className="p-name"><time className="dt-published">21.02.17</time></Date>I want to work hard. My motives are many. I want
                 to create. Not just in one medium either. I long to release the fiery passion I've
                 had inside me for decades. Turns out I was always a wannabe designer. From doodles
-                in className, to Neopet page HTML, to animated boy band GIFS, to PaintShop Pro, to
+                in class, to Neopet page HTML, to animated boy band GIFS, to PaintShop Pro, to
                 Photoshop, to photography, to drawing portraits, to blogging, to vlogging, to
                 stop-motion animation. I want to use my skills to make a positive change in the
                 world. I feel that responsibility. I don't think talent should ever go to waste.
@@ -804,7 +804,7 @@ const WordBubblePost = props => (
                 nervous stepping up on stage. Personally, some audiences scare me more than others.
                 I am more likely to speak confidently to a whole room of strangers about a topic I
                 have no knowledge on (i.e. Toastmasters) than a smaller group of peers about a topic
-                I've thoroughly researched (i.e. a Master's className at university) Why? I don't
+                I've thoroughly researched (i.e. a Master's class at university) Why? I don't
                 know. I do know that I want to practice public speaking. So I can share my passion
                 live.
                 &nbsp;<Hashtag href="#day053">#</Hashtag>
