@@ -33,7 +33,7 @@ const Index = () => (
         Blog
       </Link>
       <Link
-        to="/learning/"
+        to="/blog/wilt100days/"
         style={{
           textDecoration: 'none',
           color: '#CCC',
