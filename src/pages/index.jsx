@@ -1,26 +1,60 @@
 import React from 'react'
+import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 
-import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Bear from '../components/bear'
 import Twitter from './img/twitter.svg'
 import Github from './img/github.svg'
 import Linkedin from './img/linkedin.svg'
 
-const Index = props => (
-  // const siteTitle = props.data.site.siteMetadata.title
+const Image = styled.img`
+  width: 2.5em;
+  padding-right: 1em;
+`
 
+const HomePageLinks = styled.div`
+  font-size: 5em;
+  font-family: Open Sans;
+`
+
+const Index = () => (
   <Layout>
     <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
-    <p>
-      See my blog posts <Link to="/blog/">here</Link>.
-    </p>
-    <img src={Twitter} alt="twitter" />
-    <img src={Github} alt="github" />
-    <img src={Linkedin} alt="linkedin" />
-
-    <Bio />
+    <HomePageLinks>
+      <Link
+        to="/blog/"
+        style={{
+          textDecoration: 'none',
+          color: '#CCC',
+        }}
+      >
+        Blog
+      </Link>
+      <Link
+        to="/learning/"
+        style={{
+          textDecoration: 'none',
+          color: '#CCC',
+        }}
+      >
+        Learn
+      </Link>
+      <Link
+        to="/reading/"
+        style={{
+          textDecoration: 'none',
+          color: '#CCC',
+        }}
+      >
+        Read
+      </Link>
+    </HomePageLinks>
+    <Bear />
+    <Image src={Twitter} alt="twitter" />
+    <Image src={Github} alt="github" />
+    <Image src={Linkedin} alt="linkedin" />
   </Layout>
 )
 
