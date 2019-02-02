@@ -7,7 +7,6 @@ import SEO from '../components/seo'
 import Tags from '../components/tags'
 
 const Blog = props => {
-  // const siteTitle = props.data.site.siteMetadata.title
   const posts = props.data.allMarkdownRemark.edges
 
   return (

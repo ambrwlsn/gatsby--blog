@@ -5,9 +5,7 @@ import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const Projects = props => (
-  // const siteTitle = props.data.site.siteMetadata.title
-
+const Projects = () => (
   <Layout>
     <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
     <p>Here are my projects.</p>
