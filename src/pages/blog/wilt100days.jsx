@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 
-const Content = styled.div`
+const Content = styled.article`
   font-family: 'Quattrocento', sans-serif;
   line-height: 1.7;
   font-size: 1.25em;
@@ -18,12 +18,22 @@ const wiltPage = props => {
     <Layout>
       <SEO title="What I Learned Today" keywords={['wilt', 'learning', 'javascript']} />
       <div>
-        <h1>hello</h1>
+        <h1>What I Learned Today - 100 Days</h1>
+        <p>
+          I loved writing <a href="../words">100 words for 100 days</a> &amp; now want to write 100
+          days of little HTML, CSS or JS (ES6) lessons. I&apos;m going to write about methods and
+          techniques that I use often, either at work or on personal projects. The lessons will be
+          written from a <strong>NEWBIE</strong> (i.e. my) perspective, and so may not be perfect,
+          but they will offer a valuable insight into the thoughts of a new developer. My goal is to
+          learn/document things for myself, and to show people, particularly other new developers,
+          how someone like me approaches my work and hopefully give them something they can relate
+          to :) Thanks to <a href="https:lottejackson.com">Charlotte</a> for the suggestion!
+        </p>
         {posts.map(({ node }) => {
           const { title } = node.frontmatter
           return (
             <div>
-              <h1>{title}</h1>
+              <h2>{title}</h2>
               <Content className="e-content" dangerouslySetInnerHTML={{ __html: node.html }} />
             </div>
           )
@@ -38,7 +48,7 @@ export default wiltPage
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___number], order: DESC }
+      sort: { fields: [frontmatter___number], order: ASC }
       filter: { frontmatter: { posttype: { eq: "wilt" } } }
       limit: 1000
     ) {
