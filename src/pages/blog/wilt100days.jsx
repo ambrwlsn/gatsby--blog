@@ -1,14 +1,32 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
+import Wilt from '../img/WILT.svg'
 
 const Content = styled.article`
+  padding-bottom: 1em;
+`
+
+const Wrapper = styled.div`
+  padding: 0 9em;
   font-family: 'Quattrocento', sans-serif;
-  line-height: 1.7;
+  line-height: 1.6;
   font-size: 1.25em;
+`
+const PageTitle = styled.h1`
+  font-family: 'Courgette', cursive;
+  text-align: center;
+`
+const PostTitle = styled.h2`
+  font-family: 'Courgette', cursive;
+`
+
+const Image = styled.img`
+  display: block;
+  margin: auto;
 `
 
 const wiltPage = props => {
@@ -17,8 +35,10 @@ const wiltPage = props => {
   return (
     <Layout>
       <SEO title="What I Learned Today" keywords={['wilt', 'learning', 'javascript']} />
-      <div>
-        <h1>What I Learned Today - 100 Days</h1>
+      <Wrapper>
+        <PageTitle>What I Learned Today - 100 Days</PageTitle>
+        <Image src={Wilt} alt="twitter" />
+
         <p>
           I loved writing <a href="../words">100 words for 100 days</a> &amp; now want to write 100
           days of little HTML, CSS or JS (ES6) lessons. I&apos;m going to write about methods and
@@ -29,16 +49,29 @@ const wiltPage = props => {
           how someone like me approaches my work and hopefully give them something they can relate
           to :) Thanks to <a href="https:lottejackson.com">Charlotte</a> for the suggestion!
         </p>
+        <blockquote className="twitter-tweet" data-lang="en">
+          <p lang="en" dir="ltr">
+            Write about a different pseudo class every day? Or a different HTML element or JS lesson
+            every day? Anything you want to learn more about? I had hoped to do something similar
+            and never got round to it.
+          </p>
+          &mdash; Charlotte Jackson (@lottejackson){' '}
+          <a href="https://twitter.com/lottejackson/status/991415549476270081?ref_src=twsrc%5Etfw">
+            May 1, 2018
+          </a>
+        </blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8" />
+
         {posts.map(({ node }) => {
           const { title } = node.frontmatter
           return (
-            <div>
-              <h2>{title}</h2>
+            <Fragment>
+              <PostTitle>{title}</PostTitle>
               <Content className="e-content" dangerouslySetInnerHTML={{ __html: node.html }} />
-            </div>
+            </Fragment>
           )
         })}
-      </div>
+      </Wrapper>
     </Layout>
   )
 }
