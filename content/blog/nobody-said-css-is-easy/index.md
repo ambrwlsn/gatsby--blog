@@ -25,13 +25,13 @@ I was actually inspired to write this article after another fairly long struggle
 
 After reading a few articles and finding lots of similar but differing opinions, I asked another developer, [Nevan](http://nevanscott.com/), to come and help me.
 
-```
+```css
 .cp-#{$type}__input:focus {
     ~ .cp-#{$type}__dummy {
         border-color: cp-get-color-action(cta);
     }
 ```
-```
+```css
     ~ .cp-#{$type}__label {
         font-weight: 700;
     }
@@ -44,7 +44,7 @@ Above is code from the project. I knew I had to work on this specific piece of c
 
 We talked through different CSS selectors and Nevan drew some out for me. Once I'd learned what the general sibling combinator does, I was able to write the below code, which gave me a nice focus state for my checkbox:
 
-```
+```css
 .cp-#{$type}__input:checked:focus {
     ~ .cp-#{$type}__dummy {
         box-shadow: 0 0 0 0.075rem cp-get-color(base), 0 0 0 0.2rem cp-get-color-action(cta);
