@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Bear from '../components/bear'
+// import Bear from '../components/bear'
 import Twitter from './img/twitter.svg'
 import Github from './img/github.svg'
 import Linkedin from './img/linkedin.svg'
@@ -42,7 +42,7 @@ const Index = () => (
         Learn
       </Link>
       <Link
-        to="/reading/"
+        to="/blog/books/"
         style={{
           textDecoration: 'none',
           color: '#CCC',
@@ -51,7 +51,7 @@ const Index = () => (
         Read
       </Link>
     </HomePageLinks>
-    <Bear />
+    {/* <Bear /> */}
     <Image src={Twitter} alt="twitter" />
     <Image src={Github} alt="github" />
     <Image src={Linkedin} alt="linkedin" />
