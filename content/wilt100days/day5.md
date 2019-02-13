@@ -1,5 +1,6 @@
 ---
-title: Day 5 - Flux
+day: Day 5
+subject: Flux
 posttype: wilt
 number: 5
 ---

@@ -1,5 +1,6 @@
 ---
-title: Day 2 - Arrow Functions
+day: Day 2
+subject: Arrow Functions
 posttype: wilt
 number: 2
 ---

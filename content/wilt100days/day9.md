@@ -1,5 +1,6 @@
 ---
-title: Day 9 - Readable Code
+day: Day 9
+subject: Readable Code
 posttype: wilt
 number: 9
 ---

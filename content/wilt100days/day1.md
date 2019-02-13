@@ -1,5 +1,6 @@
 ---
-title: Day 1 - BEM
+day: Day 1
+subject: BEM
 posttype: wilt
 number: 1
 ---

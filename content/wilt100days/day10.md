@@ -1,5 +1,6 @@
 ---
-title: Day 10 - Strings
+day: Day 10
+subject: Strings
 posttype: wilt
 number: 10
 ---

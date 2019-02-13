@@ -1,5 +1,6 @@
 ---
-title: Day 8 - Debugging
+day: Day 8
+subject: Debugging
 posttype: wilt
 number: 8
 ---

@@ -1,5 +1,6 @@
 ---
-title: Day 7 - CSS Layout
+day: Day 7
+subject: CSS Layout
 posttype: wilt
 number: 7
 ---

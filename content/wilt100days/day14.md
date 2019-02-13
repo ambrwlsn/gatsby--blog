@@ -1,5 +1,6 @@
 ---
-title: Day 14 - Ternary Operator 
+day: Day 14
+subject: Ternary Operator 
 posttype: wilt
 number: 14
 ---

@@ -1,5 +1,6 @@
 ---
-title: Day 6 - JSON-LD
+day: Day 6
+subject: JSON-LD
 posttype: wilt
 number: 6
 ---

@@ -1,5 +1,6 @@
 ---
-title: Day 13 - Object Literals
+day: Day 13
+subject: Object Literals
 posttype: wilt
 number: 13
 ---

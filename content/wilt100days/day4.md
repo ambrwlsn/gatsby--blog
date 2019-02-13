@@ -1,5 +1,6 @@
 ---
-title: Day 4 - This
+day: Day 4
+subject: This
 posttype: wilt
 number: 4
 ---

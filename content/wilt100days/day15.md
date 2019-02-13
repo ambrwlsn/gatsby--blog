@@ -1,5 +1,6 @@
 ---
-title: Day 15 - Array Prototype Methods
+day: Day 15
+subject: Array Prototype Methods
 posttype: wilt
 number: 15
 ---

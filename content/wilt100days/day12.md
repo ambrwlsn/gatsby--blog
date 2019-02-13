@@ -1,5 +1,6 @@
 ---
-title: Day 12 - Testing
+day: Day 12
+subject: Testing
 posttype: wilt
 number: 12
 ---
