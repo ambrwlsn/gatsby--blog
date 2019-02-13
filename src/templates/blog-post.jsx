@@ -4,12 +4,12 @@ import styled from 'styled-components'
 
 // Utilities
 import format from 'date-fns/format'
+import '../utils/global.css'
 
-// import Bio from '../components/bio'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const Wrapper = styled.div`
+const Wrapper = styled.main`
   padding: 0 8em;
 `
 const Title = styled.h1`
@@ -40,43 +40,46 @@ const BlogPostTemplate = props => {
         {/* ← {previous.frontmatter.title} */}← blog home
       </Link>
       <Wrapper>
-        <Title className="p-name">{post.frontmatter.title}</Title>
-        <time className="dt-published" dateTime={post.frontmatter.date}>
-          {nicelyFormattedDate}
-        </time>
-        <section className="h-entry">
-          <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
-          {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
-          <Content className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
-        </section>
-        <hr />
-        {/* <Bio /> */}
+        <article>
+          <header>
+            <Title className="p-name">{post.frontmatter.title}</Title>
+          </header>
+          <time className="dt-published" dateTime={post.frontmatter.date}>
+            {nicelyFormattedDate}
+          </time>
+          <section className="h-entry">
+            <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
+            {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
+            <Content className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          </section>
+          <hr />
 
-        <ul
-          style={{
-            display: 'flex',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-            listStyle: 'none',
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`blog/${previous.fields.slug}`} rel="prev">
-                {/* ← {previous.frontmatter.title} */}← previous
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog/${next.fields.slug}`} rel="next">
-                {/* {next.frontmatter.title} → */}
-                next →
-              </Link>
-            )}
-          </li>
-        </ul>
+          <ul
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+              listStyle: 'none',
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={`blog/${previous.fields.slug}`} rel="prev">
+                  {/* ← {previous.frontmatter.title} */}← previous
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={`blog/${next.fields.slug}`} rel="next">
+                  {/* {next.frontmatter.title} → */}
+                  next →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </article>
       </Wrapper>
     </Layout>
   )
