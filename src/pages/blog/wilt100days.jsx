@@ -9,6 +9,8 @@ import SEO from '../../components/seo'
 import Wilt from '../img/WILT.svg'
 import UpArrow from '../img/back-to-top.svg'
 
+import '../../utils/global.css'
+
 const BackToTop = styled.img``
 
 const Content = styled.article`
