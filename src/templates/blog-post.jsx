@@ -5,12 +5,16 @@ import styled from 'styled-components'
 // Utilities
 import format from 'date-fns/format'
 import '../utils/global.css'
+import device from '../utils/device'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const Wrapper = styled.main`
   padding: 0 8em;
+  @media ${device.mobileL} {
+    padding: 0;
+  }
 `
 const Title = styled.h1`
   font-family: 'Courgette', cursive;

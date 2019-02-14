@@ -2,9 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import A from '../components/logo'
+import device from '../utils/device'
 
 const Wrapper = styled.div`
   margin: 2em;
+  @media ${device.mobileL} {
+    margin: 10px;
+  }
 `
 
 const Layout = ({ children }) => {
