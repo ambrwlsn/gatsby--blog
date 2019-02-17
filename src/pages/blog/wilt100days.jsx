@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { graphql, navigate } from 'gatsby'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 import Select from 'react-select'
 
 import Layout from '../../components/layout'
@@ -10,6 +10,12 @@ import Wilt from '../img/WILT.svg'
 import UpArrow from '../img/back-to-top.svg'
 
 import '../../utils/global.css'
+
+const SmoothScrollStyle = createGlobalStyle`
+html {
+  scroll-behavior: smooth;
+}
+`
 
 const BackToTop = styled.img``
 
@@ -111,6 +117,7 @@ class wiltPage extends React.Component {
     }
     return (
       <Layout>
+        <SmoothScrollStyle />
         <SEO title="What I Learned Today" keywords={['wilt', 'learning', 'javascript']} />
         <Wrapper>
           <PageTitle>What I Learned Today - 100 Days</PageTitle>
