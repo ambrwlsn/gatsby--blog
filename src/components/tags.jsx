@@ -1,5 +1,6 @@
 import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 // Utilities
@@ -15,38 +16,54 @@ const Tag = styled(Link)`
   text-decoration: none;
 `
 
-function Tags() {
+const MoreLink = styled(Link)`
+  padding-left: 10px;
+`
+
+const Tags = ({ minCount }) => {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+          }
+        }
+        allMarkdownRemark(limit: 1000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+            totalCount
+          }
+        }
+      }
+    `
+  )
+  const tags = data.allMarkdownRemark.group
+  const filteredTags = tags.filter(tag => tag.totalCount > minCount)
+  const areTagsFiltered = tags.length > filteredTags.length
+
   return (
-    <StaticQuery
-      // eslint-disable-next-line
-      query={tagQuery}
-      render={data => (
-        <p>
-          {data.allMarkdownRemark.group.map(tag => (
-            <Tag to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})&nbsp;&nbsp;
-            </Tag>
-          ))}
-        </p>
+    <p>
+      {filteredTags.map(tag => (
+        <Tag key={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+          {tag.fieldValue} ({tag.totalCount})&nbsp;&nbsp;
+        </Tag>
+      ))}
+      {areTagsFiltered && (
+        <MoreLink to="/tags" title="This is a link to all of my created tags for my blog posts.">
+          see more tags...
+        </MoreLink>
       )}
-    />
+    </p>
   )
 }
 
 export default Tags
 
-const tagQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-    allMarkdownRemark(limit: 1000) {
-      group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-    }
-  }
-`
+Tags.propTypes = {
+  minCount: PropTypes.number,
+}
+
+Tags.defaultProps = {
+  minCount: 0,
+}
