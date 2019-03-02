@@ -5,18 +5,14 @@ import Select from 'react-select'
 
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
-// import WiltDropdown from '../../components/wilt-dropdown'
 import Wilt from '../img/WILT.svg'
 import UpArrow from '../img/back-to-top.svg'
-
-import '../../utils/global.css'
 
 const SmoothScrollStyle = createGlobalStyle`
 html {
   scroll-behavior: smooth;
 }
 `
-
 const BackToTop = styled.img``
 
 const Content = styled.article`
@@ -28,7 +24,6 @@ const Hashtag = styled.a`
   color: #8dc63f;
 `
 const Wrapper = styled.div`
-  padding: 0 9em;
   font-family: 'Quattrocento', sans-serif;
   line-height: 1.6;
   font-size: 1.25em;
@@ -82,6 +77,11 @@ const customStyles = {
 class wiltPage extends React.Component {
   state = {
     selectedOption: null,
+    dropdown: null,
+  }
+
+  componentDidMount() {
+    this.setState({ dropdown: true })
   }
 
   handleChange = selectedOption => {
@@ -105,14 +105,12 @@ class wiltPage extends React.Component {
         }
       })
       return (
-        <p>
-          <Select
-            value={selectedOption}
-            onChange={this.handleChange}
-            options={options}
-            styles={customStyles}
-          />
-        </p>
+        <Select
+          value={selectedOption}
+          onChange={this.handleChange}
+          options={options}
+          styles={customStyles}
+        />
       )
     }
     return (
@@ -122,10 +120,11 @@ class wiltPage extends React.Component {
         <Wrapper>
           <PageTitle>What I Learned Today - 100 Days</PageTitle>
           <WILT src={Wilt} alt="twitter" />
-          <WiltDropdownContainer>
-            <WiltDropdown />
-          </WiltDropdownContainer>
-
+          {this.state.dropdown && (
+            <WiltDropdownContainer>
+              <WiltDropdown />
+            </WiltDropdownContainer>
+          )}
           <p>
             I loved writing <a href="../words">100 words for 100 days</a> &amp; now want to write
             100 days of little HTML, CSS or JS (ES6) lessons. I&apos;m going to write about methods
@@ -148,7 +147,6 @@ class wiltPage extends React.Component {
               May 1, 2018
             </a>
           </blockquote>
-
           {posts.map(({ node }) => {
             const { day, subject } = node.frontmatter
             return (
