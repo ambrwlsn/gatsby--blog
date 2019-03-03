@@ -13,16 +13,16 @@ const Blog = props => {
     <Layout>
       <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
       <Bio />
-      <Tags />
+      <Tags minCount={3} />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <div key={node.fields.slug}>
-            <h3>
+            <p>
               <Link style={{ boxShadow: 'none' }} to={`blog${node.fields.slug}`}>
                 {title}
               </Link>
-            </h3>
+            </p>
             <small>{node.frontmatter.date}</small>
             <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
