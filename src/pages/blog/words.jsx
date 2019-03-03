@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import Bio from '../../components/bio'
 import Layout from '../../components/layout'
 import SEO from '../../components/seo'
 
@@ -1419,7 +1417,6 @@ const WordBubblePost = props => (
         </Content>
       </section>
       <hr />
-      <Bio />
     </Wrapper>
   </Layout>
 )
