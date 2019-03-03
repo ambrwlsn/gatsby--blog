@@ -1,28 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 import A from '../components/logo'
-import device from '../utils/device'
+import ThemeContext from '../context/theme-context'
 
-const Wrapper = styled.div`
-  margin: 2em;
-  @media ${device.mobileL} {
-    margin: 10px;
-  }
-`
+const Wrapper = styled.div``
 
 const Layout = ({ children }) => {
-  // eslint-disable-next-line
-  const rootPath = `${__PATH_PREFIX__}/`
-
+  const context = useContext(ThemeContext)
   return (
     <Wrapper>
       <Link to="/">
         <A width={50} height={50} color="#000" />
       </Link>
+      <button className="dark-switcher" onClick={context.toggleDark}>
+        {context.isDarkTheme ? <span>Light mode ☀</span> : <span>Dark mode ☾</span>}
+      </button>
       {children}
     </Wrapper>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
