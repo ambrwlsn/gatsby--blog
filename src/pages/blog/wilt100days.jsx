@@ -77,11 +77,11 @@ const customStyles = {
 class wiltPage extends React.Component {
   state = {
     selectedOption: null,
-    dropdown: null,
+    dropdownMenu: null,
   }
 
   componentDidMount() {
-    this.setState({ dropdown: true })
+    this.setState({ dropdownMenu: true })
   }
 
   handleChange = selectedOption => {
@@ -120,7 +120,7 @@ class wiltPage extends React.Component {
         <Wrapper>
           <PageTitle>What I Learned Today - 100 Days</PageTitle>
           <WILT src={Wilt} alt="twitter" />
-          {this.state.dropdown && (
+          {this.state.dropdownMenu && (
             <WiltDropdownContainer>
               <WiltDropdown />
             </WiltDropdownContainer>
