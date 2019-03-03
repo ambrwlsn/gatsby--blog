@@ -1,6 +1,23 @@
-body {
-  --inlineCode-bg: rgba(255, 229, 100, 0.2);
+html {
+  --inlineCode-bg: rgba(255, 229, 100, 0.5);
   --inlineCode-text: #1a1a1a;
+  --textColor: #000000;
+  --backgroundColor: #ffffff;
+  --linkColor: #9250B8;
+
+  background: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+a {
+  color: var(--linkColor);
+}
+
+.darkMode {
+  --textColor: #ffffff;
+  --backgroundColor: #363535;
+  --inlineCode-bg: rgb(110, 113, 162);
+  --linkColor: rgb(208, 62, 142);
 }
 
 /**

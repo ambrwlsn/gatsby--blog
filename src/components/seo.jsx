@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '../../content/assets/me.jpg'
-// import JsonLd from '../components/jsonld'
+import ThemeContext from '../context/theme-context'
 
 function SEO({ description, lang, meta, keywords, title, slug, tags }) {
+  const context = useContext(ThemeContext)
+
   return (
     <StaticQuery
       // eslint-disable-next-line
@@ -22,6 +24,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
           <Helmet
             htmlAttributes={{
               lang,
+              class: context.isDarkTheme ? 'darkMode' : '',
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
