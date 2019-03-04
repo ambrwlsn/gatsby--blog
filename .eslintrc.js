@@ -1,18 +1,11 @@
 module.exports = {
-  env: {
-    browser: true,
-    es6: true,
+  parser: 'babel-eslint',
+  plugins: ['prettier', 'react-hooks'],
+  rules: {
+    strict: 0,
+    'prettier/prettier': 'error',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
   },
-  plugins: ['react'],
-  globals: {
-    graphql: false,
-  },
-  parserOptions: {
-    sourceType: 'module',
-    ecmaFeatures: {
-      experimentalObjectRestSpread: true,
-      jsx: true,
-    },
-  },
-  extends: 'edenspiekermann',
+  extends: ['eslint:recommended', 'plugin:react/recommended'],
 }

@@ -40,15 +40,20 @@
     "typeface-quattrocento": "0.0.54"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
-    "eslint-config-edenspiekermann": "^0.1.2",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2"
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.4.0",
+    "gatsby-plugin-eslint": "^2.0.4",
+    "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/ambrwlsn/gatsby--blog#readme",
-  "keywords": [
-    "gatsby, blog, writing, code, javascript, css, html"
-  ],
+  "keywords": ["gatsby, blog, writing, code, javascript, css, html"],
   "license": "MIT",
   "main": "n/a",
   "repository": {
@@ -57,7 +62,7 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint": "eslint src/**/*.js src/**/*.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
