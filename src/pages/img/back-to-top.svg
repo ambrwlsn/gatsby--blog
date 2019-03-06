@@ -1,8 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="48px" height="20px" viewBox="0 0 53 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>Path</title>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <polyline id="Path" stroke="#8dc63f" stroke-width="4" points="2 22.5 27.4607843 2 51 22.5"></polyline>
-    </g>
-</svg>
+<svg width="48" height="20" viewBox="0 0 53 25" xmlns="http://www.w3.org/2000/svg"><path stroke="#8dc63f" stroke-width="4" d="M2 22.5L27.46 2 51 22.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"/></svg>

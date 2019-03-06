@@ -17,7 +17,6 @@ const ThemeProvider = ({ children }) => {
     const localStorageDark = JSON.parse(localStorage.getItem('isDarkTheme'))
     if (localStorageDark || isOSDarkModeSet()) {
       setDarkTheme(true)
-      document.body.classList.add('isDarkTheme')
     }
   }, [])
 

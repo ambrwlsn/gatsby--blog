@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import A from '../components/logo'
 import ThemeContext from '../context/theme-context'
+import ModeToggle from '../components/mode-toggle'
 
 const Wrapper = styled.div``
 
@@ -27,7 +28,7 @@ const Layout = ({ children }) => {
       <Link to="/" style={{ color: 'inherit' }}>
         <A width={50} height={50} color="currentColor" />
       </Link>
-      <ModeButton onClick={context.toggleDark}>
+      {/* <ModeButton onClick={context.toggleDark}>
         {context.isDarkTheme ? (
           <span>
             Light mode{' '}
@@ -43,7 +44,12 @@ const Layout = ({ children }) => {
             </span>
           </span>
         )}
-      </ModeButton>
+      </ModeButton> */}
+      <ModeToggle
+        checked={!context.isDarkTheme}
+        onChange={context.toggleDark}
+      />
+
       {children}
     </Wrapper>
   )
