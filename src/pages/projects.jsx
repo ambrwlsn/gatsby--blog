@@ -7,7 +7,10 @@ import SEO from '../components/seo'
 
 const Projects = () => (
   <Layout>
-    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
+    <SEO
+      title="All posts"
+      keywords={['blog', 'gatsby', 'javascript', 'react']}
+    />
     <p>Here are my projects.</p>
     <Bio />
   </Layout>

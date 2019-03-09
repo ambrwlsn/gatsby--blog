@@ -24,7 +24,10 @@ const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
   // const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
-  const nicelyFormattedDate = format(new Date(post.frontmatter.date), 'Do MMMM YYYY')
+  const nicelyFormattedDate = format(
+    new Date(post.frontmatter.date),
+    'Do MMMM YYYY'
+  )
   return (
     <Layout>
       <ContentWrapper>
@@ -49,8 +52,13 @@ const BlogPostTemplate = props => {
               </time>
               <section className="h-entry">
                 <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
-                {post.wordCount.words ? <p>Wordcount: {post.wordCount.words}</p> : null}
-                <Content className="e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+                {post.wordCount.words ? (
+                  <p>Wordcount: {post.wordCount.words}</p>
+                ) : null}
+                <Content
+                  className="e-content"
+                  dangerouslySetInnerHTML={{ __html: post.html }}
+                />
               </section>
               <hr />
 

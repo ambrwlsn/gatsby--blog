@@ -7,7 +7,10 @@ import SEO from '../../components/seo'
 
 const Reading = () => (
   <Layout>
-    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
+    <SEO
+      title="All posts"
+      keywords={['blog', 'gatsby', 'javascript', 'react']}
+    />
     <p>
       See <a href="">here</a> my reading achievements from last year.
     </p>

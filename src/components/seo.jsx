@@ -13,7 +13,8 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
       // eslint-disable-next-line
       query={detailsQuery}
       render={data => {
-        const metaDescription = description || data.site.siteMetadata.description
+        const metaDescription =
+          description || data.site.siteMetadata.description
         const metaAuthor = data.site.siteMetadata.author
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
@@ -28,13 +29,18 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            link={[{ rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` }]}
+            link={[
+              { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
+            ]}
           >
             <meta name="author" content={metaAuthor} />
             <meta name="publisher" content={metaAuthor} />
             <meta name="copyright" content={metaAuthor} />
             <meta name="description" content={metaDescription} />
-            <meta name="keywords" content={allKeywords.concat(allTags).toString()} />
+            <meta
+              name="keywords"
+              content={allKeywords.concat(allTags).toString()}
+            />
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
             <link rel="shortcut icon" href="/public/icon-48x48.png" />
@@ -53,19 +59,33 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta itemProp="name" content={title} />
             <meta itemProp="description" content={metaDescription} />
             <meta name="twitter:card" content="summary" />
-            <meta name="twitter:image" property="og:image" content="/content/assets/me.jpg" />
+            <meta
+              name="twitter:image"
+              property="og:image"
+              content="/content/assets/me.jpg"
+            />
             <meta name="twitter:card" content="summary_large_image" />
             <meta
               name="twitter:image"
-              content={`${data.site.siteMetadata.siteUrl}${slug}twitter-card.jpg`}
+              content={`${
+                data.site.siteMetadata.siteUrl
+              }${slug}twitter-card.jpg`}
             />
             <meta name="twitter:site" content="@ambrwlsn90" />
             <meta name="twitter:site:id" content="790735158" />
             <meta name="twitter:creator" content="@ambrwlsn90" />
             <meta name="twitter:creator:id" content="790735158" />
             <meta name="twitter:url" property="og:url" content={siteUrl} />
-            <meta name="twitter:title" property="og:title" content={metaAuthor} />
-            <meta name="twitter:description" property="og:description" content={metaDescription} />
+            <meta
+              name="twitter:title"
+              property="og:title"
+              content={metaAuthor}
+            />
+            <meta
+              name="twitter:description"
+              property="og:description"
+              content={metaDescription}
+            />
             {/* <JsonLd data={jsonLdData} /> */}
             {/* <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script> */}
           </Helmet>

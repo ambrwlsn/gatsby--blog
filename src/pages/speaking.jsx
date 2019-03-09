@@ -7,7 +7,10 @@ import SEO from '../components/seo'
 
 const Speaking = () => (
   <Layout>
-    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
+    <SEO
+      title="All posts"
+      keywords={['blog', 'gatsby', 'javascript', 'react']}
+    />
     <p>Here are my speaking achievements.</p>
     <Bio />
   </Layout>

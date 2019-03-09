@@ -26,9 +26,11 @@ function Bio() {
             />
             &nbsp;
             <p>
-              <strong className="p-author">{author}</strong>, a web developer in Berlin. You can
-              follow her on <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> or send
-              her an email <a href="mailto:ambrwlsn90@gmail.com">here</a>. © 2019
+              <strong className="p-author">{author}</strong>, a web developer in
+              Berlin. You can follow her on{' '}
+              <a href={`https://twitter.com/${social.twitter}`}>Twitter</a> or
+              send her an email <a href="mailto:ambrwlsn90@gmail.com">here</a>.
+              © 2019
             </p>
           </div>
         )
