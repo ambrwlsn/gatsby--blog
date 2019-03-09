@@ -113,6 +113,7 @@ class wiltPage extends React.Component {
           onChange={this.handleChange}
           options={options}
           styles={customStyles}
+          optionClassName="needsclick"
         />
       )
     }
