@@ -50,7 +50,10 @@ const Tags = ({ minCount }) => {
         </Tag>
       ))}
       {areTagsFiltered && (
-        <MoreLink to="/tags" title="This is a link to all of my created tags for my blog posts.">
+        <MoreLink
+          to="/tags"
+          title="This is a link to all of my created tags for my blog posts."
+        >
           see more tags...
         </MoreLink>
       )}
