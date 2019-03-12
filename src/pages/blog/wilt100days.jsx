@@ -114,6 +114,7 @@ class wiltPage extends React.Component {
           options={options}
           styles={customStyles}
           optionClassName="needsclick"
+          isSearchable={false}
         />
       )
     }
