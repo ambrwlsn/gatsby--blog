@@ -34,7 +34,6 @@
     "react-select": "^2.4.1",
     "styled-components": "^4.1.3",
     "typeface-courgette": "0.0.54",
-    "typeface-montserrat": "0.0.54",
     "typeface-open-sans": "0.0.54",
     "typeface-quattrocento": "0.0.54"
   },
@@ -52,7 +51,9 @@
     "prettier": "^1.16.4"
   },
   "homepage": "https://github.com/ambrwlsn/gatsby--blog#readme",
-  "keywords": ["gatsby, blog, writing, code, javascript, css, html"],
+  "keywords": [
+    "gatsby, blog, writing, code, javascript, css, html"
+  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {

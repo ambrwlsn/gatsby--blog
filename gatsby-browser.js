@@ -7,6 +7,8 @@ require('typeface-open-sans')
 require('typeface-quattrocento')
 require('./src/utils/global.css')
 
-const wrapRootElement = ({ element }) => <ThemeProvider>{element}</ThemeProvider>
+const wrapRootElement = ({ element }) => (
+  <ThemeProvider>{element}</ThemeProvider>
+)
 
 export { wrapRootElement }
