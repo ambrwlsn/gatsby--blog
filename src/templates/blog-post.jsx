@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 const Wrapper = styled.main``
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
-  font-size: 3em;
+  font-size: 2.5em;
 `
 const Content = styled.div`
   font-family: 'Quattrocento', sans-serif;
@@ -30,6 +30,9 @@ const BlogPostTemplate = props => {
   )
   return (
     <Layout>
+      <Link to="/blog" rel="prev">
+        ← blog home
+      </Link>
       <ContentWrapper>
         <SEO
           title={post.frontmatter.title}
@@ -38,9 +41,6 @@ const BlogPostTemplate = props => {
           slug={post.fields.slug}
           tags={post.frontmatter.tags}
         />
-        <Link to="/blog" rel="prev">
-          {/* ← {previous.frontmatter.title} */}← blog home
-        </Link>
         <Wrapper>
           <main>
             <article>
@@ -73,15 +73,30 @@ const BlogPostTemplate = props => {
               >
                 <li>
                   {previous && (
-                    <Link to={`blog/${previous.fields.slug}`} rel="prev">
-                      {/* ← {previous.frontmatter.title} */}← previous
+                    <Link
+                      to={`blog/${previous.fields.slug}`}
+                      rel="prev"
+                      style={{
+                        textDecoration: 'none',
+                        fontFamily: 'Quattrocento, sans-serif',
+                        fontWeight: '900',
+                      }}
+                    >
+                      ← previous
                     </Link>
                   )}
                 </li>
                 <li>
                   {next && (
-                    <Link to={`blog/${next.fields.slug}`} rel="next">
-                      {/* {next.frontmatter.title} → */}
+                    <Link
+                      to={`blog/${next.fields.slug}`}
+                      rel="next"
+                      style={{
+                        textDecoration: 'none',
+                        fontFamily: 'Quattrocento, sans-serif',
+                        fontWeight: '900',
+                      }}
+                    >
                       next →
                     </Link>
                   )}
