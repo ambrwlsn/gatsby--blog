@@ -14,7 +14,7 @@ a {
 }
 
 .darkMode {
-  --textColor: #ffffff;
+  --textColor: #e0dcdc;
   --backgroundColor: #363535;
   --inlineCode-bg: rgb(110, 113, 162);
   --linkColor: rgb(208, 62, 142);
