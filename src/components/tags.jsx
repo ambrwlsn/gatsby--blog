@@ -7,13 +7,11 @@ import styled from 'styled-components'
 import kebabCase from 'lodash/kebabCase'
 
 const Tag = styled(Link)`
-  color: #000;
-  border-radius: 3px;
   padding: 1em;
   margin: 0.2em;
-  background: orange;
   display: inline-block;
   text-decoration: none;
+  font-family: 'Quattrocento', sans-serif;
 `
 
 const MoreLink = styled(Link)`
@@ -53,6 +51,10 @@ const Tags = ({ minCount }) => {
         <MoreLink
           to="/tags"
           title="This is a link to all of my created tags for my blog posts."
+          style={{
+            textDecoration: 'none',
+            fontFamily: 'Quattrocento, sans-serif',
+          }}
         >
           see more tags...
         </MoreLink>

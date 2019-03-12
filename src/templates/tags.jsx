@@ -19,23 +19,54 @@ const Tags = ({ pageContext, data }) => {
         htmlAttributes={{
           class: context.isDarkTheme ? 'darkMode' : '',
         }}
+        title="Tagged with"
       />
+
       <Layout>
-        <div>
-          <h1>{tagHeader}</h1>
-          <ul>
+        <Link to="/blog" rel="prev">
+          {/* ← {previous.frontmatter.title} */}← blog home
+        </Link>
+        <div style={{ maxWidth: '500px', margin: 'auto', marginBottom: '3em' }}>
+          <h1
+            style={{
+              fontFamily: 'Quattrocento, sans-serif',
+              paddingBottom: '.5em',
+            }}
+          >
+            {tagHeader}
+          </h1>
+          <ul style={{ listStyle: 'none', padding: '0' }}>
             {edges.map(({ node }) => {
               const { title } = node.frontmatter
               const { slug } = node.fields
               const blogPostUrl = `blog${slug}`
               return (
-                <li key={slug}>
-                  <Link to={blogPostUrl}>{title}</Link>
+                <li key={slug} style={{ paddingBottom: '1.5em' }}>
+                  <Link
+                    to={blogPostUrl}
+                    style={{
+                      textDecoration: 'none',
+                      lineHeight: '1.7',
+                      fontSize: '1.5em',
+                      fontFamily: 'Courgette, cursive',
+                    }}
+                  >
+                    {title}
+                  </Link>
                 </li>
               )
             })}
           </ul>
-          <Link to="/tags">All tags</Link>
+          <Link
+            to="/tags"
+            style={{
+              textDecoration: 'none',
+              fontFamily: 'Quattrocento, sans-serif',
+              paddingBottom: '1.5em',
+            }}
+          >
+            All tags
+          </Link>
         </div>
       </Layout>
     </Fragment>

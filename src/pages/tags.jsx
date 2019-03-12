@@ -1,43 +1,41 @@
-import React, { useContext } from 'react'
-import kebabCase from 'lodash/kebabCase'
+import React, { useContext, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Tags from '../components/tags'
 import ThemeContext from '../context/theme-context'
 
-const TagsPage = ({
-  data: {
-    allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-}) => {
+const TagsPage = () => {
   const context = useContext(ThemeContext)
 
   return (
-    <div>
+    <Fragment>
       <Helmet
-        title={title}
+        title="Tags"
         htmlAttributes={{
           class: context.isDarkTheme ? 'darkMode' : '',
         }}
       />
       <Layout>
-        <div>
-          <h1>Tags</h1>
-          <ul>
-            {group.map(tag => (
-              <li key={tag.fieldValue}>
-                <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                  {tag.fieldValue} ({tag.totalCount})
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Link to="/blog" rel="prev">
+          ← blog home
+        </Link>
+        <Fragment>
+          <h1
+            style={{
+              fontFamily: 'Quattrocento, sans-serif',
+              paddingBottom: '.5em',
+              textAlign: 'center',
+            }}
+          >
+            Tags
+          </h1>
+          <div style={{ maxWidth: '900px', margin: 'auto' }}>
+            <Tags />
+          </div>
+        </Fragment>
       </Layout>
-    </div>
+    </Fragment>
   )
 }
 
