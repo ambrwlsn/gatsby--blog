@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import ContentWrapper from '../components/content-wrapper'
+import Toothy from '../components/img/toothbrush'
 
 // Utilities
 import format from 'date-fns/format'
@@ -14,20 +15,26 @@ const Title = styled.h1`
   font-family: 'Courgette', cursive;
   font-size: 2.5em;
 `
+const BlogPostDate = styled.time``
+
+const PostData = styled.div`
+  font-weight: 600;
+  font-size: 1.2em;
+`
+
 const Content = styled.div`
-  font-family: 'Quattrocento', sans-serif;
   line-height: 1.7;
   font-size: 1.25em;
 `
 
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
-  // const siteTitle = props.data.site.siteMetadata.title
   const { previous, next } = props.pageContext
   const nicelyFormattedDate = format(
     new Date(post.frontmatter.date),
-    'Do MMMM YYYY'
+    'MMMM Do, YYYY'
   )
+  const toothbrushes = post.timeToRead / 2
   return (
     <Layout>
       <Link to="/blog" rel="prev">
@@ -47,14 +54,18 @@ const BlogPostTemplate = props => {
               <header>
                 <Title className="p-name">{post.frontmatter.title}</Title>
               </header>
-              <time className="dt-published" dateTime={post.frontmatter.date}>
-                {nicelyFormattedDate}
-              </time>
+              <PostData>
+                <BlogPostDate
+                  className="dt-published"
+                  dateDate={post.frontmatter.date}
+                >
+                  {nicelyFormattedDate}
+                </BlogPostDate>
+                {Array.apply(null, { length: toothbrushes }).map(i => (
+                  <Toothy key={i} color="currentColor" />
+                ))}
+              </PostData>
               <section className="h-entry">
-                <p>Time to read: {post.timeToRead}&nbsp;minutes</p>
-                {post.wordCount.words ? (
-                  <p>Wordcount: {post.wordCount.words}</p>
-                ) : null}
                 <Content
                   className="e-content"
                   dangerouslySetInnerHTML={{ __html: post.html }}
@@ -78,7 +89,6 @@ const BlogPostTemplate = props => {
                       rel="prev"
                       style={{
                         textDecoration: 'none',
-                        fontFamily: 'Quattrocento, sans-serif',
                         fontWeight: '900',
                       }}
                     >
@@ -93,7 +103,6 @@ const BlogPostTemplate = props => {
                       rel="next"
                       style={{
                         textDecoration: 'none',
-                        fontFamily: 'Quattrocento, sans-serif',
                         fontWeight: '900',
                       }}
                     >

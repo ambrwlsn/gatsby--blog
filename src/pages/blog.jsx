@@ -39,7 +39,6 @@ const PostTag = styled(Link)`
 `
 
 const Teaser = styled.p`
-  font-family: 'Quattrocento', sans-serif;
   line-height: 1.7;
   font-size: 1.25em;
 `
