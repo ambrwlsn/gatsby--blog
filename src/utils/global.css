@@ -18,36 +18,39 @@ a {
 }
 
 details {
-  border: 3px solid black;
+  border: 3px solid var(--textColor);
   max-width: 300px;
   margin: auto;
-  text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
 summary {
-  text-align: center;
   display: block;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid var(--textColor);
+  cursor: pointer;
+  text-align: center;
 }
 
 .dropdown_menu {
   max-height: 200px;
-  overflow: scroll;
-  max-width: 300px;
+  overflow-y: scroll;
   margin: auto;
   padding: .5em 0;
+  list-style: none;
 }
 
 .dropdown_menu li {
+  padding-left: 1em;
+  overflow-wrap: break-word;
+	word-wrap: break-word;
+  word-break: break-word;
   margin-bottom: .5em;
 }
 
 .darkMode {
   --textColor: #e0dcdc;
   --backgroundColor: #363535;
-  --inlineCode-bg: rgb(110, 113, 162);
   --linkColor: rgb(208, 62, 142);
   --inlineCode-bg: rgb(121, 129, 183);
   --inlineCode-border: #271111;
