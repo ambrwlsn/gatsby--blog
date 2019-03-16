@@ -3,8 +3,7 @@ import React from 'react'
 import { ThemeProvider } from './src/context/theme-context'
 
 require('typeface-courgette')
-require('typeface-open-sans')
-require('typeface-quattrocento')
+require('typeface-ubuntu')
 require('./src/utils/global.css')
 
 const wrapRootElement = ({ element }) => (

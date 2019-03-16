@@ -9,6 +9,20 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          '@assets': './src/assets',
+          '@components': './src/components',
+          '@context': './src/context',
+          '@pages': './src/pages',
+          '@style': './src/style',
+          '@templates': './src/templates',
+          '@utils': './src/utils',
+        },
+      },
+    },
     `gatsby-plugin-sass`,
     `gatsby-plugin-twitter`,
     {
