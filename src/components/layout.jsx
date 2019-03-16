@@ -1,57 +1,35 @@
-import React, { useContext } from 'react'
+import React, { useContext, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import A from '../components/logo'
-import ThemeContext from '../context/theme-context'
-import ModeToggle from '../components/mode-toggle'
+import A from '@components/img/logo'
+import ThemeContext from '@context/theme-context'
+import ModeToggle from '@components/mode-toggle'
+import Nav from '@components/navigation'
 
-const Wrapper = styled.div``
-
-const ModeButton = styled.button`
-  position: absolute;
-  background: #ffffff;
-  right: 10px;
-  padding: 1em;
-  border-radius: 50px;
-  border: 1px solid #000000;
-  font-family: 'Quattrocento', sans-serif;
-  font-weight: 900;
-  font-size: 0.8em;
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 `
 
 const Layout = ({ children }) => {
   const context = useContext(ThemeContext)
 
   return (
-    <Wrapper>
-      <Link to="/" style={{ color: 'inherit' }}>
-        <A width={50} height={50} color="currentColor" />
-      </Link>
-      {/* <ModeButton onClick={context.toggleDark}>
-        {context.isDarkTheme ? (
-          <span>
-            Light mode{' '}
-            <span role="img" aria-label="sun">
-              ☀️
-            </span>
-          </span>
-        ) : (
-          <span>
-            Dark mode{' '}
-            <span role="img" aria-label="moon">
-              🌕
-            </span>
-          </span>
-        )}
-      </ModeButton> */}
-      <ModeToggle
-        checked={!context.isDarkTheme}
-        onChange={context.toggleDark}
-      />
-
+    <Fragment>
+      <Wrapper>
+        <Link to="/" style={{ color: 'inherit', display: 'inline' }}>
+          <A width={50} height={50} color="currentColor" />
+        </Link>
+        <Nav />
+        <ModeToggle
+          checked={!context.isDarkTheme}
+          onChange={context.toggleDark}
+        />
+      </Wrapper>
       {children}
-    </Wrapper>
+    </Fragment>
   )
 }
 

@@ -9,9 +9,6 @@ const Input = styled.input`
   cursor: pointer;
 `
 const Wrapper = styled.label`
-  position: absolute;
-  right: 20px;
-  float: right;
   cursor: pointer;
   text-align: right;
   border: 1.5px solid var(--textColor);
