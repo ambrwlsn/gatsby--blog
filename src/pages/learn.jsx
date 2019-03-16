@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react'
 import { graphql, navigate } from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
-import Select from 'react-select'
-import ContentWrapper from '../../components/content-wrapper'
-import LeafyLogo from '../../components/wilt-logo'
+import ContentWrapper from '@components/content-wrapper'
+import LeafyLogo from '@components/wilt-logo'
 
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
-import Arrow from '../../components/back-to-top'
+import Layout from '@components/layout'
+import SEO from '@components/seo'
+import Arrow from '@components/img/back-to-top'
 
 const SmoothScrollStyle = createGlobalStyle`
 html {
@@ -24,7 +23,6 @@ const Hashtag = styled.a`
   color: var(--linkColor);
 `
 const ContentStyles = styled.div`
-  font-family: 'Quattrocento', sans-serif;
   line-height: 1.6;
   font-size: 1.25em;
 `
@@ -43,97 +41,55 @@ const WILT = styled(LeafyLogo)`
 
 const BackToTop = styled(Arrow)``
 
-const WiltDropdownContainer = styled.div`
-  margin: 2em;
-`
-
-const customStyles = {
-  menu: provided => ({
-    ...provided,
-    backgroundColor: '#ffffff',
-  }),
-  option: (provided, state) => ({
-    ...provided,
-    color: state.isSelected ? 'orange' : 'black',
-    '&:hover': {
-      backgroundColor: '#8dc63f',
-      color: 'black',
-    },
-    '&:last-child': {
-      borderBottom: 'none',
-    },
-  }),
-  container: provided => ({
-    ...provided,
-    borderRadius: 0,
-    maxWidth: 400,
-    margin: 'auto',
-  }),
-  singleValue: (provided, state) => {
-    const opacity = state.isDisabled ? 0.5 : 1
-    const transition = 'opacity 300ms'
-
-    return { ...provided, opacity, transition }
-  },
-}
-
 class wiltPage extends React.Component {
   state = {
     selectedOption: null,
-    dropdownMenu: null,
-  }
-
-  componentDidMount() {
-    this.setState({ dropdownMenu: true })
   }
 
   handleChange = selectedOption => {
     this.setState({ selectedOption })
-    const fullLink = `/blog/wilt100days#${selectedOption.anchorName}`
+    const fullLink = `/learn#${selectedOption.anchorName}`
     navigate(fullLink)
   }
 
   render() {
-    const { selectedOption } = this.state
-
     const posts = this.props.data.allMarkdownRemark.edges
 
-    const WiltDropdown = () => {
-      const options = posts.map(({ node }) => {
-        const { subject, day } = node.frontmatter
-        return {
-          value: `${day} - ${subject}`,
-          label: `${day} - ${subject}`,
-          anchorName: subject.replace(/\s+/g, ''),
-        }
-      })
+    const WiltDropdownNoJs = () => {
       return (
-        <Select
-          value={selectedOption}
-          onChange={this.handleChange}
-          options={options}
-          styles={customStyles}
-          optionClassName="needsclick"
-          isSearchable={false}
-        />
+        <Fragment>
+          {posts.map(({ node }) => {
+            const { subject, day } = node.frontmatter
+            return (
+              <li key={day}>
+                <a href={`/learn#${subject.replace(/\s+/g, '')}`}>
+                  {`${day} - ${subject}`}
+                </a>
+              </li>
+            )
+          })}
+        </Fragment>
       )
     }
+
     return (
       <Layout>
         <ContentWrapper>
           <SmoothScrollStyle />
           <SEO
             title="What I Learned Today"
-            keywords={['wilt', 'learning', 'javascript']}
+            keywords={['wilt', 'learning', 'javascript', 'learn']}
           />
           <ContentStyles>
             <PageTitle>What I Learned Today - 100 Days</PageTitle>
             <WILT leafColor="green" textColor="currentColor" />
-            {this.state.dropdownMenu && (
-              <WiltDropdownContainer>
-                <WiltDropdown />
-              </WiltDropdownContainer>
-            )}
+
+            <details>
+              <summary>Select</summary>
+              <ul className="dropdown_menu">
+                <WiltDropdownNoJs />
+              </ul>
+            </details>
             <p>
               I loved writing <a href="../words">100 words for 100 days</a>{' '}
               &amp; now want to write 100 days of little HTML, CSS or JS (ES6)

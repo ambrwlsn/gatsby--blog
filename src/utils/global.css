@@ -1,16 +1,47 @@
 html {
-  --inlineCode-bg: rgba(255, 229, 100, 0.5);
+  --inlineCode-bg: aliceblue;
   --inlineCode-text: #1a1a1a;
+  --inlineCode-border: #d4d4d4;
   --textColor: #000000;
   --backgroundColor: #ffffff;
   --linkColor: #9250B8;
 
   background: var(--backgroundColor);
   color: var(--textColor);
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+  margin: 1em;
 }
 
 a {
   color: var(--linkColor);
+}
+
+details {
+  border: 3px solid black;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+summary {
+  text-align: center;
+  display: block;
+  border-bottom: 3px solid black;
+}
+
+.dropdown_menu {
+  max-height: 200px;
+  overflow: scroll;
+  max-width: 300px;
+  margin: auto;
+  padding: .5em 0;
+}
+
+.dropdown_menu li {
+  margin-bottom: .5em;
 }
 
 .darkMode {
@@ -18,6 +49,9 @@ a {
   --backgroundColor: #363535;
   --inlineCode-bg: rgb(110, 113, 162);
   --linkColor: rgb(208, 62, 142);
+  --inlineCode-bg: rgb(121, 129, 183);
+  --inlineCode-border: #271111;
+  --inlineCode--text: #271111;
 }
 
 /**
@@ -49,7 +83,6 @@ a {
  
 /* Code blocks */
 pre[class*='language-'] {
-  overflow: auto;
   padding: 1.3125rem;
 }
 
@@ -83,6 +116,8 @@ pre[class*='language-']::-moz-selection {
    color: var(--inlineCode-text);
    padding: 0.15em 0.2em 0.05em;
    white-space: normal;
+   border: 2px solid var(--inlineCode-border);
+   font-size: .8em;
  }
  
  .token.attr-name {
@@ -173,6 +208,7 @@ pre[class*='language-']::-moz-selection {
   background: #282C34;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
+  font-size: .8em;
 }
 
 @media (max-width: 672px) {
@@ -183,5 +219,4 @@ pre[class*='language-']::-moz-selection {
 
 .gatsby-highlight pre[class*='language-'] {
   float: left;
-  min-width: 100%;
 }
