@@ -4,57 +4,38 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-// import Bear from '../components/bear'
-import Twitter from './img/twitter.svg'
-import Github from './img/github.svg'
-import Linkedin from './img/linkedin.svg'
+// import Twitter from './img/twitter.svg'
+// import Github from './img/github.svg'
+// import Linkedin from './img/linkedin.svg'
 
-const Image = styled.img`
-  width: 2.5em;
-  padding-right: 1em;
+const HomePage = styled.div`
+  font-size: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
 
-const HomePageLinks = styled.div`
-  font-size: 5em;
-  font-family: Open Sans;
+const HomepageLink = styled(Link)`
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 1em;
 `
 
 const Index = () => (
   <Layout>
-    <SEO title="All posts" keywords={['blog', 'gatsby', 'javascript', 'react']} />
-    <HomePageLinks>
-      <Link
-        to="/blog/"
-        style={{
-          textDecoration: 'none',
-          color: '#CCC',
-        }}
-      >
-        Blog
-      </Link>
-      <Link
-        to="/blog/wilt100days/"
-        style={{
-          textDecoration: 'none',
-          color: '#CCC',
-        }}
-      >
-        Learn
-      </Link>
-      <Link
-        to="/blog/books/"
-        style={{
-          textDecoration: 'none',
-          color: '#CCC',
-        }}
-      >
-        Read
-      </Link>
-    </HomePageLinks>
-    {/* <Bear /> */}
-    <Image src={Twitter} alt="twitter" />
+    <SEO
+      title="All posts"
+      keywords={['blog', 'gatsby', 'javascript', 'react']}
+    />
+    <HomePage>
+      <HomepageLink to="/blog/">Blog</HomepageLink>
+      <HomepageLink to="/learn/">Learn</HomepageLink>
+      <HomepageLink to="/read/">Read</HomepageLink>
+    </HomePage>
+    {/* <Image src={Twitter} alt="twitter" />
     <Image src={Github} alt="github" />
-    <Image src={Linkedin} alt="linkedin" />
+    <Image src={Linkedin} alt="linkedin" /> */}
   </Layout>
 )
 
