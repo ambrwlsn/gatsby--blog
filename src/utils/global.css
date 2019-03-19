@@ -5,12 +5,27 @@ html {
   --textColor: #000000;
   --backgroundColor: #ffffff;
   --linkColor: #9250B8;
+  --catEyeColor: #e0dcdc;
 
   background: var(--backgroundColor);
   color: var(--textColor);
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  margin: 1em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.darkMode {
+  --textColor: #e0dcdc;
+  --backgroundColor: #363535;
+  --linkColor: rgb(208, 62, 142);
+  --inlineCode-bg: rgb(121, 129, 183);
+  --inlineCode-border: #271111;
+  --inlineCode--text: #271111;
+  --catEyeColor: #f3be21;
 }
 
 a {
@@ -48,14 +63,7 @@ summary {
   margin-bottom: .5em;
 }
 
-.darkMode {
-  --textColor: #e0dcdc;
-  --backgroundColor: #363535;
-  --linkColor: rgb(208, 62, 142);
-  --inlineCode-bg: rgb(121, 129, 183);
-  --inlineCode-border: #271111;
-  --inlineCode--text: #271111;
-}
+
 
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
