@@ -5,15 +5,22 @@ import styled from 'styled-components'
 import Splodge from '@components/img/splodge'
 import Layout from '@components/layout'
 import SEO from '@components/seo'
+import Paper from '@components/img/paper.svg'
 
 const Headline = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2em;
+  font-size: 7em;
+  background: url(${Paper}) no-repeat;
+  -webkit-background-clip: text;
+  color: transparent;
 `
 const Fullstop = styled(Splodge)`
-  margin-left: 0.3em;
+  margin-left: 0.7em;
+  margin-top: 1.3em;
+`
+const A = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Reading = () => (
@@ -22,9 +29,11 @@ const Reading = () => (
       title="All posts"
       keywords={['blog', 'gatsby', 'javascript', 'react']}
     />
-    <Headline>
-      Reading <Fullstop fill="currentColor" />
-    </Headline>
+    <A>
+      <Headline>Reading</Headline>
+
+      <Fullstop fill="currentColor" />
+    </A>
   </Layout>
 )
 
