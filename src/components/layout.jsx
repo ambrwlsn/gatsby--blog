@@ -8,7 +8,8 @@ import ModeToggle from '@components/mode-toggle'
 import Nav from '@components/navigation'
 
 const Wrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
+  padding: 2em;
   display: flex;
   justify-content: space-between;
 `
