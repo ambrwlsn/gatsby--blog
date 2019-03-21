@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
+import JsonLd from '@components/jsonld'
 import ContentWrapper from '../components/content-wrapper'
 import Toothy from '../components/img/toothbrush'
 
@@ -115,6 +116,13 @@ const BlogPostTemplate = props => {
           </main>
         </Wrapper>
       </ContentWrapper>
+      <JsonLd
+        title={post.frontmatter.title}
+        keywords={`${post.frontmatter.keywords}, ${post.frontmatter.tags}`}
+        name={props.data.site.siteMetadata.author}
+        url={props.data.site.siteMetadata.siteUrl}
+        date={post.frontmatter.date}
+      />
     </Layout>
   )
 }
@@ -133,6 +141,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

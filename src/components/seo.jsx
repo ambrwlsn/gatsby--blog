@@ -2,15 +2,14 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import favicon from '../../content/assets/me.jpg'
-import ThemeContext from '../context/theme-context'
+import favicon from '@content/assets/me.jpg'
+import ThemeContext from '@context/theme-context'
 
 function SEO({ description, lang, meta, keywords, title, slug, tags }) {
   const context = useContext(ThemeContext)
 
   return (
     <StaticQuery
-      // eslint-disable-next-line
       query={detailsQuery}
       render={data => {
         const metaDescription =
@@ -86,8 +85,6 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
               property="og:description"
               content={metaDescription}
             />
-            {/* <JsonLd data={jsonLdData} /> */}
-            {/* <script type="application/ld+json">{JSON.stringify(jsonLdData)}</script> */}
           </Helmet>
         )
       }}
@@ -109,6 +106,7 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
 }
 
 export default SEO
