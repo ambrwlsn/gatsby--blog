@@ -28,7 +28,7 @@ const Cat = styled(Kitty)`
   stroke: black;
   fill: #565252;
   position: absolute;
-  bottom: 3em;
+  bottom: 5em;
   right: 3em;
 `
 const Block = styled.div`
@@ -46,8 +46,14 @@ const Index = () => (
   <Fragment>
     <Layout>
       <SEO
-        title="All posts"
-        keywords={['blog', 'gatsby', 'javascript', 'react']}
+        title="Homepage"
+        keywords={[
+          'blog',
+          'gatsby',
+          'javascript',
+          'developer',
+          'junior developer',
+        ]}
       />
       {/* <HomePage>
       <HomepageLink to="/blog/">Blog</HomepageLink>
@@ -57,8 +63,8 @@ const Index = () => (
       {/* <Image src={Twitter} alt="twitter" />
     <Image src={Github} alt="github" />
     <Image src={Linkedin} alt="linkedin" /> */}
-      <Cat eye="var(--catEyeColor)" />
     </Layout>
+    <Cat eye="var(--catEyeColor)" />
     <Block />
   </Fragment>
 )

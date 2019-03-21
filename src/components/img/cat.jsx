@@ -2,11 +2,12 @@ import React from 'react'
 
 function Cat(props) {
   const { className, stroke, eye, body } = props
+  const strokeWidth = '3'
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="246"
-      height="190"
+      width="163"
+      height="125"
       viewBox="0 0 246 190"
       className={className}
     >
@@ -19,7 +20,7 @@ function Cat(props) {
             stroke={stroke}
             strokeLinecap="round"
             strokeLinejoin="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M2817.289,841.232s14.4-18.584,50.537-33.473"
@@ -27,7 +28,7 @@ function Cat(props) {
             fill="none"
             stroke={stroke}
             strokeLinecap="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M2817.289,841.232s18.8-16.982,42.553-16.8"
@@ -35,7 +36,7 @@ function Cat(props) {
             fill="none"
             stroke={stroke}
             strokeLinecap="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M2817.289,841.232s14.4-18.584,50.537-33.473"
@@ -43,7 +44,7 @@ function Cat(props) {
             fill="none"
             stroke={stroke}
             strokeLinecap="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M2817.289,841.232s14.4-18.584,50.537-33.473"
@@ -51,7 +52,7 @@ function Cat(props) {
             fill="none"
             stroke={stroke}
             strokeLinecap="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M15.593,0C24.2,0,31.185,9.65,31.185,21.554S24.2,43.109,15.593,43.109,0,33.459,0,21.554,6.981,0,15.593,0Z"
@@ -59,7 +60,7 @@ function Cat(props) {
             fill={eye}
             stroke={stroke}
             strokeLinejoin="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
           <path
             d="M15.593,0C24.2,0,31.185,9.65,31.185,21.554S24.2,43.109,15.593,43.109,0,33.459,0,21.554,6.981,0,15.593,0Z"
@@ -67,7 +68,7 @@ function Cat(props) {
             fill={eye}
             stroke={stroke}
             strokeLinejoin="round"
-            strokeWidth="6"
+            strokeWidth={strokeWidth}
           />
 
           <ellipse
