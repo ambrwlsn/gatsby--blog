@@ -18,7 +18,7 @@ const MoreLink = styled(Link)`
   padding-left: 10px;
 `
 
-const Tags = ({ minCount }) => {
+const Tags = ({ minCount, className }) => {
   const data = useStaticQuery(
     graphql`
       query {
@@ -41,7 +41,7 @@ const Tags = ({ minCount }) => {
   const areTagsFiltered = tags.length > filteredTags.length
 
   return (
-    <p>
+    <p className={className}>
       {filteredTags.map(tag => (
         <Tag key={tag.fieldValue} to={`/tags/${kebabCase(tag.fieldValue)}/`}>
           {tag.fieldValue} ({tag.totalCount})&nbsp;&nbsp;
@@ -67,6 +67,7 @@ export default Tags
 
 Tags.propTypes = {
   minCount: PropTypes.number,
+  className: PropTypes.string,
 }
 
 Tags.defaultProps = {

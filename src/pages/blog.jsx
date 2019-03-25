@@ -57,9 +57,23 @@ const Date = styled.time`
   width: 3em;
   text-align: center;
   padding-right: 1em;
+
+  @media (max-width: 800px) {
+    top: 10px;
+    padding-right: 0.4em;
+  }
   span {
     font-size: 2em;
     display: block;
+    @media (max-width: 800px) {
+      font-size: 1.5em;
+    }
+    &:first-child {
+      font-size: 1.3em;
+      @media (max-width: 800px) {
+        font-size: 0.8em;
+      }
+    }
   }
 `
 
@@ -72,7 +86,7 @@ const Blog = props => {
           title="All posts"
           keywords={['blog', 'gatsby', 'javascript', 'react']}
         />
-        <Tags minCount={3} />
+        <Tags minCount={3} className="hideOnMobile" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const tags = node.frontmatter.tags
@@ -85,14 +99,18 @@ const Blog = props => {
                 </BlogPostLink>
               </h1>
               <Date>
-                {month}
+                <span>{month}</span>
                 <span>{day}</span>
               </Date>
               <Teaser dangerouslySetInnerHTML={{ __html: node.excerpt }} />
               {tags.map((tag, i) => {
                 const isLast = i === tags.length - 1
                 return (
-                  <PostTag key={tag} to={`/tags/${kebabCase(tag)}/`}>
+                  <PostTag
+                    title={`A tag leading to more articles about ${tag}`}
+                    key={tag}
+                    to={`/tags/${kebabCase(tag)}/`}
+                  >
                     {tag}
                     {!isLast && <Fragment> &middot; </Fragment>}
                   </PostTag>
