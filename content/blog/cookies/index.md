@@ -7,11 +7,11 @@ keywords: [amber wilson,software engineering,web development,coding,cookies,memo
 
 <span class="underline">What is a cookie?</span> If you have a sweet tooth like me you might imagine a round, freshly-baked treat containing chocolate chips:
 
-![cookie](img/cookie.svg)
+<img src="img/cookie.svg" class="svg__image--size" alt="cookie">
 
 Conversely, internet cookies (a.k.a. HTTP cookies) contain data, usually in the form of a text file:
 
-![text file](img/text.svg)
+<img src="img/text.svg" class="svg__image--size" alt="text file">
 
 <span class="underline">What's in the name?</span> Derived from the term 'magic cookies' (packets of data that have been used to send data over the web since 1979) the term 'cookie' was coined by Lou Montulli and first utilised as an e-commerce solution in 1994\. They enabled items in a shopping cart to be saved while you browsed the rest of the site. Cookies quickly gained popularity and began to be used for other purposes.
 

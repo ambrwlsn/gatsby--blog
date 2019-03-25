@@ -9,7 +9,10 @@ Amidst a learning spree on semantic HTML and the ways servers communicate with w
 
 These are HTTP (Hypertext Transfer Protocol - the language the browser uses to 'speak' with servers) request methods, typically used for sending and receiving data in forms. They are written like this inside the HTML5 form element:
 
-![get and post methods](img/getpostmethods.jpg)
+```jsx
+<form method="GET"> 
+<form method="POST">
+```
 
 The semantics behind the form element could form (see what I did there?) another lesson entirely. They are explained nicely [here](https://internetingishard.com/html-and-css/forms/).
 

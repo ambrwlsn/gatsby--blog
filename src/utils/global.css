@@ -63,7 +63,18 @@ summary {
   margin-bottom: .5em;
 }
 
+@media screen and (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+}
 
+.svg__image--size {
+  margin: 0 auto;
+  width: 10vw;
+  height: auto;
+  display: block;
+}
 
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
@@ -81,6 +92,7 @@ summary {
    word-wrap: normal;
    line-height: 1.5;
    margin-bottom: 0;
+   margin-top: 0;
  
    -moz-tab-size: 4;
    -o-tab-size: 4;
