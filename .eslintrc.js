@@ -7,7 +7,6 @@ module.exports = {
   plugins: ['react', 'prettier', 'react-hooks'],
   rules: {
     strict: 0,
-    'prettier/prettier': 'error',
     'react/prop-types': [1, { skipUndeclared: true }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
@@ -19,3 +18,22 @@ module.exports = {
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
 }
+
+// module.exports = {
+//   env: {
+//     browser: true,
+//     es6: true,
+//     node: true,
+//   },
+//   plugins: ['react', 'prettier', 'react-hooks'],
+//   globals: {
+//     graphql: false,
+//   },
+//   parserOptions: {
+//     sourceType: 'module',
+//     ecmaFeatures: {
+//       experimentalObjectRestSpread: true,
+//       jsx: true,
+//     },
+//   },
+// }
