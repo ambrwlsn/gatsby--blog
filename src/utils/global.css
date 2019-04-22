@@ -1,5 +1,5 @@
 html {
-  --inlineCode-bg: aliceblue;
+  --inlineCode-bg: #fff9c3;
   --inlineCode-text: #1a1a1a;
   --inlineCode-border: #d4d4d4;
   --textColor: #000000;
@@ -22,9 +22,8 @@ body {
   --textColor: #e0dcdc;
   --backgroundColor: #363535;
   --linkColor: rgb(208, 62, 142);
-  --inlineCode-bg: rgb(121, 129, 183);
-  --inlineCode-border: #271111;
-  --inlineCode--text: #271111;
+  --inlineCode-bg: rgba(249, 248, 244, 0.17);
+  --inlineCode--text: #e8e8e8;
   --catEyeColor: #f3be21;
 }
 
@@ -136,11 +135,11 @@ pre[class*='language-']::-moz-selection {
  :not(pre) > code[class*='language-'] {
    border-radius: 0.3em;
    background: var(--inlineCode-bg);
-   color: var(--inlineCode-text);
-   padding: 0.15em 0.2em 0.05em;
+   color: var(--inlineCode--text);
+   padding: 0.2em 0.2em;
    white-space: normal;
-   border: 2px solid var(--inlineCode-border);
    font-size: .8em;
+   margin: 0 .14em;
  }
  
  .token.attr-name {
