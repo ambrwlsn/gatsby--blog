@@ -1,28 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 
+import useEventListener from '@hooks/use-event-listener'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Kitty from '@components/img/cat'
-
-// import Twitter from './img/twitter.svg'
-// import Github from './img/github.svg'
-// import Linkedin from './img/linkedin.svg'
-
-// const HomePage = styled.div`
-//   font-size: 5em;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// `
-
-// const HomepageLink = styled(Link)`
-//   text-decoration: none;
-//   font-weight: 600;
-//   margin-top: 1em;
-// `
 
 const Cat = styled(Kitty)`
   stroke: black;
@@ -42,32 +25,76 @@ const Block = styled.div`
   padding: 0;
 `
 
-const Index = () => (
-  <Fragment>
-    <Layout>
-      <SEO
-        title="Homepage"
-        keywords={[
-          'blog',
-          'gatsby',
-          'javascript',
-          'developer',
-          'junior developer',
-        ]}
-      />
-      {/* <HomePage>
+// const handleChange = () => {
+// const eyes = document.getElementById('eyes')
+
+// // kitty.addEventListener('mousemove', e => {
+// let eyes = document.getElementById('eyes')
+// let mouseX = eyes.getBoundingClientRect().left
+// let mouseY = eyes.getBoundingClientRect().top
+// let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY)
+// let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180
+// eyes.style.transform = `rotate(${rotationDegrees}deg)`
+// })
+// }
+
+function Index() {
+  // State for storing mouse coordinates
+  const [[x, y], setCoords] = useState([0, 0])
+  const [[eyeX, eyeY], setEyeCoords] = useState([0, 0])
+  const eyesRef = useRef(null)
+
+  useEffect(() => {
+    if (eyesRef.current) {
+      const eyePos = eyesRef.current.getBoundingClientRect()
+      console.log(eyePos.left, eyePos.top)
+      setEyeCoords([eyePos.left, eyePos.top])
+    }
+  }, [])
+
+  // Add event listener using our hook
+  useEventListener('mousemove', ({ clientX, clientY }) => {
+    // Update coordinates
+    setCoords([clientX, clientY])
+  })
+
+  const clampedEyeX = Math.max(-10, Math.min(10, x - eyeX))
+  const clampedEyeY = Math.max(-10, Math.min(10, y - eyeY))
+
+  return (
+    <Fragment>
+      <Layout>
+        <SEO
+          title="Homepage"
+          keywords={[
+            'blog',
+            'gatsby',
+            'javascript',
+            'developer',
+            'junior developer',
+          ]}
+        />
+        {/* <HomePage>
       <HomepageLink to="/blog/">Blog</HomepageLink>
       <HomepageLink to="/learn/">Learn</HomepageLink>
       <HomepageLink to="/read/">Read</HomepageLink>
     </HomePage> */}
-      {/* <Image src={Twitter} alt="twitter" />
+        {/* <Image src={Twitter} alt="twitter" />
     <Image src={Github} alt="github" />
     <Image src={Linkedin} alt="linkedin" /> */}
-    </Layout>
-    <Cat eye="var(--catEyeColor)" />
-    <Block />
-  </Fragment>
-)
+        <h1>
+          The mouse position is ({x}, {y})
+        </h1>
+      </Layout>
+      <Cat
+        eye="var(--catEyeColor)"
+        eyesRef={eyesRef}
+        eyePos={[clampedEyeX, clampedEyeY]}
+      />
+      <Block />
+    </Fragment>
+  )
+}
 
 export default Index
 

@@ -18,6 +18,7 @@ module.exports = {
           '@context': './src/context',
           '@content': './content',
           '@pages': './src/pages',
+          '@hooks': './src/hooks',
           '@style': './src/style',
           '@templates': './src/templates',
           '@utils': './src/utils',

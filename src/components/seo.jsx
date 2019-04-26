@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import favicon from '@content/assets/me.jpg'
 import ThemeContext from '@context/theme-context'
@@ -106,7 +106,6 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-  slug: PropTypes.string.isRequired,
 }
 
 export default SEO
