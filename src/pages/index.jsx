@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import useEventListener from '@hooks/use-event-listener'
 import Layout from '../components/layout'
@@ -25,19 +25,6 @@ const Block = styled.div`
   padding: 0;
 `
 
-// const handleChange = () => {
-// const eyes = document.getElementById('eyes')
-
-// // kitty.addEventListener('mousemove', e => {
-// let eyes = document.getElementById('eyes')
-// let mouseX = eyes.getBoundingClientRect().left
-// let mouseY = eyes.getBoundingClientRect().top
-// let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY)
-// let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180
-// eyes.style.transform = `rotate(${rotationDegrees}deg)`
-// })
-// }
-
 function Index() {
   // State for storing mouse coordinates
   const [[x, y], setCoords] = useState([0, 0])
@@ -47,7 +34,7 @@ function Index() {
   useEffect(() => {
     if (eyesRef.current) {
       const eyePos = eyesRef.current.getBoundingClientRect()
-      console.log(eyePos.left, eyePos.top)
+
       setEyeCoords([eyePos.left, eyePos.top])
     }
   }, [])
@@ -58,8 +45,13 @@ function Index() {
     setCoords([clientX, clientY])
   })
 
-  const clampedEyeX = Math.max(-10, Math.min(10, x - eyeX))
-  const clampedEyeY = Math.max(-10, Math.min(10, y - eyeY))
+  const clampedEyeX = Math.max(-7.5, Math.min(7.5, x - eyeX))
+  const clampedEyeY = Math.max(-7.5, Math.min(7.5, y - eyeY))
+
+  // console.log('new eyes', clampedEyeX, clampedEyeY)
+  // console.log('mouse', x, y)
+  // console.log('eyes', eyeX, eyeY, eyeA, eyeB)
+  // console.log('new eyes R', radianDegreesX, radianDegreesY)
 
   return (
     <Fragment>
@@ -74,17 +66,6 @@ function Index() {
             'junior developer',
           ]}
         />
-        {/* <HomePage>
-      <HomepageLink to="/blog/">Blog</HomepageLink>
-      <HomepageLink to="/learn/">Learn</HomepageLink>
-      <HomepageLink to="/read/">Read</HomepageLink>
-    </HomePage> */}
-        {/* <Image src={Twitter} alt="twitter" />
-    <Image src={Github} alt="github" />
-    <Image src={Linkedin} alt="linkedin" /> */}
-        <h1>
-          The mouse position is ({x}, {y})
-        </h1>
       </Layout>
       <Cat
         eye="var(--catEyeColor)"
