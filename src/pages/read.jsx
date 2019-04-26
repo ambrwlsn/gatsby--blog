@@ -28,7 +28,7 @@ const A = styled.div`
 
 const Githubb = styled(Github)``
 
-const ReviewContainer = styled.div`
+const ReviewSection = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ const Reading = () => (
 
       <Fullstop fill="currentColor" />
     </A>
-    <ReviewContainer>
+    <ReviewSection>
       <BookReview
         review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with."
         picture={becoming}
@@ -55,18 +55,7 @@ const Reading = () => (
         method={<Githubb />}
         type="Autobiography, strong, real."
       />
-    </ReviewContainer>
-    <ReviewContainer>
-      <BookReview
-        review="A good book."
-        picture={becoming}
-        picAlt="Michelle Obama on her book cover"
-        methodAlt="headphones"
-        length="19h 3m"
-        method={<Githubb />}
-        type="Autobiography, strong, real."
-      />
-    </ReviewContainer>
+    </ReviewSection>
   </Layout>
 )
 

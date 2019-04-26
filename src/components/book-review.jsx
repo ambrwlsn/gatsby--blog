@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const BORDER_RADIUS = '10px'
 
-const ReviewContainer = styled.div`
+const Container = styled.div`
   display: grid;
   width: 600px;
   height: 500px;
@@ -11,26 +11,30 @@ const ReviewContainer = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
   margin-bottom: 3em;
+  grid-template-areas:
+    'review review length length'
+    'review review . picture'
+    'method type type .';
 `
 
-const Review = styled.div`
-  grid-row-start: 1;
-  grid-row-end: 3;
-  grid-column-start: 1;
-  grid-column-end: 3;
+const ReviewContainer = styled.div`
+  grid-area: review;
   background: #b2da93;
   padding: 1em;
   line-height: 1.5;
   font-size: 1em;
+
   border-radius: ${BORDER_RADIUS};
   &:hover {
     grid-row-start: 1;
-    grid-row-end: 4;
+    grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 5;
     z-index: 1;
   }
 `
+
+const Review = styled.div``
 
 const Length = styled.div`
   font-size: 5rem;
@@ -40,12 +44,9 @@ const LengthContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 5;
   background: pink;
   border-radius: ${BORDER_RADIUS};
+  grid-area: length;
 `
 
 const Picture = styled.img`
@@ -55,12 +56,9 @@ const Picture = styled.img`
 `
 
 const PictureContainer = styled.div`
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 4;
-  grid-column-end: 5;
   background: yellow;
   border-radius: ${BORDER_RADIUS};
+  grid-area: picture;
 `
 
 const Method = styled.img`
@@ -70,28 +68,26 @@ const Method = styled.img`
 `
 
 const MethodContainer = styled.div`
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 1;
-  grid-column-end: 2;
   background: rebeccapurple;
   border-radius: ${BORDER_RADIUS};
+  grid-area: method;
 `
 
-const Type = styled.div`
-  grid-row-start: 3;
-  grid-row-end: 4;
-  grid-column-start: 2;
-  grid-column-end: 4;
+const TypeContainer = styled.div`
+  grid-area: type;
   background: lightblue;
   border-radius: ${BORDER_RADIUS};
 `
 
+const Type = styled.div``
+
 const BookReview = props => {
   const { review, length, picture, picAlt, method, methodAlt, type } = props
   return (
-    <ReviewContainer>
-      <Review>{review}</Review>
+    <Container>
+      <ReviewContainer>
+        <Review>{review}</Review>
+      </ReviewContainer>
 
       <LengthContainer>
         <Length>{length}</Length>
@@ -105,8 +101,10 @@ const BookReview = props => {
         <Method src={method} alt={methodAlt} />
       </MethodContainer>
 
-      <Type>{type}</Type>
-    </ReviewContainer>
+      <TypeContainer>
+        <Type>{type}</Type>
+      </TypeContainer>
+    </Container>
   )
 }
 export default BookReview
