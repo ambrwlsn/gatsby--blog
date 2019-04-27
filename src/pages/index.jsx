@@ -18,7 +18,7 @@ const Block = styled.div`
   width: 100vw;
   background-color: var(--backgroundColor);
   height: 90px;
-  border-top: 15px solid var(--linkColor);
+  border-top: 12px solid var(--blockBorder);
   position: absolute;
   bottom: 0;
   margin: 0;
@@ -34,8 +34,9 @@ function Index() {
   useEffect(() => {
     if (eyesRef.current) {
       const eyePos = eyesRef.current.getBoundingClientRect()
-
-      setEyeCoords([eyePos.left, eyePos.top])
+      const left = eyePos.left + eyePos.width / 2
+      const top = eyePos.top + eyePos.height / 2
+      setEyeCoords([left, top])
     }
   }, [])
 
@@ -45,13 +46,13 @@ function Index() {
     setCoords([clientX, clientY])
   })
 
-  const clampedEyeX = Math.max(-7.5, Math.min(7.5, x - eyeX))
-  const clampedEyeY = Math.max(-7.5, Math.min(7.5, y - eyeY))
+  let clampedEyeX = 0
+  let clampedEyeY = 0
 
-  // console.log('new eyes', clampedEyeX, clampedEyeY)
-  // console.log('mouse', x, y)
-  // console.log('eyes', eyeX, eyeY, eyeA, eyeB)
-  // console.log('new eyes R', radianDegreesX, radianDegreesY)
+  if (x !== 0 && y !== 0) {
+    clampedEyeX = Math.max(-7.5, Math.min(7.5, x - eyeX))
+    clampedEyeY = Math.max(-7.5, Math.min(7.5, y - eyeY))
+  }
 
   return (
     <Fragment>

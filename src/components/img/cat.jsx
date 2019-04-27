@@ -74,7 +74,11 @@ function Cat(props) {
             strokeWidth={strokeWidth}
           />
 
-          <g id="eyes" ref={eyesRef} transform={`translate(${eyeX} ${eyeY})`}>
+          <g
+            id="catEyes"
+            ref={eyesRef}
+            transform={`translate(${eyeX} ${eyeY})`}
+          >
             <ellipse
               cx="6"
               cy="10"

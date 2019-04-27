@@ -1,11 +1,13 @@
 html {
-  --inlineCode-bg: #fff9c3;
+  --inlineCode-bg: #cccccc;
   --inlineCode-text: #1a1a1a;
   --inlineCode-border: #d4d4d4;
   --textColor: #000000;
   --backgroundColor: #ffffff;
-  --linkColor: #9250B8;
+  --linkColor: #9250b8;
+  --linkColorHover: #7928a7;
   --catEyeColor: #e0dcdc;
+  --blockBorder: #000000;
 
   background: var(--backgroundColor);
   color: var(--textColor);
@@ -22,16 +24,34 @@ body {
   --textColor: #e0dcdc;
   --backgroundColor: #363535;
   --linkColor: rgb(208, 62, 142);
+  --linkColorHover: rgb(162, 36, 105);
   --inlineCode-bg: rgba(249, 248, 244, 0.17);
   --inlineCode--text: #e8e8e8;
   --catEyeColor: #f3be21;
+  --blockBorder: #e0dcdc;
 }
 
 a {
   color: var(--linkColor);
 }
 
-details {
+a:hover {
+  color: var(--linkColorHover);
+}
+
+.back-to-the-top {
+  stroke: var(--linkColor);
+}
+
+.back-to-the-top:hover {
+  stroke: var(--linkColorHover);
+}
+
+#catEyes {
+  transition: all 400ms ease-in-out;
+}
+
+.learnDetails {
   border: 3px solid var(--textColor);
   max-width: 300px;
   margin: auto;
@@ -39,27 +59,31 @@ details {
   margin-bottom: 2em;
 }
 
-summary {
+.learnSummary {
   display: block;
   border-bottom: 3px solid var(--textColor);
   cursor: pointer;
   text-align: center;
 }
 
+::-webkit-details-marker {
+  display: none;
+}
+
 .dropdown_menu {
   max-height: 200px;
   overflow-y: scroll;
   margin: auto;
-  padding: .5em 0;
+  padding: 0.5em 0;
   list-style: none;
 }
 
 .dropdown_menu li {
   padding-left: 1em;
   overflow-wrap: break-word;
-	word-wrap: break-word;
+  word-wrap: break-word;
   word-break: break-word;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 @media screen and (max-width: 800px) {
@@ -78,31 +102,31 @@ summary {
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
  */
- code[class*='language-'],
- pre[class*='language-'] {
-   color: white;
-   background: none;
-   font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
-   font-feature-settings: normal;
-   text-align: left;
-   white-space: pre;
-   word-spacing: normal;
-   word-break: normal;
-   word-wrap: normal;
-   line-height: 1.5;
-   margin-bottom: 0;
-   margin-top: 0;
- 
-   -moz-tab-size: 4;
-   -o-tab-size: 4;
-   tab-size: 4;
- 
-   -webkit-hyphens: none;
-   -moz-hyphens: none;
-   -ms-hyphens: none;
-   hyphens: none;
- }
- 
+code[class*='language-'],
+pre[class*='language-'] {
+  color: white;
+  background: none;
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
+  font-feature-settings: normal;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  margin-top: 0;
+
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
 /* Code blocks */
 pre[class*='language-'] {
   padding: 1.3125rem;
@@ -112,107 +136,105 @@ pre[class*='language-']::-moz-selection {
   /* Firefox */
   background: hsl(207, 4%, 16%);
 }
- 
- pre[class*='language-']::selection {
-   /* Safari */
-   background: hsl(207, 4%, 16%);
- }
- 
- /* Text Selection colour */
- pre[class*='language-']::-moz-selection,
- pre[class*='language-'] ::-moz-selection {
-   text-shadow: none;
-   background: hsla(0, 0%, 100%, 0.15);
- }
- 
- pre[class*='language-']::selection,
- pre[class*='language-'] ::selection {
-   text-shadow: none;
-   background: hsla(0, 0%, 100%, 0.15);
- }
- 
- /* Inline code */
- :not(pre) > code[class*='language-'] {
-   border-radius: 0.3em;
-   background: var(--inlineCode-bg);
-   color: var(--inlineCode--text);
-   padding: 0.2em 0.2em;
-   white-space: normal;
-   font-size: .8em;
-   margin: 0 .14em;
- }
- 
- .token.attr-name {
-   color: rgb(173, 219, 103);
-   font-style: italic;
- }
- 
- .token.comment {
-   color: rgb(99, 119, 119);
- }
- 
- .token.string,
- .token.url {
-   color: #97C475;
- }
- 
- .token.variable {
-   color: rgb(214, 222, 235);
- }
- 
- .token.number {
-   color: rgb(220, 200, 27);
- }
- 
- .token.builtin,
- .token.char,
- .token.constant,
- .token.function {
-   color: #5DAEF2;
- }
- 
- .token.punctuation {
-   color: rgb(99, 119, 119);
- }
- 
- .token.selector,
- .token.doctype {
-   color: #C775DF;
-   font-style: 'italic';
- }
- 
- .token.class-name {
-   color: rgb(255, 203, 139);
- }
- 
- .token.tag,
- .token.keyword {
-   color: #C775DF;
- }
 
+pre[class*='language-']::selection {
+  /* Safari */
+  background: hsl(207, 4%, 16%);
+}
 
- .token.operator {
-  color: #51B6C3
- }
- 
- .token.boolean {
-   color: #D29B62
- }
- 
- .token.property {
-   color: rgb(128, 203, 196);
- }
- 
- .token.namespace {
-   color: rgb(178, 204, 214);
- }
- 
- pre[data-line] {
-   padding: 1em 0 1em 3em;
-   position: relative;
- }
+/* Text Selection colour */
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
 
- .gatsby-highlight-code-line {
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
+  text-shadow: none;
+  background: hsla(0, 0%, 100%, 0.15);
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  border-radius: 0.3rem;
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode--text);
+  padding: 0.2rem 0.2rem;
+  white-space: normal;
+  font-size: 1.1rem;
+}
+
+.token.attr-name {
+  color: rgb(173, 219, 103);
+  font-style: italic;
+}
+
+.token.comment {
+  color: rgb(99, 119, 119);
+}
+
+.token.string,
+.token.url {
+  color: #97c475;
+}
+
+.token.variable {
+  color: rgb(214, 222, 235);
+}
+
+.token.number {
+  color: rgb(220, 200, 27);
+}
+
+.token.builtin,
+.token.char,
+.token.constant,
+.token.function {
+  color: #5daef2;
+}
+
+.token.punctuation {
+  color: rgb(99, 119, 119);
+}
+
+.token.selector,
+.token.doctype {
+  color: #c775df;
+  font-style: 'italic';
+}
+
+.token.class-name {
+  color: rgb(255, 203, 139);
+}
+
+.token.tag,
+.token.keyword {
+  color: #c775df;
+}
+
+.token.operator {
+  color: #51b6c3;
+}
+
+.token.boolean {
+  color: #d29b62;
+}
+
+.token.property {
+  color: rgb(128, 203, 196);
+}
+
+.token.namespace {
+  color: rgb(178, 204, 214);
+}
+
+pre[data-line] {
+  padding: 1em 0 1em 3em;
+  position: relative;
+}
+
+.gatsby-highlight-code-line {
   background-color: hsla(207, 95%, 15%, 1);
   display: block;
   margin-right: -1.3125rem;
@@ -227,10 +249,10 @@ pre[class*='language-']::-moz-selection {
   margin-left: -1.3125rem;
   margin-right: -1.3125rem;
   border-radius: 10px;
-  background: #282C34;
+  background: #282c34;
   -webkit-overflow-scrolling: touch;
   overflow: auto;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 @media (max-width: 672px) {

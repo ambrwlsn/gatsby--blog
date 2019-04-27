@@ -84,8 +84,8 @@ class wiltPage extends React.Component {
             <PageTitle>What I Learned Today - 100 Days</PageTitle>
             <WILT leafColor="green" textColor="currentColor" />
 
-            <details>
-              <summary>Select</summary>
+            <details className="learnDetails">
+              <summary className="learnSummary">Select</summary>
               <ul className="dropdown_menu">
                 <WiltDropdownNoJs />
               </ul>
@@ -128,7 +128,7 @@ class wiltPage extends React.Component {
                     </Hashtag>
                     &nbsp;
                     <a className="link__top-of-page" href="#">
-                      <BackToTop color={`var(--linkColor)`} />
+                      <BackToTop className="back-to-the-top" />
                     </a>
                   </PostTitle>
                   <Content
