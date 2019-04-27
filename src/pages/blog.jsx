@@ -46,7 +46,8 @@ const Teaser = styled.p`
 const Wrapper = styled.article`
   padding-bottom: 1em;
   position: relative;
-  margin-left: 3em;
+  margin-left: 3rem;
+  max-width: 100%;
 `
 
 const Date = styled.time`

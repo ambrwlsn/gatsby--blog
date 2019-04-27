@@ -14,7 +14,12 @@ import SEO from '../components/seo'
 const Wrapper = styled.main``
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
-  font-size: 2.5em;
+  font-size: 2.5rem;
+  @media (max-width: 800px) {
+    margin-left: 3rem;
+    font-size: 2.2rem;
+    max-width: 80%;
+  }
 `
 const BlogPostDate = styled.time``
 
@@ -38,9 +43,6 @@ const BlogPostTemplate = props => {
   const toothbrushes = post.timeToRead / 2
   return (
     <Layout>
-      <Link to="/blog" rel="prev">
-        ← blog home
-      </Link>
       <ContentWrapper>
         <SEO
           title={post.frontmatter.title}
