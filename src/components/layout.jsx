@@ -14,6 +14,21 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 
+const sizes = {
+  desktop: 50,
+  mobile: 25,
+}
+
+const Logo = styled(A)`
+  width: ${sizes.desktop}px;
+  height: ${sizes.desktop}px;
+
+  @media (max-width: 800px) {
+    width: ${sizes.mobile}px;
+    height: ${sizes.mobile}px;
+  }
+`
+
 const Layout = ({ children }) => {
   const context = useContext(ThemeContext)
 
@@ -21,7 +36,7 @@ const Layout = ({ children }) => {
     <Fragment>
       <Wrapper>
         <Link to="/" style={{ color: 'inherit', display: 'inline' }}>
-          <A width={50} height={50} color="currentColor" />
+          <Logo width={50} height={50} color="currentColor" />
         </Link>
         <Nav />
         <ModeToggle

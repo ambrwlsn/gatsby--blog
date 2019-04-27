@@ -17,6 +17,10 @@ const Wrapper = styled.label`
   display: inline-block;
   width: 2.5em;
   height: 1.5em;
+  @media (max-width: 800px) {
+    border: none;
+    width: auto;
+  }
 `
 const Handle = styled.span`
   position: relative;
@@ -28,6 +32,12 @@ const Handle = styled.span`
   transition: transform 400ms ease-out;
   input:checked + & {
     transform: translateX(-100%);
+  }
+  @media (max-width: 800px) {
+    transition: none;
+    input: checked + & {
+      transform: none;
+    }
   }
 `
 const SunToggle = styled(Sun)`

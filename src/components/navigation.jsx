@@ -5,17 +5,27 @@ import styled from 'styled-components'
 const List = styled.ul`
   padding: 0;
   margin: 0;
-  list-style: none;
+  font-size: 2.5rem;
+
+  @media (max-width: 800px) {
+    font-size: 5.5vw;
+    display: flex;
+  }
 `
 
-const NavLink = styled(Link)``
+const NavLink = styled(Link)`
+  text-decoration: none;
+`
 
 const NavItem = styled.li`
   padding: 0;
   margin: 0;
   display: inline-block;
   margin-right: 1em;
-  font-weight: 600;
+  font-weight: 400;
+  &:last-child {
+    margin: 0;
+  }
 `
 
 const Nav = () => {
