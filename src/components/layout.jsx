@@ -9,9 +9,9 @@ import Nav from '@components/navigation'
 
 const Wrapper = styled.div`
   max-width: 100%;
-  padding: 2em;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `
 
 const sizes = {

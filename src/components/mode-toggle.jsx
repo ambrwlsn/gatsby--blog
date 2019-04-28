@@ -19,7 +19,7 @@ const Wrapper = styled.label`
   height: 1.5em;
   @media (max-width: 800px) {
     border: none;
-    width: auto;
+    width: 0.7rem;
   }
 `
 const Handle = styled.span`
@@ -35,7 +35,7 @@ const Handle = styled.span`
   }
   @media (max-width: 800px) {
     transition: none;
-    input: checked + & {
+    input:checked + & {
       transform: none;
     }
   }
@@ -43,10 +43,18 @@ const Handle = styled.span`
 const SunToggle = styled(Sun)`
   margin-right: 4px;
   max-width: 100%;
+  @media (max-width: 800px) {
+    margin-right: 0;
+    width: 20px;
+  }
 `
 const MoonToggle = styled(Moon)`
   margin-right: 9.4px;
   max-width: 100%;
+  @media (max-width: 800px) {
+    margin-right: 0;
+    width: 20px;
+  }
 `
 
 const ModeToggle = ({ checked, onChange, ...otherProps }) => {
@@ -55,7 +63,7 @@ const ModeToggle = ({ checked, onChange, ...otherProps }) => {
     setMounted(true)
   })
 
-  if (!mounted) return null
+  if (!mounted) return <Wrapper />
   return (
     <Wrapper htmlFor="mode">
       <Input

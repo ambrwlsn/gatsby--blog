@@ -8,7 +8,7 @@ const List = styled.ul`
   font-size: 2.5rem;
 
   @media (max-width: 800px) {
-    font-size: 5.5vw;
+    font-size: 1.5rem;
     display: flex;
   }
 `
@@ -24,7 +24,7 @@ const NavItem = styled.li`
   margin-right: 1em;
   font-weight: 400;
   &:last-child {
-    margin: 0;
+    margin-right: 0;
   }
 `
 
