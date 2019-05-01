@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Github = () => {
+const Github = props => {
+  const { width } = props
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="512"
-      height="512"
+      width={width}
+      height={width}
       viewBox="0 0 438.549 438.549"
     >
       <path

@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { Flipper, Flipped } from 'react-flip-toolkit'
 
 const BORDER_RADIUS = '10px'
 
 const Container = styled.div`
   display: grid;
-  width: 600px;
-  height: 500px;
+  width: 800px;
+  height: 600px;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 1rem;
@@ -14,27 +15,36 @@ const Container = styled.div`
   grid-template-areas:
     'review review length length'
     'review review . picture'
-    'method type type .';
+    'method type type picture';
+  @media (max-width: 800px) {
+    margin: 0 1em 3em 1em;
+    grid-template-areas:
+      'review review review review'
+      'method method picture picture'
+      'type type length length';
+    width: auto;
+    height: auto;
+  }
 `
 
 const ReviewContainer = styled.div`
+  position: relative;
   grid-area: review;
   background: #b2da93;
   padding: 1em;
   line-height: 1.5;
   font-size: 1em;
-
   border-radius: ${BORDER_RADIUS};
-  &:hover {
-    grid-row-start: 1;
-    grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 5;
-    z-index: 1;
+  z-index: 1;
+  overflow: hidden;
+  @media (max-width: 800px) {
+    max-height: 270px;
   }
 `
 
-const Review = styled.div``
+const Review = styled.div`
+  color: black;
+`
 
 const Length = styled.div`
   font-size: 5rem;
@@ -50,21 +60,21 @@ const LengthContainer = styled.div`
 `
 
 const Picture = styled.img`
-  height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  vertical-align: middle;
+  border-radius: ${BORDER_RADIUS};
 `
 
 const PictureContainer = styled.div`
-  background: yellow;
-  border-radius: ${BORDER_RADIUS};
   grid-area: picture;
-`
-
-const Method = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  width: 200px;
+  height: auto;
+  border-radius: ${BORDER_RADIUS};
+  @media (max-width: 800px) {
+    height: auto;
+    width: auto;
+  }
 `
 
 const MethodContainer = styled.div`
@@ -81,30 +91,78 @@ const TypeContainer = styled.div`
 
 const Type = styled.div``
 
+const DropdownReview = styled.div`
+  position: relative;
+  grid-area: review;
+  background: #b2da93;
+  padding: 1em;
+  line-height: 1.5;
+  font-size: 1em;
+  border-radius: ${BORDER_RADIUS};
+  grid-row-start: 1;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  z-index: 1;
+`
+
+const Button = styled.button`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+`
+
 const BookReview = props => {
-  const { review, length, picture, picAlt, method, methodAlt, type } = props
-  return (
-    <Container>
+  const { review, length, picture, picAlt, method, type } = props
+
+  const [isDropdownOpen, setDropdown] = useState(false)
+
+  const ReviewContainerInitial = ({ setDropdown }) => (
+    <Flipped flipId="container">
       <ReviewContainer>
-        <Review>{review}</Review>
+        <Button onClick={setDropdown}>x</Button>
+        <Flipped inverseFlipId="container">
+          <Review>{review}</Review>
+        </Flipped>
       </ReviewContainer>
+    </Flipped>
+  )
 
-      <LengthContainer>
-        <Length>{length}</Length>
-      </LengthContainer>
+  const ReviewContainerFinal = ({ setDropdown }) => (
+    <Flipped flipId="container">
+      <DropdownReview>
+        <Button onClick={setDropdown}>-</Button>
+        <Flipped inverseFlipId="container">
+          <Review>{review}</Review>
+        </Flipped>
+      </DropdownReview>
+    </Flipped>
+  )
 
-      <PictureContainer>
-        <Picture src={picture} alt={picAlt} />
-      </PictureContainer>
+  return (
+    <Flipper flipKey={isDropdownOpen}>
+      <Container>
+        {isDropdownOpen ? (
+          <ReviewContainerFinal setDropdown={() => setDropdown(false)} />
+        ) : (
+          <ReviewContainerInitial setDropdown={() => setDropdown(true)} />
+        )}
 
-      <MethodContainer>
-        <Method src={method} alt={methodAlt} />
-      </MethodContainer>
+        <LengthContainer>
+          <Length>{length}</Length>
+        </LengthContainer>
 
-      <TypeContainer>
-        <Type>{type}</Type>
-      </TypeContainer>
-    </Container>
+        <PictureContainer>
+          <Picture src={picture} alt={picAlt} />
+        </PictureContainer>
+
+        <MethodContainer>{method}</MethodContainer>
+
+        <TypeContainer>
+          <Type>{type}</Type>
+        </TypeContainer>
+      </Container>
+    </Flipper>
   )
 }
 export default BookReview
