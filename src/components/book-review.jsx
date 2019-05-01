@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Flipper, Flipped } from 'react-flip-toolkit'
 
 const BORDER_RADIUS = '10px'
+const REVIEW_COLOUR = '#b2da93'
 
 const Container = styled.div`
   display: grid;
@@ -20,6 +21,8 @@ const Container = styled.div`
     'method . type type type . picture';
   @media (max-width: 800px) {
     margin: 0 1em 3em 1em;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-rows: 1fr 1rem 0.5fr 1rem 0.5fr;
     grid-template-areas:
       'review review review review review review review'
       '. . . . . . .'
@@ -34,12 +37,13 @@ const Container = styled.div`
 const ReviewContainer = styled.div`
   position: relative;
   grid-area: review;
-  background: #b2da93;
-  padding: 1em;
-  line-height: 1.5;
-  font-size: 1em;
+  background: ${REVIEW_COLOUR};
+  padding: 1.2rem 1.2rem 2.6rem 1.2rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
   border-radius: ${BORDER_RADIUS};
   z-index: 1;
+  overflow: hidden;
 `
 
 const Review = styled.div`
@@ -78,43 +82,75 @@ const PictureContainer = styled.div`
 `
 
 const MethodContainer = styled.div`
-  background: rebeccapurple;
   border-radius: ${BORDER_RADIUS};
   grid-area: method;
+  height: 100%;
 `
 
 const TypeContainer = styled.div`
   grid-area: type;
   background: lightblue;
   border-radius: ${BORDER_RADIUS};
+  word-break: break-word;
 `
 
 const Type = styled.div`
+  padding: 1.2rem;
+  font-size: 1.05rem;
+
   @media (max-width: 800px) {
     font-size: 1.2rem;
-    padding: 1rem;
   }
 `
 
-const DropdownReview = styled.div`
+const DropdownReviewContainer = styled.div`
   position: relative;
   grid-area: review;
-  background: #b2da93;
-  padding: 1em;
-  line-height: 1.5;
-  font-size: 1em;
+  background: ${REVIEW_COLOUR};
+  padding: 2rem 5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
   border-radius: ${BORDER_RADIUS};
   grid-row-start: 1;
   grid-row-end: 8;
   grid-column-start: 1;
   grid-column-end: 8;
   z-index: 1;
+  overflow: hidden;
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
+`
+
+const DropdownReview = styled.div`
+  color: black;
+  overflow: hidden;
+  max-height: 100%;
+  margin: 50px auto;
+
+  @media (max-width: 800px) {
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 1rem 1rem 2.6rem 1rem;
+  }
 `
 
 const Button = styled.button`
   position: absolute;
   bottom: 0;
   right: 0;
+  width: 100%;
+  background: ${REVIEW_COLOUR};
+  border-bottom-right-radius: ${BORDER_RADIUS};
+  border-bottom-left-radius: ${BORDER_RADIUS};
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  font-size: 1.1rem;
+  border: none;
+  background: #6e984e;
+  border-top: 3px solid black;
+  padding: 0.4rem;
 `
 
 const BookReview = props => {
@@ -125,7 +161,7 @@ const BookReview = props => {
   const ReviewContainerInitial = ({ setDropdown }) => (
     <Flipped flipId="container">
       <ReviewContainer>
-        <Button onClick={setDropdown}>x</Button>
+        <Button onClick={setDropdown}>Read More</Button>
         <Flipped inverseFlipId="container">
           <Review>{review}</Review>
         </Flipped>
@@ -135,12 +171,12 @@ const BookReview = props => {
 
   const ReviewContainerFinal = ({ setDropdown }) => (
     <Flipped flipId="container">
-      <DropdownReview>
-        <Button onClick={setDropdown}>-</Button>
+      <DropdownReviewContainer>
+        <Button onClick={setDropdown}>Read Less</Button>
         <Flipped inverseFlipId="container">
-          <Review>{review}</Review>
+          <DropdownReview>{review}</DropdownReview>
         </Flipped>
-      </DropdownReview>
+      </DropdownReviewContainer>
     </Flipped>
   )
 

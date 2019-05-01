@@ -16,11 +16,6 @@ const ReviewSection = styled.section`
   align-items: center;
 `
 
-const Headphone = styled(Github)`
-  width: 100%;
-  height: 100%;
-`
-
 const Reading = () => (
   <Layout>
     <SEO
@@ -29,12 +24,12 @@ const Reading = () => (
     />
     <ReviewSection>
       <BookReview
-        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed."
+        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to BOO hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. boooo"
         picture={becoming}
         picAlt="Michelle Obama on her book cover"
         methodAlt="headphones"
         length="19h 3m"
-        method={<Headphone />}
+        method={<Github width="100%" />}
         type="Autobiography, strong, real."
       />
     </ReviewSection>
@@ -45,7 +40,7 @@ const Reading = () => (
         picAlt="Michelle Obama on her book cover"
         methodAlt="headphones"
         length="19h 3m"
-        method={<Headphone />}
+        method={<Github width="100%" />}
         type="Autobiography, strong, real."
       />
     </ReviewSection>
