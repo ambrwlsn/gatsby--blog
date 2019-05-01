@@ -8,20 +8,24 @@ const Container = styled.div`
   display: grid;
   width: 800px;
   height: 600px;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+  grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+  // grid-gap: 1rem;
   margin-bottom: 3em;
   grid-template-areas:
-    'review review length length'
-    'review review . picture'
-    'method type type picture';
+    'review review review . length length length'
+    'review review review . . . .'
+    'review review review . . . picture'
+    '. . . . . . picture'
+    'method . type type type . picture';
   @media (max-width: 800px) {
     margin: 0 1em 3em 1em;
     grid-template-areas:
-      'review review review review'
-      'method method picture picture'
-      'type type length length';
+      'review review review review review review review'
+      '. . . . . . .'
+      'method method method . picture picture picture'
+      '. . . . . . .'
+      'type type type . length length length';
     width: auto;
     height: auto;
   }
@@ -36,14 +40,16 @@ const ReviewContainer = styled.div`
   font-size: 1em;
   border-radius: ${BORDER_RADIUS};
   z-index: 1;
-  overflow: hidden;
-  @media (max-width: 800px) {
-    max-height: 270px;
-  }
 `
 
 const Review = styled.div`
   color: black;
+  overflow: hidden;
+  max-height: 100%;
+  @media (max-width: 800px) {
+    max-height: 270px;
+    font-size: 1.2rem;
+  }
 `
 
 const Length = styled.div`
@@ -68,13 +74,7 @@ const Picture = styled.img`
 
 const PictureContainer = styled.div`
   grid-area: picture;
-  width: 200px;
-  height: auto;
   border-radius: ${BORDER_RADIUS};
-  @media (max-width: 800px) {
-    height: auto;
-    width: auto;
-  }
 `
 
 const MethodContainer = styled.div`
@@ -89,7 +89,12 @@ const TypeContainer = styled.div`
   border-radius: ${BORDER_RADIUS};
 `
 
-const Type = styled.div``
+const Type = styled.div`
+  @media (max-width: 800px) {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+`
 
 const DropdownReview = styled.div`
   position: relative;
@@ -100,9 +105,9 @@ const DropdownReview = styled.div`
   font-size: 1em;
   border-radius: ${BORDER_RADIUS};
   grid-row-start: 1;
-  grid-row-end: 5;
+  grid-row-end: 8;
   grid-column-start: 1;
-  grid-column-end: 5;
+  grid-column-end: 8;
   z-index: 1;
 `
 
