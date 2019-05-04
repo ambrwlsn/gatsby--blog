@@ -11,8 +11,7 @@ const Container = styled.div`
   height: 600px;
   grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
   grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
-  // grid-gap: 1rem;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
   grid-template-areas:
     'review review review . length length length'
     'review review review . . . .'
@@ -47,7 +46,7 @@ const ReviewContainer = styled.div`
 `
 
 const Review = styled.div`
-  color: black;
+  color: var(--readText);
   overflow: hidden;
   max-height: 100%;
   @media (max-width: 800px) {
@@ -58,6 +57,7 @@ const Review = styled.div`
 
 const Length = styled.div`
   font-size: 5rem;
+  color: var(--readText);
 `
 
 const LengthContainer = styled.div`
@@ -92,6 +92,7 @@ const TypeContainer = styled.div`
   background: lightblue;
   border-radius: ${BORDER_RADIUS};
   word-break: break-word;
+  color: var(--readText);
 `
 
 const Type = styled.div`
@@ -141,6 +142,7 @@ const Button = styled.button`
   bottom: 0;
   right: 0;
   width: 100%;
+  color: #000000;
   background: ${REVIEW_COLOUR};
   border-bottom-right-radius: ${BORDER_RADIUS};
   border-bottom-left-radius: ${BORDER_RADIUS};

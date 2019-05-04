@@ -8,6 +8,7 @@ html {
   --linkColorHover: #7928a7;
   --catEyeColor: #e0dcdc;
   --blockBorder: #000000;
+  --readText: #363535;
 
   background: var(--backgroundColor);
   color: var(--textColor);

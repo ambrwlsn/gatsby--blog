@@ -24,19 +24,8 @@ const Reading = () => (
     />
     <ReviewSection>
       <BookReview
-        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to BOO hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. boooo"
+        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with."
         picture={becoming}
-        picAlt="Michelle Obama on her book cover"
-        methodAlt="headphones"
-        length="19h 3m"
-        method={<Github width="100%" />}
-        type="Autobiography, strong, real."
-      />
-    </ReviewSection>
-    <ReviewSection>
-      <BookReview
-        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed."
-        picture={upAndGoing}
         picAlt="Michelle Obama on her book cover"
         methodAlt="headphones"
         length="19h 3m"
