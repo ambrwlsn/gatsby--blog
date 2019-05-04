@@ -4,11 +4,15 @@ import styled from 'styled-components'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
-
 import BookReview from '@components/book-review'
+
 import becoming from '@pages/img/read/becoming.jpg'
 import upAndGoing from '@pages/img/read/up_and_going.jpg'
-import Github from '@pages/img/github'
+import myThoughtsExactly from '@pages/img/read/my_thoughts_exactly.jpg'
+
+import Headphones from '@pages/img/read/headphones'
+import Kindle from '@pages/img/read/kindle'
+// import Book from '@pages/img/read/book'
 
 const ReviewSection = styled.section`
   display: flex;
@@ -28,8 +32,51 @@ const Reading = () => (
         picture={becoming}
         picAlt="Michelle Obama on her book cover"
         methodAlt="headphones"
-        length="19h 3m"
-        method={<Github width="100%" />}
+        length="1143 minutes"
+        method={
+          <Headphones
+            width={110}
+            height={110}
+            fill="var(--readText)"
+            stroke="var(--readText)"
+          />
+        }
+        type="Autobiography, strong, real."
+      />
+    </ReviewSection>
+    <ReviewSection>
+      <BookReview
+        review=""
+        picture={upAndGoing}
+        picAlt="Up and Going Book Cover"
+        methodAlt="Kindle"
+        method={
+          <Kindle
+            width={110}
+            height={110}
+            fill="var(--readText)"
+            stroke="var(--readText)"
+          />
+        }
+        length="68 pages"
+        type="Autobiography, strong, real."
+      />
+    </ReviewSection>
+    <ReviewSection>
+      <BookReview
+        review=""
+        picture={myThoughtsExactly}
+        picAlt="Lily Allen on her book cover"
+        methodAlt="Kindle"
+        method={
+          <Kindle
+            width={110}
+            height={110}
+            fill="var(--readText)"
+            stroke="var(--readText)"
+          />
+        }
+        length="344 pages"
         type="Autobiography, strong, real."
       />
     </ReviewSection>

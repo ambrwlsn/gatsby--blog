@@ -56,8 +56,12 @@ const Review = styled.div`
 `
 
 const Length = styled.div`
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--readText);
+  @media (max-width: 800px) {
+    text-align: center;
+    font-size: 2rem;
+  }
 `
 
 const LengthContainer = styled.div`
@@ -83,8 +87,11 @@ const PictureContainer = styled.div`
 
 const MethodContainer = styled.div`
   border-radius: ${BORDER_RADIUS};
+  background: #f9f99f;
   grid-area: method;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const TypeContainer = styled.div`
@@ -139,6 +146,8 @@ const DropdownReview = styled.div`
 
 const Button = styled.button`
   position: absolute;
+  font: inherit;
+  cursor: pointer;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -155,6 +164,11 @@ const Button = styled.button`
   padding: 0.4rem;
 `
 
+const ReadCta = styled.span`
+  font-size: 0.9rem;
+  display: inline-block;
+`
+
 const BookReview = props => {
   const { review, length, picture, picAlt, method, type } = props
 
@@ -163,7 +177,11 @@ const BookReview = props => {
   const ReviewContainerInitial = ({ setDropdown }) => (
     <Flipped flipId="container">
       <ReviewContainer>
-        <Button onClick={setDropdown}>Read More</Button>
+        <Button onClick={setDropdown}>
+          <Flipped inverseFlipId="container">
+            <ReadCta>Read More…</ReadCta>
+          </Flipped>
+        </Button>
         <Flipped inverseFlipId="container">
           <Review>{review}</Review>
         </Flipped>
@@ -174,7 +192,9 @@ const BookReview = props => {
   const ReviewContainerFinal = ({ setDropdown }) => (
     <Flipped flipId="container">
       <DropdownReviewContainer>
-        <Button onClick={setDropdown}>Read Less</Button>
+        <Button onClick={setDropdown}>
+          <ReadCta>Read Less…</ReadCta>
+        </Button>
         <Flipped inverseFlipId="container">
           <DropdownReview>{review}</DropdownReview>
         </Flipped>
@@ -186,9 +206,13 @@ const BookReview = props => {
     <Flipper flipKey={isDropdownOpen}>
       <Container>
         {isDropdownOpen ? (
-          <ReviewContainerFinal setDropdown={() => setDropdown(false)} />
+          <Flipped inverseFlipId="container">
+            <ReviewContainerFinal setDropdown={() => setDropdown(false)} />
+          </Flipped>
         ) : (
-          <ReviewContainerInitial setDropdown={() => setDropdown(true)} />
+          <Flipped inverseFlipId="container">
+            <ReviewContainerInitial setDropdown={() => setDropdown(true)} />
+          </Flipped>
         )}
 
         <LengthContainer>
