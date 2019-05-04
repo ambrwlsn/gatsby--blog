@@ -15,6 +15,7 @@ const List = styled.ul`
 
 const NavLink = styled(Link)`
   text-decoration: none;
+  font-family: Courgette;
 `
 
 const NavItem = styled.li`
