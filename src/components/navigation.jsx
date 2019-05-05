@@ -8,8 +8,12 @@ const List = styled.ul`
   font-size: 2.5rem;
 
   @media (max-width: 800px) {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     display: flex;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 1.3rem;
   }
 `
 

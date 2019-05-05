@@ -24,12 +24,16 @@ const Hashtag = styled.a`
 `
 const ContentStyles = styled.div`
   line-height: 1.6;
-  font-size: 1.25em;
+  font-size: 1.25rem;
 `
-const PageTitle = styled.h1`
+const Title = styled.h1`
   font-family: 'Courgette', cursive;
   text-align: center;
 `
+const TitleStyles = styled.span`
+  font-size: 1.25rem;
+`
+
 const PostTitle = styled.h2`
   font-family: 'Courgette', cursive;
 `
@@ -80,8 +84,11 @@ class wiltPage extends React.Component {
             title="What I Learned Today"
             keywords={['wilt', 'learning', 'javascript', 'learn']}
           />
+          <TitleStyles>
+            <Title>What I Learned Today - 100 Days</Title>
+          </TitleStyles>
+
           <ContentStyles>
-            <PageTitle>What I Learned Today - 100 Days</PageTitle>
             <WILT leafColor="green" textColor="currentColor" />
 
             <details className="learnDetails">

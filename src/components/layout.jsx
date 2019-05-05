@@ -12,11 +12,14 @@ const Wrapper = styled.div`
   padding: 2rem;
   display: flex;
   justify-content: space-around;
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
 `
 
 const sizes = {
   desktop: 50,
-  mobile: 25,
+  mobile: 22,
 }
 
 const Logo = styled(A)`
