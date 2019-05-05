@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Flipper, Flipped } from 'react-flip-toolkit'
 
 const BORDER_RADIUS = '10px'
-const REVIEW_COLOUR = '#b2da93'
 
 const Container = styled.div`
   display: grid;
@@ -36,7 +35,7 @@ const Container = styled.div`
 const ReviewContainer = styled.div`
   position: relative;
   grid-area: review;
-  background: ${REVIEW_COLOUR};
+  background: ${p => p.reviewBackground};
   padding: 1.2rem 1.2rem 2.6rem 1.2rem;
   line-height: 1.7;
   font-size: 1.05rem;
@@ -68,7 +67,7 @@ const LengthContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: pink;
+  background: ${p => p.lengthBackground};
   border-radius: ${BORDER_RADIUS};
   grid-area: length;
 `
@@ -87,7 +86,7 @@ const PictureContainer = styled.div`
 
 const MethodContainer = styled.div`
   border-radius: ${BORDER_RADIUS};
-  background: #f9f99f;
+  background: ${p => p.methodBackground};
   grid-area: method;
   display: flex;
   justify-content: center;
@@ -96,7 +95,7 @@ const MethodContainer = styled.div`
 
 const TypeContainer = styled.div`
   grid-area: type;
-  background: lightblue;
+  background: ${p => p.typeBackground};
   border-radius: ${BORDER_RADIUS};
   word-break: break-word;
   color: var(--readText);
@@ -114,7 +113,7 @@ const Type = styled.div`
 const DropdownReviewContainer = styled.div`
   position: relative;
   grid-area: review;
-  background: ${REVIEW_COLOUR};
+  background: ${p => p.reviewBackground};
   padding: 2rem 5rem;
   line-height: 1.7;
   font-size: 1.05rem;
@@ -152,14 +151,13 @@ const Button = styled.button`
   right: 0;
   width: 100%;
   color: #000000;
-  background: ${REVIEW_COLOUR};
   border-bottom-right-radius: ${BORDER_RADIUS};
   border-bottom-left-radius: ${BORDER_RADIUS};
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   font-size: 1.1rem;
   border: none;
-  background: #6e984e;
+  background: ${p => p.buttonBackground};
   border-top: 3px solid black;
   padding: 0.4rem;
 `
@@ -169,15 +167,35 @@ const ReadCta = styled.span`
   display: inline-block;
 `
 
+const Title = styled.h1`
+  text-align: center;
+  font-weight: 300;
+  font-size: 1.5rem;
+  font-family: 'Courgette', sans-serif;
+`
+
 const BookReview = props => {
-  const { review, length, picture, picAlt, method, type } = props
+  const {
+    title,
+    review,
+    reviewColour,
+    length,
+    lengthColour,
+    picture,
+    picAlt,
+    method,
+    methodColour,
+    type,
+    typeColour,
+    buttonColour,
+  } = props
 
   const [isDropdownOpen, setDropdown] = useState(false)
 
   const ReviewContainerInitial = ({ setDropdown }) => (
     <Flipped flipId="container">
-      <ReviewContainer>
-        <Button onClick={setDropdown}>
+      <ReviewContainer reviewBackground={reviewColour}>
+        <Button onClick={setDropdown} buttonBackground={buttonColour}>
           <Flipped inverseFlipId="container">
             <ReadCta>Read More…</ReadCta>
           </Flipped>
@@ -191,8 +209,8 @@ const BookReview = props => {
 
   const ReviewContainerFinal = ({ setDropdown }) => (
     <Flipped flipId="container">
-      <DropdownReviewContainer>
-        <Button onClick={setDropdown}>
+      <DropdownReviewContainer reviewBackground={reviewColour}>
+        <Button onClick={setDropdown} buttonBackground={buttonColour}>
           <ReadCta>Read Less…</ReadCta>
         </Button>
         <Flipped inverseFlipId="container">
@@ -204,6 +222,7 @@ const BookReview = props => {
 
   return (
     <Flipper flipKey={isDropdownOpen}>
+      <Title>{title}</Title>
       <Container>
         {isDropdownOpen ? (
           <Flipped inverseFlipId="container">
@@ -215,7 +234,7 @@ const BookReview = props => {
           </Flipped>
         )}
 
-        <LengthContainer>
+        <LengthContainer lengthBackground={lengthColour}>
           <Length>{length}</Length>
         </LengthContainer>
 
@@ -223,9 +242,11 @@ const BookReview = props => {
           <Picture src={picture} alt={picAlt} />
         </PictureContainer>
 
-        <MethodContainer>{method}</MethodContainer>
+        <MethodContainer methodBackground={methodColour}>
+          {method}
+        </MethodContainer>
 
-        <TypeContainer>
+        <TypeContainer typeBackground={typeColour}>
           <Type>{type}</Type>
         </TypeContainer>
       </Container>
