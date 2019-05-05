@@ -16,6 +16,10 @@ html {
   font-weight: 400;
 }
 
+#gatsby-noscript {
+  display: none;
+}
+
 body {
   margin: 0;
   padding: 0;
