@@ -1,8 +1,20 @@
 ---
 title: Scotland CSS | Scotland JS
-date: "2018-07-30"
+date: '2018-07-30'
 tags: [conference]
-keywords: [amber wilson,javascript,software engineering,web development, coding, scotland, scotland css, scotland js, final, privilege]
+keywords:
+  [
+    amber wilson,
+    javascript,
+    software engineering,
+    web development,
+    coding,
+    scotland,
+    scotland css,
+    scotland js,
+    final,
+    privilege,
+  ]
 ---
 
 This post is split into three parts. Click and choose!
@@ -16,9 +28,23 @@ I will post a link to the official photos once they are out! (hint: they are goo
 See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant article on the conferences [here](https://www.katiefenn.co.uk/scotland-js-retrospective/).
 
 <div id="diary">
-    <h1>Diary<a href="#diary"> # </a><a class="link__top-of-page" href="#">
-    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
+    <h1>Diary&nbsp;<a href="#diary"> # </a>
+&nbsp;
+<a href="#">
+    <svg width="53"
+      height="25"
+      view-box="0 0 53 25"
+      xmlns="http://www.w3.org/2000/svg"
+      class="back-to-the-top"><path
+        stroke-width="4"
+        d="M2 22.5L27.46 2 51 22.5"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path></svg>
     </a></h1>
+
 </div>
 
 At 12.58pm on 17th July I stepped off the train into Edinburgh station. It was sunny! I noticed the architecture immediately - very beautiful and old. It wasn't long before I got to meet up with a very good web friend of mine, Flaki. We found the longest staircase we could and took our suitcases up it on our way to our accommodation. Once there we met up with two more good friends, Pilar and Ramón. After this, I met up with an old friend for dinner at The Castle Arms, before we all made our way to a Ceilidh dance [Peter](https://twitter.com/jiggy_pete) invited us to. This was a _blast_ and a perfect way to begin the great things to come!
@@ -106,13 +132,13 @@ The last night of the conferences was spent again at Hemma, amongst friends. And
 
 I used tips from speakers in this blog post, because the material was just _so_ good! I wasn't able to see every speaker, but I'll watch all the videos once they are out :-) All tips are from Scotland CSS, as I'm not using any JavaScript on my site:
 
-*   [Peter Müller](https://mntr.dk/)'s "[High Performance Web Fonts](http://slides.com/munter/high-performance-web-fonts-scotlandcss#/)" was about improving performance using local fonts rather than Google fonts, font subsetting, and his node package [subfont](https://www.npmjs.com/package/subfont). He added network tab visuals to help us understand the performance benefits. I went ahead and downloaded the two Google fonts I usually access with two separates HTTP requests, and added the local versions to my site.
-*   [Anna Migas](https://twitter.com/szynszyliszys)'s "[Fast But Not Furious: Debugging User Interface Issues](https://www.slideshare.net/AnnaMigas1/fast-but-not-furious-debugging-user-interaction-performance-issues)" taught me the order pages load in. An event is fired (JavaScript), styles are calculated, layout is calculated, things are rasterised and painted into layers, layers are composited together. Check out a site's layers by going to the _layers_ tab in chrome dev tools! I figured out my site only has one layer as it is static and has no JavaScript.
-*   [Natalya](http://www.artist-developer.com/)'s "[Bootstrap to CSS Grid](https://docs.google.com/presentation/d/1dERF3H9jQ3Yb7pIIx7hzWJKxvFjyvFNvFUq-mzcx27E/edit#slide=id.g34872239f6_0_6)" encourages companies to adopt CSS Grid and explains the benefits of doing so. Grid can be gradually adopted into an existing codebase. I demonstrated this here by using it to position my images and figure captions. I used `grid-template-columns`, `grid-template-areas`, and `grid-area` to position things exactly as I want them. The mobile version of this page uses Flexbox instead. Yep, you can mix Grid and Flexbox! Check out Firefox dev tools for a great visual representation of my picture grid.
-*   [Sareh Heidari](https://twitter.com/Sareh88)'s "Quick Tips for Performant Websites" encouraged us to think what our users' priorities are. Sareh taught us about some resource hints to give browsers a helping hand loading things. I had not heard of these before. See an artice [here](https://css-tricks.com/prefetching-preloading-prebrowsing/) on how resource pre-fetching helps performance. I tried using `dns-prefetch` here to pre-fetch the twitter widgets in this post.
-*   [Steven Robert](https://twitter.com/matchboxhero10)'s "CSS Animation - Best of the Web" was my favourite talk. I really couldn't wait to have a go at creating my own animation using code. He showed us how to use SVGs in separate cells (frames) with keyframes and animation properties to create just about any animation we'd want. A link to his codepen is [here](https://codepen.io/collection/nkBVzK/), and a link to his bird animation that inspired his talk and the below rabbity animation is [here](https://codepen.io/matchboxhero/pen/RLebOY). Scroll to number 4 in [this](https://www.creativebloq.com/inspiration/css-animation-examples) list for the tutorial. Steven helped me out when I had questions and I'm really grateful for that :-) Through making the rabbity animation (codepen [here](https://codepen.io/ambrwlsn90/pen/ajVReX)), I learned more about SVGs and how the viewBox attribute works.
+- [Peter Müller](https://mntr.dk/)'s "[High Performance Web Fonts](http://slides.com/munter/high-performance-web-fonts-scotlandcss#/)" was about improving performance using local fonts rather than Google fonts, font subsetting, and his node package [subfont](https://www.npmjs.com/package/subfont). He added network tab visuals to help us understand the performance benefits. I went ahead and downloaded the two Google fonts I usually access with two separates HTTP requests, and added the local versions to my site.
+- [Anna Migas](https://twitter.com/szynszyliszys)'s "[Fast But Not Furious: Debugging User Interface Issues](https://www.slideshare.net/AnnaMigas1/fast-but-not-furious-debugging-user-interaction-performance-issues)" taught me the order pages load in. An event is fired (JavaScript), styles are calculated, layout is calculated, things are rasterised and painted into layers, layers are composited together. Check out a site's layers by going to the _layers_ tab in chrome dev tools! I figured out my site only has one layer as it is static and has no JavaScript.
+- [Natalya](http://www.artist-developer.com/)'s "[Bootstrap to CSS Grid](https://docs.google.com/presentation/d/1dERF3H9jQ3Yb7pIIx7hzWJKxvFjyvFNvFUq-mzcx27E/edit#slide=id.g34872239f6_0_6)" encourages companies to adopt CSS Grid and explains the benefits of doing so. Grid can be gradually adopted into an existing codebase. I demonstrated this here by using it to position my images and figure captions. I used `grid-template-columns`, `grid-template-areas`, and `grid-area` to position things exactly as I want them. The mobile version of this page uses Flexbox instead. Yep, you can mix Grid and Flexbox! Check out Firefox dev tools for a great visual representation of my picture grid.
+- [Sareh Heidari](https://twitter.com/Sareh88)'s "Quick Tips for Performant Websites" encouraged us to think what our users' priorities are. Sareh taught us about some resource hints to give browsers a helping hand loading things. I had not heard of these before. See an artice [here](https://css-tricks.com/prefetching-preloading-prebrowsing/) on how resource pre-fetching helps performance. I tried using `dns-prefetch` here to pre-fetch the twitter widgets in this post.
+- [Steven Robert](https://twitter.com/matchboxhero10)'s "CSS Animation - Best of the Web" was my favourite talk. I really couldn't wait to have a go at creating my own animation using code. He showed us how to use SVGs in separate cells (frames) with keyframes and animation properties to create just about any animation we'd want. A link to his codepen is [here](https://codepen.io/collection/nkBVzK/), and a link to his bird animation that inspired his talk and the below rabbity animation is [here](https://codepen.io/matchboxhero/pen/RLebOY). Scroll to number 4 in [this](https://www.creativebloq.com/inspiration/css-animation-examples) list for the tutorial. Steven helped me out when I had questions and I'm really grateful for that :-) Through making the rabbity animation (codepen [here](https://codepen.io/ambrwlsn90/pen/ajVReX)), I learned more about SVGs and how the viewBox attribute works.
 
-*   [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
+- [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
 
 <div id="isspecial">
     <h1>Why this conference is special <a href="#isspecial"> # </a><a class="link__top-of-page" href="#">
@@ -189,7 +215,6 @@ Peter surpised us with an unexpected speaker at the end of Scotland JS. [Kim Cra
 <figure class="image__grid--two grid__captions--two">
 
 ![Kim Crayton speaking at Scotland JS](img/kimcrayton.jpg)
-
 
 <figcaption class="item2">
 <a href="http://www.kimcrayton.com/">Kim Crayton</a> (photo / Flaki)
