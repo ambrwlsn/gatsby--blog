@@ -42,7 +42,6 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             />
             <meta name="robots" content="index,follow" />
             <link rel="canonical" href={blogPostUrl} />
-            <link rel="shortcut icon" href="/public/icon-48x48.png" />
             <link rel="me" href="mailto:ambrwlsn90@gmail.com" />
             <meta name="DC.Title" content={title} />
             <meta name="DC.Creator" content={metaAuthor} />
@@ -97,6 +96,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   tags: [],
+  slug: ''
 }
 
 SEO.propTypes = {
@@ -106,6 +106,7 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
+  slug: PropTypes.string
 }
 
 export default SEO
