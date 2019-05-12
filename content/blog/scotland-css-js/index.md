@@ -125,9 +125,23 @@ The last day of the conference began a little later at 9am. It was just as good 
 The last night of the conferences was spent again at Hemma, amongst friends. And amonst fish and chips because Edinburgh restaurants are _really_ busy on Friday nights! I was very glad that I was staying in Scotland for one more day so I could walk around beautiful Edinburgh. I miss it and my web friends already - until next time :-)
 
 <div id="tips">
-    <h1>Tips<a href="#tips"> # </a><a class="link__top-of-page" href="#">
-    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
+    <h1>Tips&nbsp;<a href="#tips"> # </a>
+&nbsp;
+<a href="#">
+    <svg width="53"
+      height="25"
+      view-box="0 0 53 25"
+      xmlns="http://www.w3.org/2000/svg"
+      class="back-to-the-top"><path
+        stroke-width="4"
+        d="M2 22.5L27.46 2 51 22.5"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path></svg>
     </a></h1>
+
 </div>
 
 I used tips from speakers in this blog post, because the material was just _so_ good! I wasn't able to see every speaker, but I'll watch all the videos once they are out :-) All tips are from Scotland CSS, as I'm not using any JavaScript on my site:
@@ -141,10 +155,23 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 - [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
 
 <div id="isspecial">
-    <h1>Why this conference is special <a href="#isspecial"> # </a><a class="link__top-of-page" href="#">
-    <img class="button__top-of-page" src="/img/back-to-top.svg" alt="Back to top toggle">
-    </a>
-    </h1>
+    <h1>Why This Conference is Special&nbsp;<a href="#isspecial"> # </a>
+&nbsp;
+<a href="#">
+    <svg width="53"
+      height="25"
+      view-box="0 0 53 25"
+      xmlns="http://www.w3.org/2000/svg"
+      class="back-to-the-top"><path
+        stroke-width="4"
+        d="M2 22.5L27.46 2 51 22.5"
+        fill="none"
+        fill-rule="evenodd"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path></svg>
+    </a></h1>
+
 </div>
 
 I believe the technology community and related events can learn a lot from Scotland CSS and Scotland JS.
