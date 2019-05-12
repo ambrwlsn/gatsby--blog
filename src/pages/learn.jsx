@@ -45,7 +45,7 @@ const WILT = styled(LeafyLogo)`
 
 const BackToTop = styled(Arrow)``
 
-class wiltPage extends React.Component {
+class WiltPage extends React.Component {
   state = {
     selectedOption: null,
   }
@@ -111,8 +111,8 @@ class wiltPage extends React.Component {
               Thanks to <a href="https:lottejackson.com">Charlotte</a> for the
               suggestion!
             </p>
-            <blockquote className="twitter-tweet" data-lang="en">
-              <p lang="en" dir="ltr">
+            <blockquote>
+              <p>
                 Write about a different pseudo class every day? Or a different
                 HTML element or JS lesson every day? Anything you want to learn
                 more about? I had hoped to do something similar and never got
@@ -152,7 +152,7 @@ class wiltPage extends React.Component {
   }
 }
 
-export default wiltPage
+export default WiltPage
 
 export const pageQuery = graphql`
   {

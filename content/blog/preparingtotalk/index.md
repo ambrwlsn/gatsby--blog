@@ -5,7 +5,7 @@ tags: ["public speaking"]
 keywords: [amber wilson,software engineering,web development,writing,preparing]
 ---
 
- <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">
+ <blockquote><p lang="en" dir="ltr">
     If you went to <a href="https://twitter.com/hashtag/BrightonSEO?src=hash">#BrightonSEO</a> and thought &quot;Hey, it would be cool to speak on stage one day&quot;... Read this! <a href="https://t.co/Xhdj2RI0w6">https://t.co/Xhdj2RI0w6</a> <a href="https://t.co/8nayH2lBNs">pic.twitter.com/8nayH2lBNs</a></p>&mdash; Hannah Butcher (@HannahFButcher) <a href="https://twitter.com/HannahFButcher/status/852123851387547648">April 12, 2017
     </a>
 </blockquote>

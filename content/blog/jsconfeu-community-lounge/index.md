@@ -50,7 +50,7 @@ Here is the list of everyone who did a lightning talk ⚡ -
 
 See the tweet below that links to each and every initiative and the people who spoke about them!
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr">🤩🌈 The Community Lounge is welcoming 20 unique presentations across all three conference days at
         <a href="https://twitter.com/CSSconfeu?ref_src=twsrc%5Etfw">@CSSconfeu</a> and <a href="https://twitter.com/jsconfeu?ref_src=twsrc%5Etfw">@jsconfeu</a>.<br><br>We&#39;re
         so thrilled to have an amazing program that showcases people who are doing remarkable and noteworthy

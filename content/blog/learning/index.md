@@ -5,7 +5,7 @@ tags: [learning]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr">Best thing you can do for your career is to be active outside your employer. Publish, speak, build. Repeat.
         Publish, speak, build. Repeat.</p>&mdash; Rachel🦄Nabors (@rachelnabors) <a href="https://twitter.com/rachelnabors/status/881730920331452416">July 3, 2017</a>
 </blockquote>

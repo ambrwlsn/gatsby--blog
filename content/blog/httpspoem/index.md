@@ -5,7 +5,7 @@ tags: [https]
 keywords: [amber wilson,software engineering,web development,coding]
 ---
 
- <blockquote class="twitter-tweet" data-lang="en">
+ <blockquote>
         <p lang="en" dir="ltr">A little poem about HTTPS.<a href="https://t.co/kTuK3Fr8Es">https://t.co/kTuK3Fr8Es</a></p>&mdash; CSS-Tricks
         (@Real_CSS_Tricks) <a href="https://twitter.com/Real_CSS_Tricks/status/863091416506839041">May 12, 2017</a>
 </blockquote>

@@ -9,7 +9,7 @@ CSS layout is something that amazes and confuses me at the same time. There seem
 
 I love hearing from people about CSS layout, and I was lucky to hear [Miriam Suzanne](http://www.miriamsuzanne.com/) talk about it at [Beyond Tellerrand](https://beyondtellerrand.com/events/duesseldorf-2018/speakers) (check out the awesome layout on her site). The message she gave was to use CSS grid, and provide fallbacks for browsers that aren't grid-compatible. She reasons that as grid makes layouts so easy (and naturally responsive), that there is time to re-create fallback layouts, which allows more creative control.
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
 <p lang="en" dir="ltr">Often I allow fallback layouts to be much simpler. CSS Grid has power to create layouts that have
 no *exact* fallback. Since grid makes many layouts easier, I have extra time to do both. Similar
 time spent, more creative control.<br><br>Your mileage will depend on your constraints.</p>&mdash;

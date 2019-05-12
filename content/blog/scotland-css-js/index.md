@@ -151,7 +151,7 @@ I believe the technology community and related events can learn a lot from Scotl
 
 I think Frederic did a good job explaining why.
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr">Resting up after an intense week of <a href="https://twitter.com/ScotlandCSS?ref_src=twsrc%5Etfw">@ScotlandCSS</a>                                    and <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@ScotlandJS</a>.<br>☕️🛋🎶<br><br>Thanks
         so much to <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a>                                    &amp; team for fostering a community that’s equally inclusive and transformative for
         long-time industry experts, as well as total beginners, and everyone in between.</p>&mdash;
@@ -162,7 +162,7 @@ Scotland CSS and JS is created and curated by [Peter Aitken](https://twitter.com
 
 I am thrilled that so many others seemed to have a similar experience.
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr"><a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@ScotlandJS</a> is the first Tech
         conference in 10 years in Europe, where I felt that people like myself, and <a href="https://twitter.com/CodeYourFuture_?ref_src=twsrc%5Etfw">@CodeYourFuture_</a>                                students, are first-class citizens. Thank you <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a>                                for making a Tech event that is genuinely and sincerely welcoming and inclusive to *others*
         1/3
@@ -185,7 +185,7 @@ On the first day of the conferences, at Scotland CSS, the first thing we all saw
 
 The youngest attendee, Connie, was 10 years old. Peter introduced her to us and all the great work she's already done. I was lucky to get to speak (and dance!) with her. I heard about the adventures she's been on with coding so far, saw some of her work and chatted with her about Harry Potter. She is a Gryffindor.
 
-<blockquote class="twitter-tweet" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr">So pleased to welcome our youngest attendee to <a href="https://twitter.com/hashtag/scotlandjs?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs</a>                                <br><br>We’re glad you had an amazing time and can’t wait to find out what you create in
         the future 💛
         <a href="https://t.co/HlX3xPT106">https://t.co/HlX3xPT106</a>
@@ -198,7 +198,7 @@ As I mentioned in the first section of this post, there was a low stage, and als
 
 Some things weren't as obvious as inclusive measures at first glance, but they were there. For example, Peter convinced the venue to add gender-neutral toilets. He took the advice of [Nat Tarnoff](http://tarnoff.info/) on adding animation warnings for those with vestibular disorders, and also added warnings about flashing lights and loud videos. There was plenty of vegan and vegetarian food and snacks. Based on past feedback, Peter set a board game evening up to run alongside gin and whisky tasting for those who didn't want to drink.
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en">
+<blockquote>
     <p lang="en" dir="ltr">Scotland CSS &amp; Scotland JS was certainly a team effort: organizers, volunteers, speakers,
         even attendees (who, as ticketholders, got to vote &amp; decide on the final lineup) — worked
         together tirelessly to make it happen…<br><br>BUT.<br><br>I need to leave this here:
@@ -233,5 +233,5 @@ A third surprise awaited us. Peter got onto the stage once more to announce that
 It was hard to fight back the tears when Peter's family came on stage to hug him and his wife said she is really proud of him. It must be safe to say that we are all endlessly proud of Peter, and the genuine enthusiasm, kindness and tireless hard work he puts into what he does. _Thank you_, Peter Aitken!
 
  <p>
-    <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The Floss <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@scotlandjs</a> <a href="https://twitter.com/hashtag/scotlandjs2018?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs2018</a> edition <a href="https://twitter.com/hashtag/Floss?src=hash&amp;ref_src=twsrc%5Etfw">#Floss</a> <a href="https://twitter.com/hashtag/flossing?src=hash&amp;ref_src=twsrc%5Etfw">#flossing</a> <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a> <a href="https://twitter.com/waffles193?ref_src=twsrc%5Etfw">@waffles193</a> <a href="https://twitter.com/herecomesjaycee?ref_src=twsrc%5Etfw">@herecomesjaycee</a> <a href="https://t.co/KFvyl7QNOq">pic.twitter.com/KFvyl7QNOq</a></p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/1019969967586934784?ref_src=twsrc%5Etfw">July 19, 2018</a></blockquote>
+    <blockquote><p lang="en" dir="ltr">The Floss <a href="https://twitter.com/ScotlandJS?ref_src=twsrc%5Etfw">@scotlandjs</a> <a href="https://twitter.com/hashtag/scotlandjs2018?src=hash&amp;ref_src=twsrc%5Etfw">#scotlandjs2018</a> edition <a href="https://twitter.com/hashtag/Floss?src=hash&amp;ref_src=twsrc%5Etfw">#Floss</a> <a href="https://twitter.com/hashtag/flossing?src=hash&amp;ref_src=twsrc%5Etfw">#flossing</a> <a href="https://twitter.com/jiggy_pete?ref_src=twsrc%5Etfw">@jiggy_pete</a> <a href="https://twitter.com/waffles193?ref_src=twsrc%5Etfw">@waffles193</a> <a href="https://twitter.com/herecomesjaycee?ref_src=twsrc%5Etfw">@herecomesjaycee</a> <a href="https://t.co/KFvyl7QNOq">pic.twitter.com/KFvyl7QNOq</a></p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/1019969967586934784?ref_src=twsrc%5Etfw">July 19, 2018</a></blockquote>
 </p>
