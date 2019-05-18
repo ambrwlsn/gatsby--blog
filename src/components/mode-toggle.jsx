@@ -57,17 +57,15 @@ const MoonToggle = styled(Moon)`
   }
 `
 
-const ModeToggle = ({ checked, onChange, ...otherProps }) => {
+const ModeToggle = ({ checked, onChange, className }) => {
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
     setMounted(true)
   })
-
-  if (!mounted) return <Wrapper />
+  if (!mounted) return null
   return (
-    <Wrapper htmlFor="mode">
+    <Wrapper htmlFor="mode" className={className}>
       <Input
-        {...otherProps}
         type="checkbox"
         id="mode"
         checked={checked}
