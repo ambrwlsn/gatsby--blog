@@ -10,6 +10,7 @@ module.exports = {
     'react/prop-types': [1, { skipUndeclared: true }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
+    'react/no-unescaped-entities': 0,
   },
   parserOptions: {
     ecmaFeatures: {
@@ -17,23 +18,12 @@ module.exports = {
     },
   },
   extends: ['eslint:recommended', 'plugin:react/recommended'],
+  
+    settings: {
+      "react": {
+        "version": "detect",
+      },
+    }
+  
 }
 
-// module.exports = {
-//   env: {
-//     browser: true,
-//     es6: true,
-//     node: true,
-//   },
-//   plugins: ['react', 'prettier', 'react-hooks'],
-//   globals: {
-//     graphql: false,
-//   },
-//   parserOptions: {
-//     sourceType: 'module',
-//     ecmaFeatures: {
-//       experimentalObjectRestSpread: true,
-//       jsx: true,
-//     },
-//   },
-// }
