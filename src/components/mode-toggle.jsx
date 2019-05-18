@@ -62,7 +62,9 @@ const ModeToggle = ({ checked, onChange, className }) => {
   useEffect(() => {
     setMounted(true)
   })
+
   if (!mounted) return null
+  
   return (
     <Wrapper htmlFor="mode" className={className}>
       <Input
