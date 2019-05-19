@@ -30,12 +30,12 @@ See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant article on
 <div id="diary">
     <h1>Diary&nbsp;<a href="#diary"> # </a>
 &nbsp;
-<a href="#">
+<a href="#" role="link">
     <svg width="53"
       height="25"
       view-box="0 0 53 25"
       xmlns="http://www.w3.org/2000/svg"
-      class="back-to-the-top"><path
+      class="back-to-the-top" role="img" aria-labelledby="title desc" aria-describedby="desc"><title id="title">Back to the top arrow</title><desc id="desc">Click this to go back to the top of the blog post</desc><path
         stroke-width="4"
         d="M2 22.5L27.46 2 51 22.5"
         fill="none"
@@ -127,12 +127,12 @@ The last night of the conferences was spent again at Hemma, amongst friends. And
 <div id="tips">
     <h1>Tips&nbsp;<a href="#tips"> # </a>
 &nbsp;
-<a href="#">
+<a href="#" role="link">
     <svg width="53"
       height="25"
       view-box="0 0 53 25"
       xmlns="http://www.w3.org/2000/svg"
-      class="back-to-the-top"><path
+      class="back-to-the-top" role="img" aria-labelledby="title desc" aria-describedby="desc"><title id="title">Back to the top arrow</title><desc id="desc">Click this to go back to the top of the blog post</desc><path
         stroke-width="4"
         d="M2 22.5L27.46 2 51 22.5"
         fill="none"
@@ -157,12 +157,12 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 <div id="isspecial">
     <h1>Why This Conference is Special&nbsp;<a href="#isspecial"> # </a>
 &nbsp;
-<a href="#">
+<a href="#" role="link">
     <svg width="53"
       height="25"
       view-box="0 0 53 25"
       xmlns="http://www.w3.org/2000/svg"
-      class="back-to-the-top"><path
+      class="back-to-the-top" role="img" aria-labelledby="title desc" aria-describedby="desc"><title id="title">Back to the top arrow</title><desc id="desc">Click this to go back to the top of the blog post</desc><path
         stroke-width="4"
         d="M2 22.5L27.46 2 51 22.5"
         fill="none"
