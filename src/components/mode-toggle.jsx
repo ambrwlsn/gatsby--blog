@@ -22,6 +22,20 @@ const Wrapper = styled.label`
     width: 0.7rem;
   }
 `
+
+const HiddenWrapper = styled.span`
+  display: inline-block;
+  text-align: right;
+  visibility: hidden;
+  padding: 0 5px;
+  border: 1.5px solid rgba(255,255,255,.5);
+  width: 2.5em;
+  height: 1.5em;
+  @media (max-width: 800px) {
+    border: none;
+    width: 0.7rem;
+  }
+`
 const Handle = styled.span`
   position: relative;
   right: -5px;
@@ -63,8 +77,8 @@ const ModeToggle = ({ checked, onChange, className }) => {
     setMounted(true)
   })
 
-  if (!mounted) return null
-  
+  if (!mounted) return <HiddenWrapper />
+
   return (
     <Wrapper htmlFor="mode" className={className}>
       <Input
