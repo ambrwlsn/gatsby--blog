@@ -35,9 +35,13 @@ const TitleStyles = styled.span`
 
 const Intro = styled.p`
   margin: 0 auto;
-  max-width: 80%;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  width: 55%;
+  @media (max-width: 800px) {
+    margin-bottom: 1rem;
+    width: 90%;
+  }
 `
 
 const IntroStyles = styled.span`
@@ -46,10 +50,7 @@ const IntroStyles = styled.span`
 
 const Reading = () => (
   <Layout>
-    <SEO
-      title="All posts"
-      keywords={['blog', 'gatsby', 'javascript', 'react']}
-    />
+    <SEO title="All posts" keywords={['gatsby', 'javascript', 'react']} />
     <TitleStyles>
       <Title>Book Reviews</Title>
     </TitleStyles>
@@ -63,7 +64,8 @@ const Reading = () => (
     <ReviewSection>
       <BookReview
         title="Becoming by Michelle Obama"
-        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with."
+        review="Before beginning this book I was looking forward to hearing about Michelle's wisdom and experiences and I wasn't disappointed. I liked hearing how she grew up and about the people she grew up with. I find that quite often, people will speak of those they admire but not go into details. Michelle gave enough details about key people in her life that I almost felt I could feel them sitting next to me in the same room. 
+        I was impressed to hear about her incredibly hard work ethic. I was also intrigued at how her parents raised her - to not be afraid of hard work, to be kind to others, and to be open to people and possibilities. I like how hers and Barack Obama's personalities seem to compliment as much as clash with each other. While I may not be a parent, I share her concerns over her children's protection while living at the white house, and admire the strength she displayed in the face of so much bad and unfair press coverage."
         picture={becoming}
         picAlt="Michelle Obama on her book cover"
         methodAlt="headphones"

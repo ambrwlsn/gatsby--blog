@@ -44,13 +44,23 @@ const ReviewContainer = styled.div`
   overflow: hidden;
 `
 
-const Review = styled.div`
+const ReviewDesktop = styled.div`
   color: var(--readText);
   overflow: hidden;
   max-height: 100%;
   @media (max-width: 800px) {
+    display: none;
+  }
+`
+
+const ReviewMobile = styled.div`
+  display: none;
+  @media (max-width: 800px) {
     max-height: 270px;
     font-size: 1.2rem;
+    color: var(--readText);
+    overflow: hidden;
+    display: block;
   }
 `
 
@@ -130,16 +140,27 @@ const DropdownReviewContainer = styled.div`
   }
 `
 
-const DropdownReview = styled.div`
+const DropdownReviewDesktop = styled.div`
   color: black;
   overflow: hidden;
   max-height: 100%;
   margin: 50px auto;
 
   @media (max-width: 800px) {
+    display: none;
+  }
+`
+
+const DropdownReviewMobile = styled.div`
+  display: none;
+  @media (max-width: 800px) {
+    max-height: 100%;
+    color: black;
+    overflow: hidden;
     font-size: 1.2rem;
     margin: 0;
     padding: 1rem 1rem 2.6rem 1rem;
+    display: block;
   }
 `
 
@@ -147,6 +168,7 @@ const Button = styled.button`
   position: absolute;
   font: inherit;
   cursor: pointer;
+  margin: 0;
   bottom: 0;
   right: 0;
   width: 100%;
@@ -172,6 +194,9 @@ const Title = styled.h1`
   font-weight: 300;
   font-size: 1.5rem;
   font-family: 'Courgette', sans-serif;
+  @media (max-width: 800px) {
+    padding: 0 0.8rem;
+  }
 `
 
 const BookReview = props => {
@@ -201,7 +226,10 @@ const BookReview = props => {
           </Flipped>
         </Button>
         <Flipped inverseFlipId="container">
-          <Review>{review}</Review>
+          <ReviewDesktop>{getReviewExcerpt(review, 480)}</ReviewDesktop>
+        </Flipped>
+        <Flipped inverseFlipId="container">
+          <ReviewMobile>{getReviewExcerpt(review, 150)}</ReviewMobile>
         </Flipped>
       </ReviewContainer>
     </Flipped>
@@ -214,11 +242,32 @@ const BookReview = props => {
           <ReadCta>Read Less…</ReadCta>
         </Button>
         <Flipped inverseFlipId="container">
-          <DropdownReview>{review}</DropdownReview>
+          <DropdownReviewDesktop>
+            {getFullReview(review, 480)}
+          </DropdownReviewDesktop>
+        </Flipped>
+        <Flipped inverseFlipId="container">
+          <DropdownReviewMobile>
+            {getFullReview(review, 150)}
+          </DropdownReviewMobile>
         </Flipped>
       </DropdownReviewContainer>
     </Flipped>
   )
+
+  const getReviewExcerpt = (review, length) => {
+    const trimmedReview =
+      review.length > length ? review.substring(0, length) : review
+    const newLength = trimmedReview.lastIndexOf(' ')
+    const reviewExcerpt = review.substring(0, newLength)
+    return review && reviewExcerpt + '…'
+  }
+
+  const getFullReview = (review, length) => {
+    const trimmedReview = review.substring(0, length)
+    const newLength = trimmedReview.lastIndexOf(' ')
+    return review && review.slice(0, newLength) + '…' + review.slice(newLength)
+  }
 
   return (
     <Flipper flipKey={isDropdownOpen}>
