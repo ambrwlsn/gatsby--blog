@@ -23,9 +23,6 @@ const Tags = ({ pageContext, data }) => {
       />
 
       <Layout>
-        <Link to="/blog" rel="prev">
-          {/* ← {previous.frontmatter.title} */}← blog home
-        </Link>
         <div style={{ maxWidth: '500px', margin: 'auto', marginBottom: '3em' }}>
           <h1
             style={{

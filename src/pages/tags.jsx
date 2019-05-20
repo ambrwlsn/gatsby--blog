@@ -1,6 +1,6 @@
 import React, { useContext, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import Tags from '../components/tags'
 import ThemeContext from '../context/theme-context'
@@ -17,9 +17,6 @@ const TagsPage = () => {
         }}
       />
       <Layout>
-        <Link to="/blog" rel="prev">
-          ← blog home
-        </Link>
         <Fragment>
           <h1
             style={{
