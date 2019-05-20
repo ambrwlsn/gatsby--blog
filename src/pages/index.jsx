@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import useEventListener from '@hooks/use-event-listener'
 import Layout from '../components/layout'
@@ -23,6 +23,24 @@ const Block = styled.div`
   bottom: 0;
   margin: 0;
   padding: 0;
+`
+
+const IntroductionBox = styled.main`
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Introduction = styled.p`
+  margin: 0 auto;
+  max-width: 60%;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  @media (max-width: 800px) {
+    max-width: 90%;
+    font-size: 1rem;
+  }
 `
 
 function Index() {
@@ -67,6 +85,14 @@ function Index() {
             'junior developer',
           ]}
         />
+        <IntroductionBox>
+          <Introduction>
+            Hi, my name's Amber and I am a web developer. I recently refurbished
+            my site and it's in beta mode. This means I've achieved a bunch of
+            things I want to do, and need some more time to finish the rest. See
+            the list <Link to="/projects">here</Link>.
+          </Introduction>
+        </IntroductionBox>
       </Layout>
       <Cat
         eye="var(--catEyeColor)"
