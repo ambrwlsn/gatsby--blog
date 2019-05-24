@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import JsonLd from '@components/jsonld'
 import ContentWrapper from '../components/content-wrapper'
-import Toothy from '../components/img/toothbrush'
+import Clock from '../components/img/clock'
 
 // Utilities
 import format from 'date-fns/format'
@@ -20,16 +20,38 @@ const Title = styled.h1`
     max-width: 80%;
   }
 `
-const BlogPostDate = styled.time``
+const BlogPostDate = styled.time`
+  margin-right: 0.5rem;
+  @media (max-width: 800px) {
+    margin: 0;
+  }
+`
 
 const PostData = styled.div`
   font-weight: 600;
   font-size: 1.2em;
+  display: flex;
+  align-items: flex-end;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const Content = styled.div`
   line-height: 1.7;
   font-size: 1.25em;
+`
+
+const ClockIcon = styled(Clock)`
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  @media (max-width: 800px) {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 `
 
 const BlogPostTemplate = props => {
@@ -39,7 +61,7 @@ const BlogPostTemplate = props => {
     new Date(post.frontmatter.date),
     'MMMM Do, YYYY'
   )
-  const toothbrushes = post.timeToRead / 2
+  const clocks = post.timeToRead / 2
   return (
     <Layout>
       <ContentWrapper>
@@ -63,9 +85,11 @@ const BlogPostTemplate = props => {
                 >
                   {nicelyFormattedDate}
                 </BlogPostDate>
-                {Array.apply(null, { length: toothbrushes }).map(i => (
-                  <Toothy key={i} color="currentColor" />
-                ))}
+                <div style={{ marginTop: '.5rem' }}>
+                  {Array.apply(null, { length: clocks }).map(i => (
+                    <ClockIcon key={i} color="currentColor" />
+                  ))}
+                </div>
               </PostData>
               <section className="h-entry">
                 <Content
