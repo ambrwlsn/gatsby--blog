@@ -1,13 +1,13 @@
-import React, { Fragment, useState, useRef, useEffect } from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 
-import useEventListener from '@hooks/use-event-listener'
+// import useEventListener from '@hooks/use-event-listener'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Kitty from '@components/img/cat'
+import CatController from '@components/cat-controller'
 
-const Cat = styled(Kitty)`
+const Cat = styled(CatController)`
   stroke: black;
   fill: #565252;
   position: absolute;
@@ -44,34 +44,6 @@ const Introduction = styled.p`
 `
 
 function Index() {
-  // State for storing mouse coordinates
-  const [[x, y], setCoords] = useState([0, 0])
-  const [[eyeX, eyeY], setEyeCoords] = useState([0, 0])
-  const eyesRef = useRef(null)
-
-  useEffect(() => {
-    if (eyesRef.current) {
-      const eyePos = eyesRef.current.getBoundingClientRect()
-      const left = eyePos.left + eyePos.width / 2
-      const top = eyePos.top + eyePos.height / 2
-      setEyeCoords([left, top])
-    }
-  }, [])
-
-  // Add event listener using our hook
-  useEventListener('mousemove', ({ clientX, clientY }) => {
-    // Update coordinates
-    setCoords([clientX, clientY])
-  })
-
-  let clampedEyeX = 0
-  let clampedEyeY = 0
-
-  if (x !== 0 && y !== 0) {
-    clampedEyeX = Math.max(-7.5, Math.min(7.5, x - eyeX))
-    clampedEyeY = Math.max(-7.5, Math.min(7.5, y - eyeY))
-  }
-
   return (
     <Fragment>
       <Layout>
@@ -94,11 +66,7 @@ function Index() {
           </Introduction>
         </IntroductionBox>
       </Layout>
-      <Cat
-        eye="var(--catEyeColor)"
-        eyesRef={eyesRef}
-        eyePos={[clampedEyeX, clampedEyeY]}
-      />
+      <Cat />
       <Block />
     </Fragment>
   )
