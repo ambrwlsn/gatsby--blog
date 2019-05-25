@@ -52,7 +52,7 @@ a:hover {
   stroke: var(--linkColorHover);
 }
 
-#catEyes {
+.catEye {
   transition: all 400ms ease-in-out;
 }
 

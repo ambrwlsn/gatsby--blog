@@ -75,7 +75,7 @@ const ModeToggle = ({ checked, onChange, className }) => {
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
     setMounted(true)
-  })
+  }, [setMounted])
 
   if (!mounted) return <HiddenWrapper />
 
