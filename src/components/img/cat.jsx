@@ -74,9 +74,7 @@ function Cat(props) {
             strokeWidth={strokeWidth}
           />
 
-          <g
-            ref={eyesRef}
-          >
+          <g ref={eyesRef}>
             <ellipse
               cx="6"
               cy="10"

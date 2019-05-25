@@ -16,10 +16,14 @@ function CatController({ className }) {
         setCoords([mouse.x, mouse.y])
       }
     }, 50)
-    watchViewport(updateValues)
+    if (typeof window !== undefined) {
+      watchViewport(updateValues)
+    }
 
     return () => {
-      unwatchViewport(updateValues)
+      if (typeof window !== undefined) {
+        unwatchViewport(updateValues)
+      }
     }
   }, [])
 
