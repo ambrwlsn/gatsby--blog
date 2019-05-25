@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { watchViewport, unwatchViewport } from 'tornis'
 
 import Kitty from '@components/img/cat'
 import throttle from '@utils/throttle'
@@ -17,11 +16,13 @@ function CatController({ className }) {
       }
     }, 50)
     if (typeof window !== undefined) {
+      const { watchViewport } = require('tornis')
       watchViewport(updateValues)
     }
 
     return () => {
       if (typeof window !== undefined) {
+        const { unwatchViewport } = require('tornis')
         unwatchViewport(updateValues)
       }
     }
