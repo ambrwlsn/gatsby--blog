@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
+import useEventListener from '@hooks/use-event-listener'
 
 import Kitty from '@components/img/cat'
 import throttle from '@utils/throttle'
@@ -10,25 +11,6 @@ function CatController({ className }) {
   const eyesRef = useRef(null)
 
   useEffect(() => {
-    const updateValues = throttle(({ mouse }) => {
-      if (mouse.changed) {
-        setCoords([mouse.x, mouse.y])
-      }
-    }, 50)
-    if (typeof window !== undefined) {
-      const { watchViewport } = require('tornis')
-      watchViewport(updateValues)
-    }
-
-    return () => {
-      if (typeof window !== undefined) {
-        const { unwatchViewport } = require('tornis')
-        unwatchViewport(updateValues)
-      }
-    }
-  }, [])
-
-  useEffect(() => {
     if (eyesRef.current) {
       const eyePos = eyesRef.current.getBoundingClientRect()
       const left = eyePos.left + eyePos.width / 2
@@ -36,6 +18,15 @@ function CatController({ className }) {
       setEyeCoords([left, top])
     }
   }, [])
+
+  // Add event listener using our hook
+  useEventListener(
+    'mousemove',
+    throttle(({ clientX, clientY }) => {
+      // Update coordinates
+      setCoords([clientX, clientY])
+    }, 50)
+  )
 
   let clampedEyeX = 0
   let clampedEyeY = 0
