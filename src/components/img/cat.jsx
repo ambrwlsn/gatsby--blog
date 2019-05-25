@@ -75,25 +75,25 @@ function Cat(props) {
           />
 
           <g
-            id="catEyes"
             ref={eyesRef}
-            transform={`translate(${eyeX} ${eyeY})`}
           >
             <ellipse
               cx="6"
               cy="10"
               rx="6"
               ry="10"
-              transform="translate(644.51 647.062) rotate(-9)"
+              transform={`translate(${eyeX + 644.51} ${eyeY + 647.062}) rotate(-9)`}
               fill="black"
+              className="catEye"
             />
             <ellipse
               cx="6"
               cy="10"
               rx="6"
               ry="10"
-              transform="translate(696.51 638.062) rotate(-9)"
+              transform={`translate(${eyeX + 696.51} ${eyeY + 638.062}) rotate(-9)`}
               fill="black"
+              className="catEye"
             />
           </g>
         </g>
