@@ -71,6 +71,15 @@ a:hover {
   text-align: center;
 }
 
+.social-icon {
+  fill: var(--textColor);
+  
+}
+
+.social-icon:hover {
+  fill: var(--linkColorHover);
+}
+
 ::-webkit-details-marker {
   display: none;
 }

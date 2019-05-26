@@ -2,10 +2,11 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
 
-// import useEventListener from '@hooks/use-event-listener'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CatController from '@components/cat-controller'
+import Github from './img/github'
+import Twitter from './img/twitter'
 
 const Cat = styled(CatController)`
   stroke: black;
@@ -26,19 +27,19 @@ const Block = styled.div`
 `
 
 const IntroductionBox = styled.main`
-  height: 50vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
-const Introduction = styled.p`
+const Introduction = styled.div`
   margin: 0 auto;
   max-width: 60%;
   font-size: 1.25rem;
   line-height: 1.6;
   @media (max-width: 800px) {
-    max-width: 90%;
+    max-width: 80%;
   }
 `
 
@@ -58,14 +59,28 @@ function Index() {
         />
         <IntroductionBox>
           <Introduction>
-            Hi, my name's Amber and I am a web developer. I recently refurbished
-            my site and it's in beta mode. This means I've achieved a bunch of
-            things I want to do, and need some more time to finish the rest. See
-            the list <Link to="/projects">here</Link>.
+            <p>
+              Hi, my name's Amber and I am a web developer. I recently
+              refurbished my site and it's in beta mode. This means I've
+              achieved a bunch of things I want to do, and need some more time
+              to finish the rest. See the list <Link to="/projects">here</Link>.
+            </p>
+            <p>
+              <a
+                style={{ marginRight: '1rem' }}
+                href="https://github.com/ambrwlsn"
+              >
+                <Github width="25" height="25" className="social-icon" />
+              </a>
+              <a href="https://twitter.com/ambrwlsn90">
+                <Twitter width="25" height="25" className="social-icon" />
+              </a>
+            </p>
           </Introduction>
         </IntroductionBox>
       </Layout>
       <Cat />
+
       <Block />
     </Fragment>
   )
@@ -82,3 +97,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+// <Social>
+// <Github width="25" height="25" fill="var(--textColor)" />
+// <Github width="25" height="25" fill="var(--textColor)" />
+// <Github width="25" height="25" fill="var(--textColor)" />
+// </Social>
