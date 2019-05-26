@@ -80,6 +80,7 @@ const Date = styled.time`
 
 const Blog = props => {
   const posts = props.data.allMarkdownRemark.edges
+  const siteUrl = props.data.site.siteMetadata.siteUrl
   return (
     <Layout>
       <ContentWrapper>
@@ -88,6 +89,9 @@ const Blog = props => {
           keywords={['blog', 'gatsby', 'javascript', 'react']}
         />
         <Tags minCount={3} className="hideOnMobile" />
+        <div>
+          Add my RSS feed <a href={`${siteUrl}/rss.xml`}>here</a>!
+        </div>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const tags = node.frontmatter.tags
@@ -132,6 +136,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
       }
     }
     allMarkdownRemark(
