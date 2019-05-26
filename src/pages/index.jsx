@@ -39,7 +39,6 @@ const Introduction = styled.p`
   line-height: 1.6;
   @media (max-width: 800px) {
     max-width: 90%;
-    font-size: 1rem;
   }
 `
 
