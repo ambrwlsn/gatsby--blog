@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
 
@@ -11,6 +11,8 @@ const Container = styled.main`
   line-height: 1.6;
   font-size: 1.25rem;
   padding-bottom: 2rem;
+  margin: 0 auto;
+  max-width: 90%;
 `
 
 const Projects = () => (
@@ -23,8 +25,8 @@ const Projects = () => (
       <div>
         <h1>Projects</h1>
         <p>
-          The first project I'll list here is my own site - things I've done,
-          and what I want to do.
+          The first project I'll list here is my own site and thing I still need
+          to do on it (in rough order of importance).
         </p>
         <p>If you think I should improve something, let me know and I will.</p>
         <h2>To do:</h2>
@@ -33,6 +35,7 @@ const Projects = () => (
           <li>Bring down network requests.</li>
           <li>Make everything as accessible as possible.</li>
           <li>Only render React on the server, not client.</li>
+          <li>Write tests.</li>
           <li>Add functionality to cat.</li>
           <li>Optimise book review page for tablets.</li>
           <li>Refactor all existing code.</li>
