@@ -258,15 +258,21 @@ const BookReview = props => {
   const getReviewExcerpt = (review, length) => {
     const trimmedReview =
       review.length > length ? review.substring(0, length) : review
-    const newLength = trimmedReview.lastIndexOf(' ')
-    const reviewExcerpt = review.substring(0, newLength)
-    return review && reviewExcerpt + '…'
+    const newLength =
+      review.length > length ? trimmedReview.lastIndexOf(' ') : review
+    const reviewExcerpt =
+      review.length > length ? review.substring(0, newLength) : review
+    return review.length > length ? review && reviewExcerpt + '…' : review
   }
 
   const getFullReview = (review, length) => {
-    const trimmedReview = review.substring(0, length)
-    const newLength = trimmedReview.lastIndexOf(' ')
-    return review && review.slice(0, newLength) + '…' + review.slice(newLength)
+    const trimmedReview =
+      review.length > length ? review.substring(0, length) : review
+    const newLength =
+      review.length > length ? trimmedReview.lastIndexOf(' ') : review
+    return review.length > length
+      ? review && review.slice(0, newLength) + '…' + review.slice(newLength)
+      : review
   }
 
   return (
