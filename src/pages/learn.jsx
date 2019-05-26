@@ -130,11 +130,10 @@ class WiltPage extends React.Component {
                   <PostTitle id={subject.replace(/\s+/g, '')}>
                     {`${day} - ${subject}`}{' '}
                     <Hashtag href={`#${subject.replace(/\s+/g, '')}`}>
-                      {' '}
                       #
                     </Hashtag>
                     &nbsp;
-                    <a className="link__top-of-page" href="#">
+                    <a href="#">
                       <BackToTop className="back-to-the-top" />
                     </a>
                   </PostTitle>

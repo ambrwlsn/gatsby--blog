@@ -25,8 +25,8 @@ const Projects = () => (
       <div>
         <h1>Projects</h1>
         <p>
-          The first project I'll list here is my own site and thing I still need
-          to do on it (in rough order of importance).
+          The first project I'll list here is my own site and things I still
+          need to do on it (in rough order of importance).
         </p>
         <p>If you think I should improve something, let me know and I will.</p>
         <h2>To do:</h2>

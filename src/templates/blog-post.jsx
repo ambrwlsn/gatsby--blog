@@ -33,8 +33,15 @@ const PostData = styled.div`
   display: flex;
   align-items: flex-end;
   @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+`
+
+const DotSeparator = styled.span`
+  margin-right: 0.5rem;
+  @media (max-width: 800px) {
+    display: none;
+    margin: 0;
   }
 `
 
@@ -85,10 +92,20 @@ const BlogPostTemplate = props => {
                 >
                   {nicelyFormattedDate}
                 </BlogPostDate>
+                <DotSeparator> • </DotSeparator>
                 <div style={{ marginTop: '.5rem' }}>
-                  {Array.apply(null, { length: clocks }).map(i => (
-                    <ClockIcon key={i} color="currentColor" />
-                  ))}
+                  {clocks < 1 ? (
+                    <span>{post.timeToRead} min</span>
+                  ) : (
+                    <span>{post.timeToRead} mins</span>
+                  )}
+                  {clocks < 1 ? (
+                    <ClockIcon color="currentColor" />
+                  ) : (
+                    Array.apply(null, { length: clocks }).map(i => (
+                      <ClockIcon key={i} color="currentColor" />
+                    ))
+                  )}
                 </div>
               </PostData>
               <section className="h-entry">
