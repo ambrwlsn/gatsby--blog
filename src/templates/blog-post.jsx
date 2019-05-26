@@ -33,7 +33,8 @@ const PostData = styled.div`
   display: flex;
   align-items: flex-end;
   @media (max-width: 800px) {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
