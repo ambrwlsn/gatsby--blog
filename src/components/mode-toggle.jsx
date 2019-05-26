@@ -28,7 +28,7 @@ const HiddenWrapper = styled.span`
   text-align: right;
   visibility: hidden;
   padding: 0 5px;
-  border: 1.5px solid rgba(255,255,255,.5);
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
   width: 2.5em;
   height: 1.5em;
   @media (max-width: 800px) {
@@ -75,7 +75,7 @@ const ModeToggle = ({ checked, onChange, className }) => {
   const [mounted, setMounted] = useState(false)
   useEffect(() => {
     setMounted(true)
-  }, [setMounted])
+  }, [])
 
   if (!mounted) return <HiddenWrapper />
 
