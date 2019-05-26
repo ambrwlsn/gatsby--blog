@@ -66,10 +66,19 @@ module.exports = {
     },
 
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+              withWebp: true,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
