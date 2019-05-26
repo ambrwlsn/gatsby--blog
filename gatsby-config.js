@@ -3,7 +3,7 @@ module.exports = {
     title: "Amber's Website",
     author: 'Amber Wilson',
     description: "Amber's blog for thoughts and things.",
-    siteUrl: 'https://gatsbytastic.netlify.com',
+    siteUrl: 'https://amberwilson.co.uk',
     social: {
       twitter: 'ambrwlsn90',
     },
