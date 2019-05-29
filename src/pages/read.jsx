@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '@components/layout'
@@ -58,7 +58,8 @@ const Reading = () => (
       <Intro>
         Here are the books I've read or listened to this year. Each block
         contains a review, a picture, the book's length, format (audiobook,
-        kindle, paperback), and summary of characteristics.
+        kindle, paperback), and summary of characteristics. See the books I read
+        last year <Link to="/blog/books/">here</Link> :)
       </Intro>
     </IntroStyles>
     <ReviewSection>
