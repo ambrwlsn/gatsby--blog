@@ -27,7 +27,7 @@ function catTypes(type) {
     }
 }
 
-console.log(cat.getCat) // Siamese
+console.log(cat.getCat) // Many Siamese cats have blue eyes.
 ```
 
 If this was not exciting enough, there are many other data types (not only functions) that can be organised using object literals - e.g. array literals (see an example of this in MPJ's video), nested object literals, numbers, any string, etc.
