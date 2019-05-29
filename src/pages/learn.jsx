@@ -156,7 +156,7 @@ export default WiltPage
 export const pageQuery = graphql`
   {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___number], order: ASC }
+      sort: { fields: [frontmatter___number], order: DESC }
       filter: { frontmatter: { posttype: { eq: "wilt" } } }
       limit: 1000
     ) {
