@@ -22,14 +22,16 @@ const colours = keyframes`
 
 const BlogPostLink = styled(Link)`
   font-family: 'Courgette', cursive;
-  text-decoration-skip: ink;
-  background: linear-gradient(270deg, #5ceaf6, #be1fbb);
-  background-size: 300% 100%;
-  -webkit-background-clip: text;
-  padding-right: 10px;
-  &:hover {
-    color: transparent;
-    animation: ${colours} 3.5s ease;
+  @media (min-width: 800px) {
+    text-decoration-skip: ink;
+    background: linear-gradient(270deg, #5ceaf6, #be1fbb);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    padding-right: 10px;
+    &:hover {
+      color: transparent;
+      animation: ${colours} 3.5s ease;
+    }
   }
 `
 
