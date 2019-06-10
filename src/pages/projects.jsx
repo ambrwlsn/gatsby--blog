@@ -32,7 +32,7 @@ const Projects = () => (
         <h2>To do:</h2>
         <ul>
           <li>
-            Optimise book review page for tablets (and tweak other tablet
+            <s>Optimise book review page for tablets</s> (and tweak other tablet
             layouts).
           </li>
           <li>Complete clean, semantic HTML.</li>

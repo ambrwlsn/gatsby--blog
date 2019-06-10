@@ -6,19 +6,35 @@ const BORDER_RADIUS = '10px'
 
 const Container = styled.div`
   display: grid;
+  margin-bottom: 5em;
   width: 800px;
   height: 600px;
   grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
   grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
-  margin-bottom: 5em;
   grid-template-areas:
     'review review review . length length length'
     'review review review . . . .'
     'review review review . . . picture'
     '. . . . . . picture'
-    'method . type type type . picture';
+    'method . type type type . .';
+
   @media (max-width: 800px) {
+    width: 500px;
+    height: 600px;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-areas:
+      'review review review review review . length'
+      'review review review review review . .'
+      'review review review review review . picture'
+      '. . . . . . picture'
+      'method . type type type . .';
+  }
+
+  @media (max-width: 500px) {
     margin: 0 1em 3em 1em;
+    width: auto;
+    height: auto;
     grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
     grid-template-rows: 1fr 1rem 0.5fr 1rem 0.5fr;
     grid-template-areas:
@@ -27,8 +43,6 @@ const Container = styled.div`
       'method method method . picture picture picture'
       '. . . . . . .'
       'type type type . length length length';
-    width: auto;
-    height: auto;
   }
 `
 
@@ -48,14 +62,14 @@ const ReviewDesktop = styled.div`
   color: var(--readText);
   overflow: hidden;
   max-height: 100%;
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `
 
 const ReviewMobile = styled.div`
   display: none;
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     max-height: 270px;
     font-size: 1.2rem;
     color: var(--readText);
@@ -67,8 +81,11 @@ const ReviewMobile = styled.div`
 const Length = styled.div`
   font-size: 3rem;
   color: var(--readText);
+  text-align: center;
   @media (max-width: 800px) {
-    text-align: center;
+    font-size: 1.5rem;
+  }
+  @media (max-width: 500px) {
     font-size: 2rem;
   }
 `
@@ -115,7 +132,7 @@ const Type = styled.div`
   padding: 1.2rem;
   font-size: 1.05rem;
 
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     font-size: 1.2rem;
   }
 `
@@ -145,15 +162,14 @@ const DropdownReviewDesktop = styled.div`
   overflow: hidden;
   max-height: 100%;
   margin: 50px auto;
-
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `
 
 const DropdownReviewMobile = styled.div`
   display: none;
-  @media (max-width: 800px) {
+  @media (max-width: 500px) {
     max-height: 100%;
     color: black;
     overflow: hidden;
@@ -194,7 +210,9 @@ const Title = styled.h1`
   font-weight: 300;
   font-size: 1.5rem;
   font-family: 'Courgette', sans-serif;
-  @media (max-width: 800px) {
+  max-width: 400px;
+  margin: 1rem auto;
+  @media (max-width: 500px) {
     padding: 0 0.8rem;
   }
 `
