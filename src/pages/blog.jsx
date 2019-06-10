@@ -90,7 +90,7 @@ const Blog = props => {
           title="All posts"
           keywords={['blog', 'gatsby', 'javascript', 'react']}
         />
-        <Tags minCount={3} className="hideOnMobile" />
+        <Tags minCount={5} className="hideOnMobile" />
         <div>
           Add my RSS feed <a href={`${siteUrl}/rss.xml`}>here</a>!
         </div>
