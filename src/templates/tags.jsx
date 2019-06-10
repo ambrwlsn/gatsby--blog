@@ -2,8 +2,17 @@ import React, { Fragment, useContext } from 'react'
 import { Link, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
+import styled from 'styled-components'
 import Layout from '../components/layout'
 import ThemeContext from '../context/theme-context'
+
+const Wrapper = styled.div`
+  padding: 1rem;
+  max-width: 500px;
+  margin: auto;
+  margin-bottom: 3em;
+  text-align: center;
+`
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -21,13 +30,12 @@ const Tags = ({ pageContext, data }) => {
         }}
         title="Tagged with"
       />
-
-      <Layout>
-        <div style={{ maxWidth: '500px', margin: 'auto', marginBottom: '3em' }}>
+      <Wrapper>
+        <Layout>
           <h1
             style={{
-              fontFamily: 'Quattrocento, sans-serif',
               paddingBottom: '.5em',
+              fontSize: '1.5rem',
             }}
           >
             {tagHeader}
@@ -58,14 +66,14 @@ const Tags = ({ pageContext, data }) => {
             to="/tags"
             style={{
               textDecoration: 'none',
-              fontFamily: 'Quattrocento, sans-serif',
               paddingBottom: '1.5em',
+              margin: '0 auto',
             }}
           >
             All tags
           </Link>
-        </div>
-      </Layout>
+        </Layout>
+      </Wrapper>
     </Fragment>
   )
 }
