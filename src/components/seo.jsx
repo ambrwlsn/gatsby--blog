@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import favicon from '@content/assets/me.jpg'
 import ThemeContext from '@context/theme-context'
+import cardImage from '../../content/assets/me.jpg'
 
-function SEO({ description, lang, meta, keywords, title, slug, tags }) {
+function SEO({ description, lang, meta, keywords, title, slug, tags, twitterImage }) {
   const context = useContext(ThemeContext)
 
   return (
@@ -18,8 +18,8 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
         const allKeywords = keywords || []
+        const twitterCardImage = twitterImage
         const allTags = tags || []
-
         return (
           <Helmet
             htmlAttributes={{
@@ -28,9 +28,9 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            link={[
-              { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
-            ]}
+          // link={[
+          //   { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
+          // ]}
           >
             <meta name="author" content={metaAuthor} />
             <meta name="publisher" content={metaAuthor} />
@@ -57,17 +57,11 @@ function SEO({ description, lang, meta, keywords, title, slug, tags }) {
             <meta itemProp="name" content={title} />
             <meta itemProp="description" content={metaDescription} />
             <meta name="twitter:card" content="summary" />
-            <meta
-              name="twitter:image"
-              property="og:image"
-              content="/content/assets/me.jpg"
-            />
             <meta name="twitter:card" content="summary_large_image" />
             <meta
               name="twitter:image"
-              content={`${
-                data.site.siteMetadata.siteUrl
-              }${slug}twitter-card.jpg`}
+              property="og:image"
+              content={`${data.site.siteMetadata.siteUrl}${twitterCardImage}`}
             />
             <meta name="twitter:site" content="@ambrwlsn90" />
             <meta name="twitter:site:id" content="790735158" />
@@ -96,7 +90,8 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   tags: [],
-  slug: ''
+  slug: '',
+  twitterImage: cardImage
 }
 
 SEO.propTypes = {
@@ -106,7 +101,8 @@ SEO.propTypes = {
   keywords: PropTypes.arrayOf(PropTypes.string),
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
-  slug: PropTypes.string
+  slug: PropTypes.string,
+  twitterImage: PropTypes.string
 }
 
 export default SEO

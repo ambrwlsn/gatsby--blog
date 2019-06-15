@@ -3,6 +3,7 @@ import { graphql, navigate } from 'gatsby'
 import styled, { createGlobalStyle } from 'styled-components'
 import ContentWrapper from '@components/content-wrapper'
 import LeafyLogo from '@components/wilt-logo'
+import wiltTwitterCardImage from './img/wilt.png'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
@@ -83,6 +84,7 @@ class WiltPage extends React.Component {
           <SEO
             title="What I Learned Today"
             keywords={['wilt', 'learning', 'javascript', 'learn']}
+            twitterImage={wiltTwitterCardImage}
           />
           <TitleStyles>
             <Title>What I Learned Today - 100 Days</Title>
