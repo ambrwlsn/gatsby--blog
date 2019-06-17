@@ -3,6 +3,7 @@ day: Day 7
 subject: CSS Layout
 posttype: wilt
 number: 7
+postdate: June 2018
 ---
 
 CSS layout is something that amazes and confuses me at the same time. There seem to be so many approaches (e.g. floats, flexbox, grid), and so many frameworks (way too many to mention). The paradox of choice seems to apply here.

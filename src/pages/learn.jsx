@@ -38,6 +38,13 @@ const TitleStyles = styled.span`
 const PostTitle = styled.h2`
   font-family: 'Courgette', cursive;
 `
+
+const PostDate = styled.time`
+  color: grey;
+  font-family: 'Quattrocento', sans-serif;
+  font-size: .8rem;
+`
+
 const WILT = styled(LeafyLogo)`
   display: block;
   margin: auto;
@@ -126,11 +133,13 @@ class WiltPage extends React.Component {
               </a>
             </blockquote>
             {posts.map(({ node }) => {
-              const { day, subject } = node.frontmatter
+              const { day, subject, postdate } = node.frontmatter
               return (
                 <Fragment key={day}>
                   <PostTitle id={subject.replace(/\s+/g, '')}>
                     {`${day} - ${subject}`}{' '}
+                    <PostDate>{postdate}</PostDate>
+                    &nbsp;
                     <Hashtag href={`#${subject.replace(/\s+/g, '')}`}>
                       #
                     </Hashtag>
@@ -170,6 +179,7 @@ export const pageQuery = graphql`
             subject
             posttype
             number
+            postdate
           }
         }
       }

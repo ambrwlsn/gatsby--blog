@@ -3,6 +3,7 @@ day: Day 4
 subject: This
 posttype: wilt
 number: 4
+postdate: May 2018
 ---
 
 The `this` keyword is found in various programming languages, and behaves a certain way in JavaScript. Apparently even experienced developers get confused by it.

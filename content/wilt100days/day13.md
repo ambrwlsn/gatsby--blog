@@ -3,6 +3,7 @@ day: Day 13
 subject: Object Literals
 posttype: wilt
 number: 13
+postdate: July 2018
 ---
 
 I didn't learn about these at work but rather from a [video](https://www.youtube.com/watch?v=1DMolJ2FrNY) on the JavaScript reduce function by the wonderful [MPJ](https://twitter.com/mpjme).

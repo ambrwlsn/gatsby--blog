@@ -3,6 +3,7 @@ day: Day 9
 subject: Readable Code
 posttype: wilt
 number: 9
+postdate: June 2018
 ---
 
 There are so many books, articles, and videos about how to make code readable, so I'll keep this short and from my perspective (as a new developer who works mainly with JavaScript).

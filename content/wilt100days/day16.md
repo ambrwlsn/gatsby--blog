@@ -3,6 +3,7 @@ day: Day 16
 subject: indexOf
 posttype: wilt
 number: 16
+postdate: June 2019
 ---
 
 `indexOf()` is a handy little JavaScript method that returns the **first** index (position) of an item within an array or a string. For example: 

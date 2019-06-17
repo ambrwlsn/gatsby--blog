@@ -3,6 +3,7 @@ day: Day 3
 subject: Pseudo Selectors
 posttype: wilt
 number: 3
+postdate: May 2018
 ---
 
 I only just found out that `::before` (`:before`) and `::after` (`:after`) are pseudo elements, which are different from pseudo classes. Both of these are grouped under pseudo selectors. I like this quote from MDN ~

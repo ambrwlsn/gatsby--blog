@@ -3,6 +3,7 @@ day: Day 5
 subject: Flux
 posttype: wilt
 number: 5
+postdate: May 2018
 ---
 
 Recently, I began to write React at work and I've been doing okay with presentational components, but much less so with business logic (I hear ya [Brad Frost](http://bradfrost.com/blog/post/my-struggle-to-learn-react/)). I've heard that improving my ES6 will really help, so you'll see more little lessons on it, but I also want to touch on how to manage dynamic state. Despite the popularity of Redux, one of my developer friends recommended covering Flux.

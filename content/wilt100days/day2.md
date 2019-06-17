@@ -3,6 +3,7 @@ day: Day 2
 subject: Arrow Functions
 posttype: wilt
 number: 2
+postdate: May 2018
 ---
 
 Also known as a fat arrow, `=>`. This ES6 feature is a fat topic, so I'll concentrate on one aspect today.

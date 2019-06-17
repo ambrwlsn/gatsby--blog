@@ -3,6 +3,7 @@ day: Day 12
 subject: Testing
 posttype: wilt
 number: 12
+postdate: July 2018
 ---
 
 Today at work, we talked about test automation. One of the developers mentioned this quote:

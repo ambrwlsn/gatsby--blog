@@ -3,6 +3,7 @@ day: Day 10
 subject: Strings
 posttype: wilt
 number: 10
+postdate: June 2018
 ---
 
 *   A sequence containing some letters, numbers or symbols.
