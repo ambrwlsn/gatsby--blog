@@ -13,6 +13,7 @@ import ourHouse from '@pages/img/read/our_house.jpg'
 import whenBreathBecomesAir from '@pages/img/read/when_breath_becomes_air.jpg'
 import theDollsAlphabet from '@pages/img/read/the_dolls_alphabet.jpg'
 import theBear from '@pages/img/read/the_bear.jpg'
+import theHurt from '@pages/img/read/this_is_going_to_hurt.jpg'
 
 import Headphones from '@pages/img/read/headphones'
 import Kindle from '@pages/img/read/kindle'
@@ -162,7 +163,7 @@ const Reading = () => (
     <ReviewSection>
       <BookReview
         title="When Breath Becomes Air by Paul Kalanithi"
-        review="Review coming soon..."
+        review="This is one of the most poignant and thoughtful books I've read. Paul documented his journey with a terribly illness that sprang upon him very early in life. We get to hear about his early life, his time working as a young doctor and the strains it put on his relationship. Getting a glimpse into someone else's life - not only the shiny, polished parts - is quite an honour. Paul explained that he'd always loved writing and would write if he was not a doctor. I really like how he was able to enjoy writing even though his illness was slowly taking away the most important part of his life - his work as brain surgeon. I enjoyed Paul's wisdom throughout the book - in particular how he explained that a job isn't something you do for the monetary compensation. It's something you do because it brings you meaning. Otherwise - why would anyone make holes in people's brains? A haunting thing is that Paul never got to finish his book, which shows that nothing in life is certain and you should treat each day as a gift."
         picture={whenBreathBecomesAir}
         picAlt="When Breath Becomes Air book cover"
         methodAlt="Kindle"
@@ -181,7 +182,7 @@ const Reading = () => (
     <ReviewSection>
       <BookReview
         title="The Dolls Alphabet by Camilla Grudova"
-        review="Review coming soon..."
+        review="I knew that book is a little something different before I'd even read the first page. I like that. I think it's good to read unusual things sometimes. The book is an entirely fictional (I hope) collection of short stories that I believe are designed to make you think. Although, to be honest, they could be written for no reason other than the author liked them. There are similarities between the stories, mainly in the use of props and descriptions of people. Not all of the stories were enjoyable for me, but they were worth getting through so that I could reach the ones that were. I particularly enjoyed two or three of them very much. The author writes about dystopian worlds with different social rules, and I find that very interesting. I think we get used to the cultural rules of our society and they end up as background noise. Hearing about a different set of rules is unnerving but can be refreshing. The stories dealing with these rules are ones that I still think of from time to time. It's nice that the contents of a book stay with me like that."
         picture={theDollsAlphabet}
         picAlt="The Dolls Alphabet book cover"
         methodAlt="Kindle"
@@ -200,7 +201,7 @@ const Reading = () => (
     <ReviewSection>
       <BookReview
         title="The Bear Went Over The Mountain by William Kotzwinkle"
-        review="Reading in progress..."
+        review="Reading in progress - 50 pages to go."
         picture={theBear}
         picAlt="The Bear Went Over The Mountain book cover"
         methodAlt="Book"
@@ -219,6 +220,30 @@ const Reading = () => (
         lengthColour="#9a7f56"
         methodColour="#bbcae3"
         typeColour="#8e97b4"
+      />
+    </ReviewSection>
+    <ReviewSection>
+      <BookReview
+        title="This Is Going to Hurt: Secret Diaries of a Junior Doctor by Adam Kay"
+        review="I got into this book right away and could hardly put it down. Adam Kay's sense of humour made me feel nostalgic for the UK, which felt great by itself. But, the most amazing thing about this book is that it gives a valuable insight into what it's like to be a doctor. Even if some of it seems a little scripted, the majority served to grow my empathy and thankfulness towards doctors, especially those who work where life and death is involved. It reminded me of my time working in a resthome for the elderly. Adam describes to us humanity at its most vulnerable, scared, angry and exhausted. This is something you can't grasp from newspapers or quotes from politicians. The book ends with a call to do something to make people aware of the plight of employees within the NHS. How we should treasure everyone who works there for being there to help us when we need it the most. Adam's dry sense of humour and realness spill forth from every page of his book and I am so, so glad I read it. I miss it already!"
+        picture={theHurt}
+        picAlt="This Is Going to Hurt book cover"
+        methodAlt="Kindle"
+        method={
+          <Kindle
+            width={110}
+            height={110}
+            fill="var(--readText)"
+            stroke="var(--readText)"
+          />
+        }
+        length="285 pages"
+        type="Funny, shocking, revealing."
+        reviewColour="#CED6E1"
+        buttonColour="#ADBAC3"
+        lengthColour="#F6FB5B"
+        methodColour="#32B2DF"
+        typeColour="#B894A1"
       />
     </ReviewSection>
   </Layout>
