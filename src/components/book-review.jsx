@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Flipper, Flipped } from 'react-flip-toolkit'
+import HasJavaScriptContext from '@context/has-javascript'
 
 const BORDER_RADIUS = '10px'
 
@@ -43,6 +44,23 @@ const Container = styled.div`
       'method method method . picture picture picture'
       '. . . . . . .'
       'type type type . length length length';
+  }
+`
+
+const NoJsReviewContainer = styled.div`
+  grid-area: review;
+  background: ${p => p.noJSReviewBackground};
+  padding: 1em;
+  line-height: 1.5;
+  font-size: 1em;
+  border-radius: ${BORDER_RADIUS};
+  overflow: hidden;
+  &:hover {
+    grid-row-start: 1;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    z-index: 1;
   }
 `
 
@@ -293,11 +311,13 @@ const BookReview = props => {
       : review
   }
 
+  const hasJavaScript = !React.useContext(HasJavaScriptContext)
+
   return (
     <Flipper flipKey={isDropdownOpen}>
-      <Title>{title}</Title>
+      <Title>{hasJavaScript ? title : 'no javascript here'}</Title>
       <Container>
-        {isDropdownOpen ? (
+        {isDropdownOpen && hasJavaScript ? (
           <Flipped inverseFlipId="container">
             <ReviewContainerFinal setDropdown={() => setDropdown(false)} />
           </Flipped>
@@ -305,6 +325,11 @@ const BookReview = props => {
           <Flipped inverseFlipId="container">
             <ReviewContainerInitial setDropdown={() => setDropdown(true)} />
           </Flipped>
+        )}
+        {!hasJavaScript && (
+          <NoJsReviewContainer noJSReviewBackground={reviewColour}>
+            {review}
+          </NoJsReviewContainer>
         )}
 
         <LengthContainer lengthBackground={lengthColour}>
