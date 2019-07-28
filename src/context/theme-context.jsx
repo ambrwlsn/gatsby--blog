@@ -8,7 +8,8 @@ const defaultState = {
 
 const ThemeContext = React.createContext(defaultState)
 
-const isOSDarkModeSet = () => window.matchMedia('(prefers-color-scheme: dark)').matches === true
+const isOSDarkModeSet = () =>
+  window.matchMedia('(prefers-color-scheme: dark)').matches === true
 
 const ThemeProvider = ({ children }) => {
   const [isDarkTheme, setDarkTheme] = useState(false)
@@ -26,7 +27,9 @@ const ThemeProvider = ({ children }) => {
   }
 
   return (
-    <ThemeContext.Provider value={{ isDarkTheme, toggleDark }}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ isDarkTheme, toggleDark }}>
+      {children}
+    </ThemeContext.Provider>
   )
 }
 

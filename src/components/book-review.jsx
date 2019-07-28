@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Flipper, Flipped } from 'react-flip-toolkit'
-import HasJavaScriptContext from '@context/has-javascript'
 
 const BORDER_RADIUS = '10px'
 
@@ -234,7 +233,6 @@ const Title = styled.h1`
     padding: 0 0.8rem;
   }
 `
-
 const BookReview = props => {
   const {
     title,
@@ -252,6 +250,8 @@ const BookReview = props => {
   } = props
 
   const [isDropdownOpen, setDropdown] = useState(false)
+  const [hasJavaScript, setJSAvailability] = React.useState(false)
+  React.useEffect(() => setJSAvailability(true), [])
 
   const ReviewContainerInitial = ({ setDropdown }) => (
     <Flipped flipId="container">
@@ -311,17 +311,16 @@ const BookReview = props => {
       : review
   }
 
-  const hasJavaScript = !React.useContext(HasJavaScriptContext)
-
   return (
     <Flipper flipKey={isDropdownOpen}>
-      <Title>{hasJavaScript ? title : 'no javascript here'}</Title>
+      <Title>{title}</Title>
       <Container>
-        {isDropdownOpen && hasJavaScript ? (
+        {isDropdownOpen && hasJavaScript && (
           <Flipped inverseFlipId="container">
             <ReviewContainerFinal setDropdown={() => setDropdown(false)} />
           </Flipped>
-        ) : (
+        )}
+        {!isDropdownOpen && hasJavaScript && (
           <Flipped inverseFlipId="container">
             <ReviewContainerInitial setDropdown={() => setDropdown(true)} />
           </Flipped>

@@ -46,33 +46,35 @@ const IntroStyles = styled.span`
   font-size: 1.25rem;
 `
 
-const Reading = () => (
-  <Layout>
-    <SEO title="All posts" keywords={['gatsby', 'javascript', 'react']} />
-    <TitleStyles>
-      <Title>Book Reviews</Title>
-    </TitleStyles>
-    <IntroStyles>
-      <Intro>
-        Here are the books I've read or listened to this year. Each block
-        contains a review, a picture, the book's length, format (audiobook,
-        kindle, paperback), and summary of characteristics. See the books I read
-        last year <Link to="/blog/books/">here</Link> :)
-      </Intro>
-    </IntroStyles>
-    <ReviewSection>
-      <AngryPlanet />
-      <Hurt />
-      <Bear />
-      <DollsAlphabet />
-      <Breath />
-      <OurHouse />
-      <Thoughts />
-      <UpAndGoing />
-      <Becoming />
-    </ReviewSection>
-  </Layout>
-)
+const Reading = () => {
+  return (
+    <Layout>
+      <SEO title="All posts" keywords={['gatsby', 'javascript', 'react']} />
+      <TitleStyles>
+        <Title>Book Reviews</Title>
+      </TitleStyles>
+      <IntroStyles>
+        <Intro>
+          Here are the books I've read or listened to this year. Each block
+          contains a review, a picture, the book's length, format (audiobook,
+          kindle, paperback), and summary of characteristics. See the books I
+          read last year <Link to="/blog/books/">here</Link> :)
+        </Intro>
+      </IntroStyles>
+      <ReviewSection>
+        <AngryPlanet />
+        <Hurt />
+        <Bear />
+        <DollsAlphabet />
+        <Breath />
+        <OurHouse />
+        <Thoughts />
+        <UpAndGoing />
+        <Becoming />
+      </ReviewSection>
+    </Layout>
+  )
+}
 
 export default Reading
 
