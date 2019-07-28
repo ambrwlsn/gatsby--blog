@@ -1,21 +1,20 @@
 ---
-day: Day 20
-subject: Imperative And Declarative
-posttype: wilt
-number: 20
-postdate: July 2019
+title: Imperative and Declarative Programming
+date: '2019-07-28'
+tags: ['dev tips', 'learning', 'javascript']
+keywords: [amber wilson, software engineering, web development, mentoring]
 ---
 
 In spoken languages, the imperative is used to express commands/give orders. This helps me remember how programming languages use the imperative.
 
-In programming languages like JavaScript the **imperative** is used for giving orders that describe to the computer **how** to do something! An example is a `for` loop that does something to an array:
+In programming languages like JavaScript the **imperative** is used for giving orders that describe to the computer **how** to do something! An example of imperative programming in JavaScript is a `for` loop that does something to items in an array. Check out the comments in the code below that represent what the computer is being ordered to do:
 
 ```js
 var catRatingOutOfTen = [10, 12, 15, 14, 11, 13]
-// Initialise a variable containing an empty array.
+// Create a variable containing an empty array.
 var accurateCatRating = []
 
-// Initialise a variable called i and give it a value of 0. Run a loop and,
+// Create a variable called i and give it a value of 0. Run a loop and,
 // each time, increase i by 1. Only loop while i is less than the number
 // of items in the catRatingOutOfTen array.
 for (var i = 0; i < catRatingOutOfTen.length; i++) {
@@ -26,21 +25,21 @@ for (var i = 0; i < catRatingOutOfTen.length; i++) {
   // initialised earlier.
   accurateCatRating.push(newRating)
 }
-// Log the result of accurateCatRating.
+
 console.log(accurateCatRating) // [20, 24, 30, 28, 22, 26]
 ```
 
-Quite verbose, eh? However, looping through an array can also be done in a **declarative** way! The `map()` method is one way - it describes to the computer **what** to do, while letting it figure out the **how**. Check it out:
+Quite verbose, eh? However, looping through an array can also be done in a **declarative** way! The `map()` method is one way - it states **what** the code does, and lets the computer figure out the **how** to do it. In spoken languages, the declarative deals with informative statements. The computer can be told **what** code is supposed to do, and be allowed to figure out **how** to do it by itself. Check out the comment below:
 
 ```js
 var catRatingOutOfTen = [10, 12, 15, 14, 11, 13]
 
-// Create a new array consisting of each item of the catRatingOutOfTen array...
+// accurateCatRating is a new array consisting of each item of the catRatingOutOfTen
+// array mapped out and multiplied by 2.
 var accurateCatRating = catRatingOutOfTen.map(function(n) {
-  // ...and multiply each item by 2.
   return n * 2
 })
-// Log the result of accurateCatRating.
+
 console.log(accurateCatRating) // [20, 24, 30, 28, 22, 26]
 ```
 
