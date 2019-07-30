@@ -28,7 +28,7 @@ body {
 .darkMode {
   --textColor: #e0dcdc;
   --backgroundColor: #363535;
-  --linkColor: rgb(208, 62, 142);
+  --linkColor: rgb(251, 150, 204);
   --linkColorHover: rgb(162, 36, 105);
   --inlineCode-bg: rgba(249, 248, 244, 0.17);
   --inlineCode--text: #e8e8e8;
@@ -73,7 +73,6 @@ a:hover {
 
 .social-icon {
   fill: var(--textColor);
-  
 }
 
 .social-icon:hover {
