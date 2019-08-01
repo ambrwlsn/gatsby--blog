@@ -32,15 +32,20 @@ const Logo = styled(A)`
   }
 `
 
+const LovelyLink = styled(Link)`
+  color: inherit;
+  display: inline;
+`
+
 const Layout = ({ children }) => {
   const context = useContext(ThemeContext)
 
   return (
     <Fragment>
       <Wrapper>
-        <Link to="/" style={{ color: 'inherit', display: 'inline' }}>
+        <LovelyLink to="/">
           <Logo width={50} height={50} color="currentColor" />
-        </Link>
+        </LovelyLink>
         <Nav />
         <ModeToggle
           checked={!context.isDarkTheme}

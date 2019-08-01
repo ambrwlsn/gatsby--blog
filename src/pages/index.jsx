@@ -63,7 +63,8 @@ function Index() {
               Hi, my name's Amber and I am a web developer. I recently
               refurbished my site and it's in beta mode. This means I've
               achieved a bunch of things I want to do, and need some more time
-              to finish the rest. See the list <Link to="/projects">here</Link>.
+              to finish the rest. See{' '}
+              <Link to="/projects">the list of things</Link> here.
             </p>
             <p>
               <a
