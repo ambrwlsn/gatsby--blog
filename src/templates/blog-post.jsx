@@ -11,6 +11,14 @@ import format from 'date-fns/format'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
+const ArticleList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+`
+
 const Wrapper = styled.main``
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
@@ -27,7 +35,11 @@ const BlogPostDate = styled.time`
   }
 `
 
-const PostData = styled.div`
+const BlogPostTimeToRead = styled.span`
+  margin-top: 0.5rem;
+`
+
+const PostData = styled.p`
   font-weight: 600;
   font-size: 1.2em;
   display: flex;
@@ -94,7 +106,7 @@ const BlogPostTemplate = props => {
                   {nicelyFormattedDate}
                 </BlogPostDate>
                 <DotSeparator> • </DotSeparator>
-                <div style={{ marginTop: '.5rem' }}>
+                <BlogPostTimeToRead>
                   {clocks < 1 ? (
                     <span>{post.timeToRead} min</span>
                   ) : (
@@ -103,11 +115,11 @@ const BlogPostTemplate = props => {
                   {clocks < 1 ? (
                     <ClockIcon color="currentColor" />
                   ) : (
-                    Array.apply(null, { length: clocks }).map(i => (
-                      <ClockIcon key={i} color="currentColor" />
+                    Array.apply(null, { length: clocks }).map((item, index) => (
+                      <ClockIcon key={index} color="currentColor" />
                     ))
                   )}
-                </div>
+                </BlogPostTimeToRead>
               </PostData>
               <section className="h-entry">
                 <Content
@@ -117,15 +129,7 @@ const BlogPostTemplate = props => {
               </section>
               <hr />
 
-              <ul
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  justifyContent: 'space-between',
-                  listStyle: 'none',
-                  padding: 0,
-                }}
-              >
+              <ArticleList>
                 <li>
                   {previous && (
                     <Link
@@ -154,7 +158,7 @@ const BlogPostTemplate = props => {
                     </Link>
                   )}
                 </li>
-              </ul>
+              </ArticleList>
             </article>
           </main>
         </Wrapper>

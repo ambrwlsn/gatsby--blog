@@ -84,6 +84,7 @@ const ModeToggle = ({ checked, onChange, className }) => {
       <Input
         type="checkbox"
         id="mode"
+        name="mode"
         checked={checked}
         onChange={() => {
           onChange(!checked)

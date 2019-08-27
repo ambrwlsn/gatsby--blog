@@ -5,7 +5,7 @@ html {
   --textColor: #000000;
   --backgroundColor: #ffffff;
   --linkColor: rgb(125, 57, 164);
-  --linkColorHover: #7928a7;
+  --linkColorHover: #56187a;
   --catEyeColor: #e0dcdc;
   --blockBorder: #000000;
   --readText: #363535;
@@ -69,14 +69,6 @@ a:hover {
   border-bottom: 3px solid var(--textColor);
   cursor: pointer;
   text-align: center;
-}
-
-.social-icon {
-  fill: var(--textColor);
-}
-
-.social-icon:hover {
-  fill: var(--linkColorHover);
 }
 
 ::-webkit-details-marker {

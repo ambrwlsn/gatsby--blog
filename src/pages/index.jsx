@@ -5,8 +5,8 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CatController from '@components/cat-controller'
-import Github from './img/github'
-import Twitter from './img/twitter'
+import GitHubSVG from './img/github'
+import TwitterSVG from './img/twitter'
 
 const Cat = styled(CatController)`
   stroke: black;
@@ -43,6 +43,26 @@ const Introduction = styled.div`
   }
 `
 
+const GitHubLink = styled.a`
+  margin-right: 1em;
+`
+
+const TwitterLink = styled.a``
+
+const GitHubIcon = styled(GitHubSVG)`
+  fill: var(--textColor);
+  &:hover {
+    fill: var(--linkColorHover);
+  }
+`
+
+const TwitterIcon = styled(TwitterSVG)`
+  fill: var(--textColor);
+  &:hover {
+    fill: var(--linkColorHover);
+  }
+`
+
 function Index() {
   return (
     <Fragment>
@@ -67,15 +87,12 @@ function Index() {
               <Link to="/projects">the list of things</Link> here.
             </p>
             <p>
-              <a
-                style={{ marginRight: '1rem' }}
-                href="https://github.com/ambrwlsn"
-              >
-                <Github width="25" height="25" className="social-icon" />
-              </a>
-              <a href="https://twitter.com/ambrwlsn90">
-                <Twitter width="25" height="25" className="social-icon" />
-              </a>
+              <GitHubLink href="https://github.com/ambrwlsn">
+                <GitHubIcon width="25" height="25" />
+              </GitHubLink>
+              <TwitterLink href="https://twitter.com/ambrwlsn90">
+                <TwitterIcon width="25" height="25" />
+              </TwitterLink>
             </p>
           </Introduction>
         </IntroductionBox>
