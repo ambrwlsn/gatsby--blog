@@ -14,6 +14,7 @@ import DollsAlphabet from '@content/books/dolls-alphabet'
 import Bear from '@content/books/bear'
 import Hurt from '@content/books/hurt'
 import AngryPlanet from '@content/books/angry-planet'
+import TechnicallyWrong from '@content/books/technically-wrong'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -62,6 +63,7 @@ const Reading = () => {
         </Intro>
       </IntroStyles>
       <ReviewSection>
+        <TechnicallyWrong />
         <AngryPlanet />
         <Hurt />
         <Bear />
