@@ -10,14 +10,14 @@ postdate: July 2018
 
 So, I use array methods more and more at work and they are definitely a pleasure to work with! There are quite a lot of them (I think around 50), but there are some more frequently used ones that cover most use cases, such as `sort()`, `map()`, `filter()`, and `reduce()`. I was inspired to write about them after reading [this](https://hackernoon.com/a-quick-introduction-to-functional-javascript-7e6fe520e7fa) post by [Angelos Chalaris](https://twitter.com/chalarangelo)! Please check out his post because there are _great_ examples & explanations in there!
 
-Of course, since I like them so much, I wanted to give an example here. The one I used most at work is `map()` but I didn't choose it because I gave an example of it in [Day 2](https://amberwilson.co.uk/blog/wilt100days/#arrowfunctions) :) As a side note, if you look carefully at the example in Day 2's lesson, you'll see how the elements array takes the map function, which in turn takes a function as its input, and returns a value based on the input. Below, I decided to create an example of `reduce()`.
+Of course, since I like them so much, I wanted to give an example here. The one I used most at work is `map()` but I didn't choose it because I gave an example of it in [Day 2](./learn#ArrowFunctions) :) As a side note, if you look carefully at the example in Day 2's lesson, you'll see how the elements array takes the map function, which in turn takes a function as its input, and returns a value based on the input. Below, I decided to create an example of `reduce()`.
 
 ```js
-const initialCatRating = [10, 10, 10];
+const initialCatRating = [10, 10, 10]
 const accurateCatRating = initialCatRating.reduce((total, amount) => {
-    total.push(amount * 2);
-    return total;
-}, []);
+  total.push(amount * 2)
+  return total
+}, [])
 
 accurateCatRating // [20, 20, 20]
 ```
@@ -36,16 +36,16 @@ Of course, to make it re-usable, you can extract the callback function from the 
 
 ```js
 const doubleMyValue = (total, amount) => {
-    total.push(amount * 2);
-    return total;
-};
+  total.push(amount * 2)
+  return total
+}
 ```
 
 Then, it can be put straight into `reduce()` (as an argument), to read:
 
 ```js
-const initialCatRating = [10, 10, 10];
-const accurateCatRating = initialCatRating.reduce(doubleMyValue , []);
+const initialCatRating = [10, 10, 10]
+const accurateCatRating = initialCatRating.reduce(doubleMyValue, [])
 
 accurateCatRating // [20, 20, 20]
 ```
