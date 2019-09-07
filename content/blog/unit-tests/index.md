@@ -1,8 +1,16 @@
 ---
 title: Unit Tests
-date: "2018-02-05"
-tags: ["javsascript", "testing"]
-keywords: [amber wilson,software engineering,web development,coding,code examples,javascript,unit tests]
+date: '2018-02-05'
+tags: ['javascript', 'testing']
+keywords:
+  [
+    amber wilson,
+    software engineering,
+    web development,
+    coding,
+    code examples,
+    unit tests,
+  ]
 ---
 
 This is a bit of a retrospective post, because the things I’m going to talk about happened on the last day of January. It was the day before my new job began, and I’d been in Berlin for 10 days. I had signed up to a codebar Berlin meetup about a week before, as a student, and was really excited to go along and see what codebar in Berlin was like. Before I moved to Berlin, I’d been part of codebar Brighton for about 1.5 years as a student, coach and organiser.
@@ -15,15 +23,16 @@ The code in question was this function:
 
 ```javascript
 function validatePrice() {
-    var $price = document.getElementById('price');
-    var priceValue = $price.value;
-    var regex = /^[1-9]\d*(((,\d{3}){1})?(\.\d{0,2})?)$/;
-    var invalidMessageNotDisplayed = document.querySelectorAll('.invalid_price_span').length <= 0;
-    var isValid = regex.test(priceValue);
-    if (!isValid && invalidMessageNotDisplayed) {
-        showInvalidPriceMessage($price);
-    }
-    return isValid;
+  var $price = document.getElementById('price')
+  var priceValue = $price.value
+  var regex = /^[1-9]\d*(((,\d{3}){1})?(\.\d{0,2})?)$/
+  var invalidMessageNotDisplayed =
+    document.querySelectorAll('.invalid_price_span').length <= 0
+  var isValid = regex.test(priceValue)
+  if (!isValid && invalidMessageNotDisplayed) {
+    showInvalidPriceMessage($price)
+  }
+  return isValid
 }
 ```
 
@@ -32,6 +41,7 @@ This function is designed to validate user-inputted prices. It isn’t the messi
 Dave suggested we use the popular testing framework [Jest](https://facebook.github.io/jest/), and the command line, to help me re-write the function, and write my first ever unit tests.
 
 I created a new folder with the command line `mkdir price`, I targeted the folder `cd price`, and ran `npm init`. My `package.json` data was created. I then ran `npm install --save jest`. My `package.json` then looked like this:
+
 ```javascript
 {
     "name": "price",
@@ -46,7 +56,7 @@ I created a new folder with the command line `mkdir price`, I targeted the folde
     "dependencies": {
         "jest": "^22.1.4"
     }
-} 
+}
 ```
 
 I opened my text editor and added my new price folder to my workspace. Within the folder, I created a file - `validate_price.js`. In here, I created an empty function - `validate_price`. Beneath the function, I made sure to add a line of code that enables the file contents to be exported - `module.exports = validate_price`. I then created a sub-folder - `__tests__`. I formatted the name like this so Jest can recognise it. In this sub-folder, I created a file - `validate_price.spec.js`, which Jest can also recognise. In this file, I wrote - `var validate_price = require (‘../validate_price’)`, to link it with my `validate_price` function.
@@ -54,12 +64,12 @@ I opened my text editor and added my new price folder to my workspace. Within th
 Dave then showed me the syntax for writing unit tests with Jest:
 
 ```javascript
-describe('validate_price', function (){
-    it('accepts numbers without decimals', function(){
-        var result = validate_price('45');
-        expect(result).toBe(true);
-    })
-});
+describe('validate_price', function() {
+  it('accepts numbers without decimals', function() {
+    var result = validate_price('45')
+    expect(result).toBe(true)
+  })
+})
 ```
 
 I had just written my first ever unit test! I ran `npm test` in the command line, triggering Jest to run. The result was:
@@ -73,9 +83,9 @@ The result helpfully informed me that my `validate_price` function was still emp
 I then added a second unit test to my `validate_price.spec.js` file:
 
 ```javascript
-it('declines values with non-digits', function(){
-    var result = validate_price('foo');
-    expect(result).toBe(false);
+it('declines values with non-digits', function() {
+  var result = validate_price('foo')
+  expect(result).toBe(false)
 })
 ```
 
@@ -85,7 +95,7 @@ What do you think would happen if `npm test` was run now? You may or may not hav
 
 This is because we have ‘true’ written in our function, and the expected result of this test is ‘false’. So our first unit test passes, and our second one fails. This is easily fixed by creating an ‘if, else’ statement that returns true or false, depending on whether the input is a number or not.
 
-It was at this point that Dave began to further explain what Test Driven Development (TDD) is. This is an agile method whereby an empty function is written, and each part of the function is written just well enough so it passes a test written specifically for it, and is then refactored. This helps code to be as DRY and readable as possible. Read more about TDD [here](https://www.agilealliance.org/glossary/tdd/#q=~(filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'tdd))~searchTerm~'~sort~false~sortDirection~'asc~page~1)).
+It was at this point that Dave began to further explain what Test Driven Development (TDD) is. This is an agile method whereby an empty function is written, and each part of the function is written just well enough so it passes a test written specifically for it, and is then refactored. This helps code to be as DRY and readable as possible. Read more about TDD [here](<https://www.agilealliance.org/glossary/tdd/#q=~(filters~(postType~(~'page~'post~'aa_book~'aa_event_session~'aa_experience_report~'aa_glossary~'aa_research_paper~'aa_video)~tags~(~'tdd))~searchTerm~'~sort~false~sortDirection~'asc~page~1)>).
 
 Dave also told me about red, green, refactor (RFR). Uncle Bob does an amazing job of describing this [here](http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html).
 
@@ -99,9 +109,9 @@ Next, Dave and I talked about my next task - how I could write code that would a
 
 ```javascript
 function validate_price(price) {
-    var regex = /^[0-9]+$/;
-    var result = regex.test(price)
-    return result;
+  var regex = /^[0-9]+$/
+  var result = regex.test(price)
+  return result
 }
 
 module.exports = validate_price
