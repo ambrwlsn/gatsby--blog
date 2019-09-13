@@ -94,7 +94,7 @@ const BlogPostTemplate = props => {
         />
         <Wrapper>
           <main>
-            <article>
+            <article className="h-entry">
               <header>
                 <Title className="p-name">{post.frontmatter.title}</Title>
               </header>
@@ -121,45 +121,43 @@ const BlogPostTemplate = props => {
                   )}
                 </BlogPostTimeToRead>
               </PostData>
-              <section className="h-entry">
-                <Content
-                  className="e-content"
-                  dangerouslySetInnerHTML={{ __html: post.html }}
-                />
-              </section>
-              <hr />
-
-              <ArticleList>
-                <li>
-                  {previous && (
-                    <Link
-                      to={`blog/${previous.fields.slug}`}
-                      rel="prev"
-                      style={{
-                        textDecoration: 'none',
-                        fontWeight: '900',
-                      }}
-                    >
-                      ← previous
-                    </Link>
-                  )}
-                </li>
-                <li>
-                  {next && (
-                    <Link
-                      to={`blog/${next.fields.slug}`}
-                      rel="next"
-                      style={{
-                        textDecoration: 'none',
-                        fontWeight: '900',
-                      }}
-                    >
-                      next →
-                    </Link>
-                  )}
-                </li>
-              </ArticleList>
+              <Content
+                className="e-content"
+                dangerouslySetInnerHTML={{ __html: post.html }}
+              />
             </article>
+            <hr />
+
+            <ArticleList>
+              <li>
+                {previous && (
+                  <Link
+                    to={`blog/${previous.fields.slug}`}
+                    rel="prev"
+                    style={{
+                      textDecoration: 'none',
+                      fontWeight: '900',
+                    }}
+                  >
+                    ← previous
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link
+                    to={`blog/${next.fields.slug}`}
+                    rel="next"
+                    style={{
+                      textDecoration: 'none',
+                      fontWeight: '900',
+                    }}
+                  >
+                    next →
+                  </Link>
+                )}
+              </li>
+            </ArticleList>
           </main>
         </Wrapper>
       </ContentWrapper>
