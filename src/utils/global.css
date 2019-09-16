@@ -14,6 +14,13 @@ html {
   color: var(--textColor);
   font-family: 'Quattrocento', sans-serif;
   font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 #gatsby-noscript {
@@ -23,6 +30,10 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+li {
+  margin-bottom: 1em;
 }
 
 .darkMode {

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { graphql, navigate } from 'gatsby'
-import styled, { createGlobalStyle } from 'styled-components'
+import styled from 'styled-components'
 import ContentWrapper from '@components/content-wrapper'
 import LeafyLogo from '@components/wilt-logo'
 import wiltTwitterCardImage from './img/wilt.png'
@@ -8,12 +8,6 @@ import wiltTwitterCardImage from './img/wilt.png'
 import Layout from '@components/layout'
 import SEO from '@components/seo'
 import Arrow from '@components/img/back-to-top'
-
-const SmoothScrollStyle = createGlobalStyle`
-html {
-  scroll-behavior: smooth;
-}
-`
 
 const Content = styled.article`
   padding-bottom: 1em;
@@ -42,7 +36,7 @@ const PostTitle = styled.h2`
 const PostDate = styled.time`
   color: grey;
   font-family: 'Quattrocento', sans-serif;
-  font-size: .8rem;
+  font-size: 0.8rem;
 `
 
 const WILT = styled(LeafyLogo)`
@@ -87,7 +81,6 @@ class WiltPage extends React.Component {
     return (
       <Layout>
         <ContentWrapper>
-          <SmoothScrollStyle />
           <SEO
             title="What I Learned Today"
             keywords={['wilt', 'learning', 'javascript', 'learn']}
@@ -137,8 +130,7 @@ class WiltPage extends React.Component {
               return (
                 <Fragment key={day}>
                   <PostTitle id={subject.replace(/\s+/g, '')}>
-                    {`${day} - ${subject}`}{' '}
-                    <PostDate>{postdate}</PostDate>
+                    {`${day} - ${subject}`} <PostDate>{postdate}</PostDate>
                     &nbsp;
                     <Hashtag href={`#${subject.replace(/\s+/g, '')}`}>
                       #
