@@ -18,8 +18,6 @@ const ArticleList = styled.ul`
   list-style: none;
   padding: 0;
 `
-
-const Wrapper = styled.main``
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
   font-size: 2.5rem;
@@ -92,74 +90,72 @@ const BlogPostTemplate = props => {
           slug={post.fields.slug}
           tags={post.frontmatter.tags}
         />
-        <Wrapper>
-          <main>
-            <article className="h-entry">
-              <header>
-                <Title className="p-name">{post.frontmatter.title}</Title>
-              </header>
-              <PostData>
-                <BlogPostDate
-                  className="dt-published"
-                  dateDate={post.frontmatter.date}
-                >
-                  {nicelyFormattedDate}
-                </BlogPostDate>
-                <DotSeparator> • </DotSeparator>
-                <BlogPostTimeToRead>
-                  {clocks < 1 ? (
-                    <span>{post.timeToRead} min</span>
-                  ) : (
-                    <span>{post.timeToRead} mins</span>
-                  )}
-                  {clocks < 1 ? (
-                    <ClockIcon color="currentColor" />
-                  ) : (
-                    Array.apply(null, { length: clocks }).map((item, index) => (
-                      <ClockIcon key={index} color="currentColor" />
-                    ))
-                  )}
-                </BlogPostTimeToRead>
-              </PostData>
-              <Content
-                className="e-content"
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
-            </article>
-            <hr />
+        <main>
+          <article className="h-entry">
+            <header>
+              <Title className="p-name">{post.frontmatter.title}</Title>
+            </header>
+            <PostData>
+              <BlogPostDate
+                className="dt-published"
+                dateDate={post.frontmatter.date}
+              >
+                {nicelyFormattedDate}
+              </BlogPostDate>
+              <DotSeparator> • </DotSeparator>
+              <BlogPostTimeToRead>
+                {clocks < 1 ? (
+                  <span>{post.timeToRead} min</span>
+                ) : (
+                  <span>{post.timeToRead} mins</span>
+                )}
+                {clocks < 1 ? (
+                  <ClockIcon color="currentColor" />
+                ) : (
+                  Array.apply(null, { length: clocks }).map((item, index) => (
+                    <ClockIcon key={index} color="currentColor" />
+                  ))
+                )}
+              </BlogPostTimeToRead>
+            </PostData>
+            <Content
+              className="e-content"
+              dangerouslySetInnerHTML={{ __html: post.html }}
+            />
+          </article>
+          <hr />
 
-            <ArticleList>
-              <li>
-                {previous && (
-                  <Link
-                    to={`blog/${previous.fields.slug}`}
-                    rel="prev"
-                    style={{
-                      textDecoration: 'none',
-                      fontWeight: '900',
-                    }}
-                  >
-                    ← previous
-                  </Link>
-                )}
-              </li>
-              <li>
-                {next && (
-                  <Link
-                    to={`blog/${next.fields.slug}`}
-                    rel="next"
-                    style={{
-                      textDecoration: 'none',
-                      fontWeight: '900',
-                    }}
-                  >
-                    next →
-                  </Link>
-                )}
-              </li>
-            </ArticleList>
-          </main>
-        </Wrapper>
+          <ArticleList>
+            <li>
+              {previous && (
+                <Link
+                  to={`blog/${previous.fields.slug}`}
+                  rel="prev"
+                  style={{
+                    textDecoration: 'none',
+                    fontWeight: '900',
+                  }}
+                >
+                  ← previous
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link
+                  to={`blog/${next.fields.slug}`}
+                  rel="next"
+                  style={{
+                    textDecoration: 'none',
+                    fontWeight: '900',
+                  }}
+                >
+                  next →
+                </Link>
+              )}
+            </li>
+          </ArticleList>
+        </main>
       </ContentWrapper>
       <JsonLd
         title={post.frontmatter.title}
