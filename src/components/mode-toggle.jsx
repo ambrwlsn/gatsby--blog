@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Sun from './img/sun'
 import Moon from './img/moon'
 
@@ -21,6 +21,18 @@ const Wrapper = styled.label`
     border: none;
     width: 0.7rem;
   }
+  /* https://ghinda.net/article/mimic-native-focus-css/ */
+  ${props =>
+    props.focused &&
+    css`
+      outline-width: 4px;
+      outline-style: solid;
+      outline-color: Highlight;
+      @media (-webkit-min-device-pixel-ratio: 0) {
+        outline-color: -webkit-focus-ring-color;
+        outline-style: auto;
+      }
+    `}
 `
 
 const HiddenWrapper = styled.span`
@@ -73,6 +85,8 @@ const MoonToggle = styled(Moon)`
 
 const ModeToggle = ({ checked, onChange, className }) => {
   const [mounted, setMounted] = useState(false)
+  const [focused, setFocused] = useState(false)
+
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -80,11 +94,13 @@ const ModeToggle = ({ checked, onChange, className }) => {
   if (!mounted) return <HiddenWrapper />
 
   return (
-    <Wrapper htmlFor="mode" className={className}>
+    <Wrapper htmlFor="mode" className={className} focused={focused}>
       <Input
         type="checkbox"
         id="mode"
         name="mode"
+        onBlur={() => setFocused(false)}
+        onFocus={() => setFocused(true)}
         checked={checked}
         onChange={() => {
           onChange(!checked)
