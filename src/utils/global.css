@@ -36,6 +36,13 @@ li {
   margin-bottom: 1em;
 }
 
+/* for image caption */
+.image-caption {
+  font-style: normal;
+  display: inherit;
+  font-size: 80%;
+}
+
 .darkMode {
   --textColor: #e0dcdc;
   --backgroundColor: #363535;
