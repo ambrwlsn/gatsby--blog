@@ -77,6 +77,7 @@ module.exports = {
             options: {
               maxWidth: 500,
               withWebp: true,
+              wrapperStyle: 'margin-left: 0!important;',
             },
           },
           {
