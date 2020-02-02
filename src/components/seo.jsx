@@ -4,8 +4,18 @@ import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import ThemeContext from '@context/theme-context'
 import cardImage from '../../content/assets/me.jpg'
+import favicon from './img/favicon.ico'
 
-function SEO({ description, lang, meta, keywords, title, slug, tags, twitterImage }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  slug,
+  tags,
+  twitterImage,
+}) {
   const context = useContext(ThemeContext)
 
   return (
@@ -28,9 +38,9 @@ function SEO({ description, lang, meta, keywords, title, slug, tags, twitterImag
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-          // link={[
-          //   { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
-          // ]}
+            // link={[
+            //   { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
+            // ]}
           >
             <meta name="author" content={metaAuthor} />
             <meta name="publisher" content={metaAuthor} />
@@ -78,6 +88,7 @@ function SEO({ description, lang, meta, keywords, title, slug, tags, twitterImag
               property="og:description"
               content={metaDescription}
             />
+            <link rel="icon" href={favicon} />
           </Helmet>
         )
       }}
@@ -91,7 +102,7 @@ SEO.defaultProps = {
   keywords: [],
   tags: [],
   slug: '',
-  twitterImage: cardImage
+  twitterImage: cardImage,
 }
 
 SEO.propTypes = {
@@ -102,7 +113,7 @@ SEO.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
   slug: PropTypes.string,
-  twitterImage: PropTypes.string
+  twitterImage: PropTypes.string,
 }
 
 export default SEO
