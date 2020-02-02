@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import ThemeContext from '@context/theme-context'
-import cardImage from '../../content/assets/me.jpg'
+import cardImage from '../../content/assets/favicon-32x32.png'
 import favicon from './img/favicon.ico'
 
 function SEO({
