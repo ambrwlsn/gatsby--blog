@@ -224,7 +224,7 @@ pre[class*='language-'] ::selection {
 .token.selector,
 .token.doctype {
   color: #c775df;
-  font-style: 'italic';
+  font-style: italic;
 }
 
 .token.class-name {
