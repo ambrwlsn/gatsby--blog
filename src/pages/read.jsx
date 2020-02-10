@@ -15,6 +15,9 @@ import Bear from '@content/books/bear'
 import Hurt from '@content/books/hurt'
 import AngryPlanet from '@content/books/angry-planet'
 import TechnicallyWrong from '@content/books/technically-wrong'
+import HowToBeRight from '@content/books/how-to-be-right'
+import TheCatSanctuary from '@content/books/the-cat-sanctuary'
+import EinGanzesLeben from '@content/books/ein-ganzes-leben'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -56,13 +59,30 @@ const Reading = () => {
       </TitleStyles>
       <IntroStyles>
         <Intro>
-          Here are the books I've read or listened to this year. Each block
-          contains a review, a picture, the book's length, format (audiobook,
-          kindle, paperback), and summary of characteristics. See{' '}
-          <Link to="/blog/books/">the books I read last year</Link> here:)
+          Here are the books I've read or listened to. Skip to a year using the
+          dropdown menu! Each block contains a review, a picture, the book's
+          length, format (audiobook, kindle, paperback), and summary of
+          characteristics. See{' '}
+          <Link to="/blog/books/">the books I read in 2018</Link> here :)
+          <details className="learnDetails">
+            <summary className="learnSummary">Select</summary>
+            <ul className="dropdown_menu">
+              <li>
+                <a href="#2020">2020</a>
+              </li>
+              <li>
+                <a href="#2019">2019</a>
+              </li>
+            </ul>
+          </details>
         </Intro>
       </IntroStyles>
       <ReviewSection>
+        <h2 id="2020">2020</h2>
+        <TheCatSanctuary />
+        <HowToBeRight />
+        <EinGanzesLeben />
+        <h2 id="2019">2019</h2>
         <TechnicallyWrong />
         <AngryPlanet />
         <Hurt />
