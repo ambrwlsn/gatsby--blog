@@ -68,7 +68,6 @@ function SEO({
             <meta itemProp="name" content={title} />
             <meta itemProp="description" content={metaDescription} />
             <meta name="twitter:card" content="summary" />
-            <meta name="twitter:card" content="summary_large_image" />
             <meta
               name="twitter:image"
               property="og:image"
