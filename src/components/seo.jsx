@@ -3,18 +3,18 @@ import PropTypes from 'prop-types'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import ThemeContext from '@context/theme-context'
-import cardImage from '../../content/assets/favicon-32x32.png'
+import cardImage from '@content/assets/favicon-32x32.png'
 import favicon from './img/favicon.ico'
 
 function SEO({
   description,
   lang,
-  meta,
+  // meta,
   keywords,
   title,
   slug,
   tags,
-  twitterImage,
+  // twitterImage,
 }) {
   const context = useContext(ThemeContext)
 
@@ -25,10 +25,11 @@ function SEO({
         const metaDescription =
           description || data.site.siteMetadata.description
         const metaAuthor = data.site.siteMetadata.author
+        // const metaTitle = data.site.siteMetadata.title
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
         const allKeywords = keywords || []
-        const twitterCardImage = twitterImage
+        // const twitterCardImage = twitterImage
         const allTags = tags || []
         return (
           <Helmet
@@ -71,18 +72,14 @@ function SEO({
             <meta
               name="twitter:image"
               property="og:image"
-              content={`${data.site.siteMetadata.siteUrl}${twitterCardImage}`}
+              content={`${siteUrl}/favicon.png`}
             />
             <meta name="twitter:site" content="@ambrwlsn90" />
             <meta name="twitter:site:id" content="790735158" />
             <meta name="twitter:creator" content="@ambrwlsn90" />
             <meta name="twitter:creator:id" content="790735158" />
-            <meta name="twitter:url" property="og:url" content={siteUrl} />
-            <meta
-              name="twitter:title"
-              property="og:title"
-              content={metaAuthor}
-            />
+            <meta name="twitter:url" property="og:url" content={blogPostUrl} />
+            <meta name="twitter:title" property="og:title" content={title} />
             <meta
               name="twitter:description"
               property="og:description"
