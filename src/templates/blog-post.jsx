@@ -56,7 +56,7 @@ const DotSeparator = styled.span`
   }
 `
 
-const Content = styled.div`
+const Content = styled.article`
   line-height: 1.7;
   font-size: 1.25em;
 `
@@ -91,7 +91,7 @@ const BlogPostTemplate = props => {
           tags={post.frontmatter.tags}
         />
         <main>
-          <article className="h-entry">
+          <section>
             <header>
               <Title className="p-name">{post.frontmatter.title}</Title>
             </header>
@@ -118,11 +118,11 @@ const BlogPostTemplate = props => {
                 )}
               </BlogPostTimeToRead>
             </PostData>
-            <Content
-              className="e-content"
-              dangerouslySetInnerHTML={{ __html: post.html }}
-            />
-          </article>
+          </section>
+          <Content
+            className="e-content, h-entry"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
           <hr />
 
           <ArticleList>
