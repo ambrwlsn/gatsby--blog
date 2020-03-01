@@ -122,6 +122,11 @@ a:hover {
   display: block;
 }
 
+.scotland-section {
+  display: flex;
+  align-items: center;
+}
+
 /**
  * Based on copypasta from Remy Bach and Sarah Drasner
  */
