@@ -7,7 +7,7 @@ keywords:
 ---
 
 <span class="blog-image">
-<img src="img/hugues-de-buyer-mimeure.jpg" alt="girl walking on paw prints">
+<img src="img/hugues-de-buyer-mimeure.jpg" alt="girl walking on paw prints" />
 <em class="image-caption">Image by <a href="https://unsplash.com/@huguesdb">hugues-dbm</a></em>
 </span>
 
