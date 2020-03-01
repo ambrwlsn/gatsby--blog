@@ -122,9 +122,17 @@ a:hover {
   display: block;
 }
 
-.scotland-section {
+.heading-with-neighbour-element {
+  display: inline;
+}
+
+.heading-with-more-than-one-neighbour {
   display: flex;
   align-items: center;
+}
+
+.heading-margin {
+  margin: 0.83em 0;
 }
 
 /**

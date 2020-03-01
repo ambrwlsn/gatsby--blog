@@ -27,7 +27,7 @@ I will post a link to the official photos once they are out! (hint: they are goo
 
 See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant article on the conferences [here](https://www.katiefenn.co.uk/scotland-js-retrospective/).
 
-<div id="diary" class="scotland-section">
+<div id="diary" class="heading-with-more-than-one-neighbour">
   <h1>Diary&nbsp;<a href="#diary" aria-hidden="true"> # </a>&nbsp;</h1>
 <a href="#" role="link">
 
@@ -75,7 +75,7 @@ At 7.15am, I walked to the conference venue, Dynamic Earth, and met up with the 
 
 </figure>
 
-The quality of the talks at Scotland CSS were, in Peter's words, _beyond phenomenal_. The quality and variation in the topics was amazing. Each talk was 20 minutes, and in a set of three. After each set there was a separate discussion slot for each speaker, which the audience could attend to ask questions.**This was a really nice and down-to-earth format that broke down barriers between audience and speakers and allowed everyone to feel on the same level! The stage for speakers was also very low - at the level of the audience. No hero-worship of speakers here.**
+The quality of the talks at Scotland CSS were, in Peter's words, _beyond phenomenal_. The quality and variation in the topics was amazing. Each talk was 20 minutes, and in a set of three. After each set there was a separate discussion slot for each speaker, which the audience could attend to ask questions. **This was a really nice and down-to-earth format that broke down barriers between audience and speakers and allowed everyone to feel on the same level! The stage for speakers was also very low - at the level of the audience. No hero-worship of speakers here.**
 
 <figure class="image__grid--two grid__captions--two">
 
@@ -124,7 +124,7 @@ The last day of the conference began a little later at 9am. It was just as good 
 
 The last night of the conferences was spent again at Hemma, amongst friends. And amonst fish and chips because Edinburgh restaurants are _really_ busy on Friday nights! I was very glad that I was staying in Scotland for one more day so I could walk around beautiful Edinburgh. I miss it and my web friends already - until next time :-)
 
-<div id="tips" class="scotland-section">
+<div id="tips" class="heading-with-more-than-one-neighbour">
   <h1>Tips&nbsp;<a href="#tips" aria-hidden="true"> # </a>&nbsp;</h1>
 <a href="#" role="link">
 
@@ -154,7 +154,7 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 
 - [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
 
-<div id="isspecial" class="scotland-section">
+<div id="isspecial" class="heading-with-more-than-one-neighbour">
 <h1>Why This Conference is Special&nbsp;<a href="#isspecial" aria-hidden="true"> # </a>&nbsp;</h1>
   <a href="#" role="link">
   
