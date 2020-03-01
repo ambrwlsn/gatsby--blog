@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { graphql, Link } from 'gatsby'
-
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CatController from '@components/cat-controller'
@@ -115,9 +114,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-// <Social>
-// <Github width="25" height="25" fill="var(--textColor)" />
-// <Github width="25" height="25" fill="var(--textColor)" />
-// <Github width="25" height="25" fill="var(--textColor)" />
-// </Social>
