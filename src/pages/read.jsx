@@ -18,6 +18,7 @@ import TechnicallyWrong from '@content/books/technically-wrong'
 import HowToBeRight from '@content/books/how-to-be-right'
 import TheCatSanctuary from '@content/books/the-cat-sanctuary'
 import EinGanzesLeben from '@content/books/ein-ganzes-leben'
+import AnAmericanMarriage from '@content/books/an-american-marriage'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -79,6 +80,7 @@ const Reading = () => {
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
+        <AnAmericanMarriage />
         <TheCatSanctuary />
         <HowToBeRight />
         <EinGanzesLeben />
