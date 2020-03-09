@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-remark": "^2.6.55",
     "gatsby-transformer-sharp": "^2.3.17",
+    "he": "^1.2.0",
     "prismjs": "^1.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
@@ -27,6 +28,7 @@
     "react-flip-toolkit": "^6.5.9",
     "react-helmet": "^5.2.1",
     "react-is": "^16.13.0",
+    "striptags": "^3.1.1",
     "styled-components": "^5.0.1",
     "typeface-courgette": "0.0.54",
     "typeface-quattrocento": "0.0.54"
