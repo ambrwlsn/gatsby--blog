@@ -6,6 +6,7 @@ import ContentWrapper from '../components/content-wrapper'
 import Clock from '../components/img/clock'
 
 // Utilities
+import excerpt from '@helpers/excerpt'
 import format from 'date-fns/format'
 
 import Layout from '../components/layout'
@@ -85,7 +86,7 @@ const BlogPostTemplate = props => {
       <ContentWrapper>
         <SEO
           title={post.frontmatter.title}
-          description={post.excerpt}
+          description={excerpt(post.html)}
           keywords={post.frontmatter.keywords}
           slug={post.fields.slug}
           tags={post.frontmatter.tags}
@@ -187,7 +188,6 @@ export const pageQuery = graphql`
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
-      excerpt(pruneLength: 160)
       html
       timeToRead
       wordCount {

@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import Tags from '../components/tags'
 import styled, { keyframes } from 'styled-components'
 // Utilities
+import excerpt from '@helpers/excerpt'
 import kebabCase from 'lodash/kebabCase'
 
 const colours = keyframes`
@@ -20,7 +21,7 @@ const colours = keyframes`
   }
 `
 
-const BlogPostLink = styled(Link)`
+const BlogPostLink = styled.a`
   font-family: 'Courgette', cursive;
   @media (min-width: 800px) {
     text-decoration-skip: ink;
@@ -38,6 +39,10 @@ const BlogPostLink = styled(Link)`
 const PostTag = styled(Link)`
   text-decoration: none;
   font-family: 'Quattrocento', sans-serif;
+`
+
+const PostTitle = styled.h1`
+  font-size: 2.5em;
 `
 
 const Teaser = styled.p`
@@ -98,18 +103,21 @@ const Blog = props => {
           const title = node.frontmatter.title || node.fields.slug
           const tags = node.frontmatter.tags
           const [month, day] = node.frontmatter.date.split(' ')
+          // Remove HTML tags from the output for plain text, and
+          // encode HTML entities.
+          const postExcerpt = excerpt(node.html)
           return (
             <Wrapper key={node.fields.slug}>
-              <h1 style={{ fontSize: '2.5em' }}>
-                <BlogPostLink to={`blog${node.fields.slug}`} title={title}>
+              <PostTitle>
+                <BlogPostLink href={`blog${node.fields.slug}`} title={title}>
                   {title}
                 </BlogPostLink>
-              </h1>
+              </PostTitle>
               <Date>
                 <span>{month}</span>
                 <span>{day}</span>
               </Date>
-              <Teaser dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+              <Teaser>{postExcerpt}</Teaser>
               {tags.map((tag, i) => {
                 const isLast = i === tags.length - 1
                 return (
@@ -147,7 +155,7 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          html
           fields {
             slug
           }
