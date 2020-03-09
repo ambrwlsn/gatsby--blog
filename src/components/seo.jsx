@@ -6,16 +6,7 @@ import ThemeContext from '@context/theme-context'
 import cardImage from '@content/assets/favicon-32x32.png'
 import favicon from './img/favicon.ico'
 
-function SEO({
-  description,
-  lang,
-  // meta,
-  keywords,
-  title,
-  slug,
-  tags,
-  // twitterImage,
-}) {
+function SEO({ description, lang, keywords, title, slug, tags }) {
   const context = useContext(ThemeContext)
 
   return (
@@ -25,11 +16,9 @@ function SEO({
         const metaDescription =
           description || data.site.siteMetadata.description
         const metaAuthor = data.site.siteMetadata.author
-        // const metaTitle = data.site.siteMetadata.title
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
         const allKeywords = keywords || []
-        // const twitterCardImage = twitterImage
         const allTags = tags || []
         return (
           <Helmet
@@ -39,9 +28,6 @@ function SEO({
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.title}`}
-            // link={[
-            //   { rel: 'shortcut icon', type: 'image/jpg', href: `${favicon}` },
-            // ]}
           >
             <meta name="author" content={metaAuthor} />
             <meta name="publisher" content={metaAuthor} />
@@ -62,7 +48,7 @@ function SEO({
             <meta property="og:title" content={title} />
             <meta property="og:type" content="website" />
             <meta property="og:description" content={metaDescription} />
-            {/* <meta property="og:image" content="/workspace.jpg/" /> */}
+            <meta property="og:image" content={`${siteUrl}/favicon.png`} />
             <meta property="og:url" content={blogPostUrl} />
 
             <meta itemProp="name" content={title} />
