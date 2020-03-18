@@ -23,8 +23,8 @@ const Title = styled.h1`
   font-family: 'Courgette', cursive;
   font-size: 2.5rem;
   @media (max-width: 800px) {
-    margin-left: 3rem;
-    max-width: 80%;
+    margin: 0;
+    margin-bottom: 0.8em;
   }
 `
 const BlogPostDate = styled.time`
