@@ -21,7 +21,7 @@ const colours = keyframes`
   }
 `
 
-const BlogPostLink = styled.a`
+const BlogPostLink = styled(Link)`
   font-family: 'Courgette', cursive;
   @media (min-width: 800px) {
     text-decoration-skip: ink;
@@ -109,7 +109,7 @@ const Blog = props => {
           return (
             <Wrapper key={node.fields.slug}>
               <PostTitle>
-                <BlogPostLink href={`blog${node.fields.slug}`} title={title}>
+                <BlogPostLink to={`blog${node.fields.slug}`} title={title}>
                   {title}
                 </BlogPostLink>
               </PostTitle>
