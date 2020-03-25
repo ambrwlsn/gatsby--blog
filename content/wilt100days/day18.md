@@ -1,5 +1,4 @@
 ---
-day: Day 18
 subject: Types
 posttype: wilt
 number: 18

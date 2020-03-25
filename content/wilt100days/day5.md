@@ -1,5 +1,4 @@
 ---
-day: Day 5
 subject: Flux
 posttype: wilt
 number: 5
@@ -12,9 +11,9 @@ Flux is an application architecture for React (that can also be used elsewhere) 
 
 **action -> dispatcher -> store -> view**
 
-*   The **action** creator formats messages (what the user does) from the UI
-*   The **dispatcher** takes the formatted messages and synchronously sends them to different stores
-*   The **store** holds all state logic and changes it by deciding what actions it wants to pay attention to
-*   The **view** takes changes from the store and updates the UI
+- The **action** creator formats messages (what the user does) from the UI
+- The **dispatcher** takes the formatted messages and synchronously sends them to different stores
+- The **store** holds all state logic and changes it by deciding what actions it wants to pay attention to
+- The **view** takes changes from the store and updates the UI
 
 Please look at Lin Clark's great [cartoon guide](https://code-cartoons.com/a-cartoon-guide-to-flux-6157355ab207) for more details. For a more code-heavy example, see [here](https://blog.andrewray.me/flux-for-stupid-people/). I feel like the best way to learn about Flux is to build things in tandem with reading about it (and finding nice developers who can guide you)!

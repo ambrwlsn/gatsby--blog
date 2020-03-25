@@ -1,5 +1,4 @@
 ---
-day: Day 3
 subject: Pseudo Selectors
 posttype: wilt
 number: 3

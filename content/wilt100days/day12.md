@@ -1,5 +1,4 @@
 ---
-day: Day 12
 subject: Testing
 posttype: wilt
 number: 12

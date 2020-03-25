@@ -1,5 +1,4 @@
 ---
-day: Day 17
 subject: Prebrowsing
 posttype: wilt
 number: 17
@@ -16,9 +15,8 @@ I'll mention a commonly used one here - `dns-prefetch`: My understanding is that
 
 ```html
 <head>
-    <link rel="dns-prefetch" href="//fancyimagecdn.com">
+  <link rel="dns-prefetch" href="//fancyimagecdn.com" />
 </head>
 ```
-
 
 See [this](https://css-tricks.com/prefetching-preloading-prebrowsing/) CSS tricks article by [Robin Rendle](https://www.robinrendle.com/adventures/) for further information.

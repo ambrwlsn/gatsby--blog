@@ -1,5 +1,4 @@
 ---
-day: Day 20
 subject: filter
 posttype: wilt
 number: 20

@@ -1,5 +1,4 @@
 ---
-day: Day 11
 subject: Emmet
 posttype: wilt
 number: 11

@@ -1,5 +1,4 @@
 ---
-day: Day 6
 subject: JSON-LD
 posttype: wilt
 number: 6
@@ -18,6 +17,7 @@ JSON, or JavaScript Object Notation, is a simple language that represents object
 ```
 
 Here is similar information in JSON-LD format:
+
 ```js
 {
     "@context": {

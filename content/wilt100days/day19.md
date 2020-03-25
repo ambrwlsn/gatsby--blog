@@ -1,5 +1,4 @@
 ---
-day: Day 19
 subject: Console debugging
 posttype: wilt
 number: 19

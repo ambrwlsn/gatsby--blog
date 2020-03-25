@@ -1,5 +1,4 @@
 ---
-day: Day 1
 subject: BEM
 posttype: wilt
 number: 1
@@ -10,10 +9,10 @@ I keep getting tripped up at work by forgetting to write modular CSS classes. Th
 
 Example:
 
-__`.button`__ is a block.
+**`.button`** is a block.
 
 **`.button__label`** is an element.
 
-__`.button--confirm`__ is a modifier.
+**`.button--confirm`** is a modifier.
 
 See resources [here](http://getbem.com/introduction/) and [here](https://zellwk.com/blog/css-architecture-1/).

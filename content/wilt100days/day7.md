@@ -1,5 +1,4 @@
 ---
-day: Day 7
 subject: CSS Layout
 posttype: wilt
 number: 7

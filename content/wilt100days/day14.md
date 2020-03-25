@@ -1,6 +1,5 @@
 ---
-day: Day 14
-subject: Ternary Operator 
+subject: Ternary Operator
 posttype: wilt
 number: 14
 postdate: July 2018
@@ -9,10 +8,11 @@ postdate: July 2018
 This is one of my favourite things in JavaScript. Not only is it simple and easy to use but it's also applicable to lots of situations **and** it can replace more verbose syntax (like `if` statements). It looks something like this:
 
 ```js
-const hoursOfSleep = 5;
-const timeForSleep = (hoursOfSleep < 8) ? 
-    "Yup, no more phone for you" : 
-    "Ah nah, a few more minutes of phone time won't hurt"; 
+const hoursOfSleep = 5
+const timeForSleep =
+  hoursOfSleep < 8
+    ? 'Yup, no more phone for you'
+    : "Ah nah, a few more minutes of phone time won't hurt"
 ```
 
 Notice the **?** and the **:**
@@ -26,7 +26,7 @@ Ternary operators are really flexible and can be used in a number of ways. You c
 ```js
 const catsRule = true,
 const dogsDrool = false,
-const catDog = catsRule ? 
+const catDog = catsRule ?
     (dogsDrool ? "Let's all live in harmony": "Both cats and dogs drool") :
     (dogsDrool ? "Dogs are cool, nearly as cool as cats" : "Dogs and cats can be friends");
 ```

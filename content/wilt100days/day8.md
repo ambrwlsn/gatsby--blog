@@ -1,5 +1,4 @@
 ---
-day: Day 8
 subject: Debugging
 posttype: wilt
 number: 8
@@ -10,16 +9,19 @@ Recently at work, I've watched other developers use `console.log` a lot in code 
 
 The debugger can do a lot, and it'd take a much longer post to walk through this tool's UI, so I'll mention four of the most commonly used debugging methods here.
 
-*   **Step over code**
-    * Steps over a function that doesn't contain a bug and runs its code
+- **Step over code**
 
-*   **Step into code**
-    * Steps inside a function and allows you to run each part separately
+  - Steps over a function that doesn't contain a bug and runs its code
 
-*   **Step out of code**
-    * Steps out of a function you are inside, and runs its code
+- **Step into code**
 
-*   **Resume execution of code**
+  - Steps inside a function and allows you to run each part separately
+
+- **Step out of code**
+
+  - Steps out of a function you are inside, and runs its code
+
+- **Resume execution of code**
 
 Debugging is something developers have to be really good at. So don't be scared to do it! Or, be scared but do it anyway, you'll get better :)
 

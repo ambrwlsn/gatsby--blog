@@ -1,5 +1,4 @@
 ---
-day: Day 13
 subject: Object Literals
 posttype: wilt
 number: 13
@@ -12,20 +11,20 @@ Object literals are a data structure that can be used in JavaScript. I really li
 
 ```js
 var cat = {
-    myCat: 'Tabby',
-    getCat: catTypes('Siamese')
+  myCat: 'Tabby',
+  getCat: catTypes('Siamese'),
 }
 ```
 
-The above code is an alteration of the MDN [example](https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals). I found MDN's explanation of object literals a little mechanical (compared to other resources I found), but it does give quite a clear portrayal of how flexible object literals can be. For instance, the typical combination of a key (`myCat`), value (`Tabby`) pair can be accessed and used in other places in your code, without these values polluting the global scope*. You can use the `catTypes` function like so:
+The above code is an alteration of the MDN [example](https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide/Grammar_and_types#Object_literals). I found MDN's explanation of object literals a little mechanical (compared to other resources I found), but it does give quite a clear portrayal of how flexible object literals can be. For instance, the typical combination of a key (`myCat`), value (`Tabby`) pair can be accessed and used in other places in your code, without these values polluting the global scope\*. You can use the `catTypes` function like so:
 
 ```js
 function catTypes(type) {
-    if (type !== 'Siamese') {
-        return type;
-    } else {
-        return "Many " + type + " cats have blue eyes.";
-    }
+  if (type !== 'Siamese') {
+    return type
+  } else {
+    return 'Many ' + type + ' cats have blue eyes.'
+  }
 }
 
 console.log(cat.getCat) // Many Siamese cats have blue eyes.
@@ -41,4 +40,4 @@ For more rules and when to use, check out [this](http://www.dyn-web.com/tutorial
 
 I haven't had much of a chance to use object literals in the wild yet, but I hope to soon. After I have, I hope to write an updated post that describes my new insights.
 
-* An object (literal) can be used like a namespace to avoid polluting the global object, but there's still the reference of the object attached to global. If you want to completely eliminate variables polluting the global object as fields, then IIFEs are for you. Some modules are also isolated from global. So, object literals limit pollution through namespacing, but do not entirely eliminate it. (Thanks, [Mark](https://qubyte.codes/), for the information).
+- An object (literal) can be used like a namespace to avoid polluting the global object, but there's still the reference of the object attached to global. If you want to completely eliminate variables polluting the global object as fields, then IIFEs are for you. Some modules are also isolated from global. So, object literals limit pollution through namespacing, but do not entirely eliminate it. (Thanks, [Mark](https://qubyte.codes/), for the information).
