@@ -192,7 +192,7 @@ pre[class*='language-'] ::selection {
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre)>code[class*='language-'] {
   border-radius: 0.3rem;
   background: var(--inlineCode-bg);
   color: var(--inlineCode--text);
@@ -207,7 +207,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.comment {
-  color: rgb(99, 119, 119);
+  color: #ADBBBB;
 }
 
 .token.string,
@@ -231,7 +231,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: rgb(99, 119, 119);
+  color: #ADBBBB;
 }
 
 .token.selector,
