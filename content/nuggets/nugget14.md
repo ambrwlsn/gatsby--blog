@@ -1,6 +1,6 @@
 ---
 subject: Ternary Operator
-posttype: wilt
+posttype: nugget
 number: 14
 postdate: July 2018
 ---

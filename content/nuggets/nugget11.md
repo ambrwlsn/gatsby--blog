@@ -1,6 +1,6 @@
 ---
 subject: Emmet
-posttype: wilt
+posttype: nugget
 number: 11
 postdate: July 2018
 ---

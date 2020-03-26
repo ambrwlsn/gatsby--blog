@@ -1,6 +1,6 @@
 ---
 subject: JSON-LD
-posttype: wilt
+posttype: nugget
 number: 6
 postdate: May 2018
 ---

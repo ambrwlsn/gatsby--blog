@@ -1,6 +1,6 @@
 ---
 subject: Testing
-posttype: wilt
+posttype: nugget
 number: 12
 postdate: July 2018
 ---

@@ -1,6 +1,6 @@
 ---
 subject: Debugging
-posttype: wilt
+posttype: nugget
 number: 8
 postdate: June 2018
 ---

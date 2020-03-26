@@ -114,7 +114,7 @@ export const pageQuery = graphql`
   {
     allMarkdownRemark(
       sort: { fields: [frontmatter___number], order: DESC }
-      filter: { frontmatter: { posttype: { eq: "wilt" } } }
+      filter: { frontmatter: { posttype: { eq: "nugget" } } }
       limit: 1000
     ) {
       edges {

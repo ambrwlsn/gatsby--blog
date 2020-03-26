@@ -1,6 +1,6 @@
 ---
 subject: Strings
-posttype: wilt
+posttype: nugget
 number: 10
 postdate: June 2018
 ---

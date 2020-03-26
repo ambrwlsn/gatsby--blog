@@ -51,8 +51,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/wilt100days`,
-        name: 'wilt100days',
+        path: `${__dirname}/content/nuggets`,
+        name: 'nuggets',
       },
     },
     {

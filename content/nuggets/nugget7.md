@@ -1,6 +1,6 @@
 ---
 subject: CSS Layout
-posttype: wilt
+posttype: nugget
 number: 7
 postdate: June 2018
 ---

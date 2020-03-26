@@ -1,6 +1,6 @@
 ---
 subject: Prebrowsing
-posttype: wilt
+posttype: nugget
 number: 17
 postdate: June 2019
 ---

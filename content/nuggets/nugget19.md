@@ -1,6 +1,6 @@
 ---
 subject: Console debugging
-posttype: wilt
+posttype: nugget
 number: 19
 postdate: July 2019
 ---

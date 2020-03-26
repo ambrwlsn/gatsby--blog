@@ -1,6 +1,6 @@
 ---
 subject: indexOf
-posttype: wilt
+posttype: nugget
 number: 16
 postdate: June 2019
 ---

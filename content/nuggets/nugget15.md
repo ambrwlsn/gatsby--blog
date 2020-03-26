@@ -1,6 +1,6 @@
 ---
 subject: Array Prototype Methods
-posttype: wilt
+posttype: nugget
 number: 15
 postdate: July 2018
 ---

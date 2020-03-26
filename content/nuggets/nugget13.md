@@ -1,6 +1,6 @@
 ---
 subject: Object Literals
-posttype: wilt
+posttype: nugget
 number: 13
 postdate: July 2018
 ---

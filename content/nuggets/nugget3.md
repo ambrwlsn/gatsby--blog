@@ -1,6 +1,6 @@
 ---
 subject: Pseudo Selectors
-posttype: wilt
+posttype: nugget
 number: 3
 postdate: May 2018
 ---

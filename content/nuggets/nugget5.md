@@ -1,6 +1,6 @@
 ---
 subject: Flux
-posttype: wilt
+posttype: nugget
 number: 5
 postdate: May 2018
 ---

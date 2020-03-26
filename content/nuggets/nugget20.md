@@ -1,6 +1,6 @@
 ---
 subject: filter
-posttype: wilt
+posttype: nugget
 number: 20
 postdate: October 2019
 ---

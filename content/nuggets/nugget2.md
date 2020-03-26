@@ -1,6 +1,6 @@
 ---
 subject: Arrow Functions
-posttype: wilt
+posttype: nugget
 number: 2
 postdate: May 2018
 ---

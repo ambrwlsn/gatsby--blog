@@ -1,6 +1,6 @@
 ---
 subject: Readable Code
-posttype: wilt
+posttype: nugget
 number: 9
 postdate: June 2018
 ---

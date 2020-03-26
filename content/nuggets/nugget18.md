@@ -1,6 +1,6 @@
 ---
 subject: Types
-posttype: wilt
+posttype: nugget
 number: 18
 postdate: July 2019
 ---

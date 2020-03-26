@@ -1,6 +1,6 @@
 ---
 subject: BEM
-posttype: wilt
+posttype: nugget
 number: 1
 postdate: May 2018
 ---

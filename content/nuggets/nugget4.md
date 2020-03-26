@@ -1,6 +1,6 @@
 ---
 subject: This
-posttype: wilt
+posttype: nugget
 number: 4
 postdate: May 2018
 ---
