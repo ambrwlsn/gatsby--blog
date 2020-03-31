@@ -2,7 +2,6 @@ import React, { Fragment } from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import ContentWrapper from '@components/content-wrapper'
-import NuggetTwitterCardImage from './img/wilt.png'
 
 import Layout from '@components/layout'
 import SEO from '@components/seo'
@@ -64,7 +63,7 @@ const KnowledgeNuggets = props => {
   return (
     <Layout>
       <ContentWrapper>
-        <SEO title="Knowledge Nuggets" twitterImage={NuggetTwitterCardImage} />
+        <SEO title="Knowledge Nuggets" />
         <TitleStyles>
           <Title>Knowledge Nuggets 💛</Title>
         </TitleStyles>
