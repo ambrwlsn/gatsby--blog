@@ -2,83 +2,78 @@ const path = require('path')
 const _ = require('lodash')
 const { createFilePath } = require('gatsby-source-filesystem')
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
+  const blogPost = path.resolve('./src/templates/blog-post.jsx')
+  const tagTemplate = path.resolve('src/templates/tags.jsx')
 
-  return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.jsx')
-    const tagTemplate = path.resolve('src/templates/tags.jsx')
-    resolve(
-      graphql(
-        `
-          {
-            allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              filter: { fileAbsolutePath: { regex: "/content/blog/" } }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                    tags
-                  }
-                }
-              }
+  // Get a full list of markdown posts
+  const markdownQueryResult = await graphql(`
+    {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        filter: { fileAbsolutePath: { regex: "/content/blog/" } }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              tags
             }
           }
-        `
-      ).then(result => {
-        if (result.errors) {
-          reject(result.errors)
         }
+      }
+    }
+  `)
 
-        // Create blog posts pages.
-        const posts = result.data.allMarkdownRemark.edges
+  if (markdownQueryResult.errors) {
+    console.error(markdownQueryResult.errors)
+    throw markdownQueryResult.errors
+  }
 
-        posts.forEach((post, index) => {
-          const previous =
-            index === posts.length - 1 ? null : posts[index + 1].node
-          const next = index === 0 ? null : posts[index - 1].node
+  // Create blog posts pages.
+  const posts = markdownQueryResult.data.allMarkdownRemark.edges
 
-          createPage({
-            path: `blog${post.node.fields.slug}`,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug,
-              previous,
-              next,
-            },
-          })
-        })
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
 
-        // Tag pages:
-        let tags = []
-        // Iterate through each post, putting all found tags into `tags`
-        _.each(posts, edge => {
-          if (_.get(edge, 'node.frontmatter.tags')) {
-            edge.node.frontmatter.tags.forEach(tag => {
-              tags = tags.concat(tag)
-            })
-          }
-        })
-        // Eliminate duplicate tags
-        tags = _.uniq(tags)
-        // Make tag pages
-        tags.forEach(tag => {
-          createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
-            component: tagTemplate,
-            context: {
-              tag,
-            },
-          })
-        })
+    createPage({
+      path: `blog${post.node.fields.slug}`,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        previous,
+        next,
+      },
+    })
+  })
+
+  // Tag pages:
+  let tags = []
+  // Iterate through each post, putting all found tags into `tags`
+  _.each(posts, edge => {
+    if (_.get(edge, 'node.frontmatter.tags')) {
+      edge.node.frontmatter.tags.forEach(tag => {
+        tags = tags.concat(tag)
       })
-    )
+    }
+  })
+  // Eliminate duplicate tags
+  tags = _.uniq(tags)
+  // Make tag pages
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag)}/`,
+      component: tagTemplate,
+      context: {
+        tag,
+      },
+    })
   })
 }
 
