@@ -78,7 +78,7 @@ const BlogPostTemplate = props => {
   const { previous, next } = props.pageContext
   const nicelyFormattedDate = format(
     new Date(post.frontmatter.date),
-    'MMMM Do, YYYY'
+    'MMMM do, yyyy'
   )
   const clocks = post.timeToRead / 2
   return (
