@@ -27,9 +27,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
-    },
-    {
       resolve: 'gatsby-plugin-eslint',
       options: {
         test: /\.js$|\.jsx$/,
@@ -73,6 +70,12 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: f => `${f.name}`,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
