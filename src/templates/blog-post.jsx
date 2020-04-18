@@ -130,7 +130,7 @@ const BlogPostTemplate = props => {
             <li>
               {previous && (
                 <Link
-                  to={`blog/${previous.fields.slug}`}
+                  to={`/blog${previous.fields.slug}`}
                   rel="prev"
                   style={{
                     textDecoration: 'none',
@@ -144,7 +144,7 @@ const BlogPostTemplate = props => {
             <li>
               {next && (
                 <Link
-                  to={`blog/${next.fields.slug}`}
+                  to={`/blog${next.fields.slug}`}
                   rel="next"
                   style={{
                     textDecoration: 'none',

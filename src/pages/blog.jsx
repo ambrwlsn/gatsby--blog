@@ -109,7 +109,7 @@ const Blog = props => {
           return (
             <Wrapper key={node.fields.slug}>
               <PostTitle>
-                <BlogPostLink to={`blog${node.fields.slug}`} title={title}>
+                <BlogPostLink to={`/blog${node.fields.slug}`} title={title}>
                   {title}
                 </BlogPostLink>
               </PostTitle>
