@@ -9,7 +9,7 @@ const Container = styled.main`
   display: flex;
   justify-content: center;
   line-height: 1.6;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding-bottom: 2rem;
   margin: 0 auto;
   max-width: 85%;

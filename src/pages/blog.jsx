@@ -42,12 +42,12 @@ const PostTag = styled(Link)`
 `
 
 const PostTitle = styled.h1`
-  font-size: 2.5em;
+  font-size: 2rem;
 `
 
 const Teaser = styled.p`
   line-height: 1.7;
-  font-size: 1.25em;
+  font-size: 1rem;
 `
 
 const Wrapper = styled.article`
@@ -71,18 +71,22 @@ const Date = styled.time`
     padding-right: 0.4em;
   }
   span {
-    font-size: 2em;
+    font-size: 1.5rem;
     display: block;
     @media (max-width: 800px) {
-      font-size: 1.5em;
+      font-size: 1.2rem;
     }
     &:first-child {
-      font-size: 1.3em;
+      font-size: 1rem;
       @media (max-width: 800px) {
         font-size: 0.8em;
       }
     }
   }
+`
+
+const RSSFeed = styled.div`
+  font-size: 0.9rem;
 `
 
 const Blog = props => {
@@ -96,9 +100,9 @@ const Blog = props => {
           keywords={['blog', 'gatsby', 'javascript', 'react']}
         />
         <Tags minCount={5} className="hideOnMobile" />
-        <div>
+        <RSSFeed>
           Add my RSS feed <a href={`${siteUrl}/rss.xml`}>here</a>!
-        </div>
+        </RSSFeed>
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           const tags = node.frontmatter.tags

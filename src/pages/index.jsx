@@ -35,7 +35,7 @@ const IntroductionBox = styled.main`
 const Introduction = styled.div`
   margin: 0 auto;
   max-width: 60%;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.6;
   @media (max-width: 800px) {
     max-width: 80%;
@@ -79,11 +79,9 @@ function Index() {
         <IntroductionBox>
           <Introduction>
             <p>
-              Hi, my name's Amber and I am a web developer. I recently
-              refurbished my site and it's in beta mode. This means I've
-              achieved a bunch of things I want to do, and need some more time
-              to finish the rest. See{' '}
-              <Link to="/projects">the list of things</Link> here.
+              Hi, my name's Amber and I am a mid-level front end engineer. See{' '}
+              <Link to="/projects">a list of things of my site to-do list</Link>{' '}
+              here.
             </p>
             <p>
               <GitHubLink href="https://github.com/ambrwlsn">

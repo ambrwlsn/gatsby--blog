@@ -14,18 +14,18 @@ const Content = styled.article`
 const Hashtag = styled.a`
   text-decoration: none;
   color: var(--linkColor);
-  font-size: 22px;
+  font-size: 1.2rem;
 `
 const ContentStyles = styled.div`
   line-height: 1.6;
-  font-size: 1.25rem;
+  font-size: 1rem;
 `
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
   text-align: center;
 `
 const TitleStyles = styled.span`
-  font-size: 1.25rem;
+  font-size: 1rem;
 `
 
 const PostTitle = styled.h2`
@@ -35,7 +35,7 @@ const PostTitle = styled.h2`
 const PostDate = styled.time`
   color: grey;
   font-family: 'Quattrocento', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 `
 
 const BackToTop = styled(Arrow)`

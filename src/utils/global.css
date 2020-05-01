@@ -13,6 +13,7 @@ html {
   background: var(--backgroundColor);
   color: var(--textColor);
   font-family: 'Quattrocento', sans-serif;
+  font-size: 112.5%;
   font-weight: 400;
   scroll-behavior: smooth;
 }
@@ -40,7 +41,7 @@ li {
 .image-caption {
   font-style: normal;
   display: inherit;
-  font-size: 80%;
+  font-size: 0.9rem;
 }
 
 .darkMode {
@@ -192,13 +193,13 @@ pre[class*='language-'] ::selection {
 }
 
 /* Inline code */
-:not(pre)>code[class*='language-'] {
+:not(pre) > code[class*='language-'] {
   border-radius: 0.3rem;
   background: var(--inlineCode-bg);
   color: var(--inlineCode--text);
   padding: 0.2rem 0.2rem;
   white-space: normal;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 .token.attr-name {
@@ -207,7 +208,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.comment {
-  color: #ADBBBB;
+  color: #adbbbb;
 }
 
 .token.string,
@@ -231,7 +232,7 @@ pre[class*='language-'] ::selection {
 }
 
 .token.punctuation {
-  color: #ADBBBB;
+  color: #adbbbb;
 }
 
 .token.selector,

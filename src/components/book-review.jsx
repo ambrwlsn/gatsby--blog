@@ -51,7 +51,7 @@ const NoJsReviewContainer = styled.div`
   background: ${p => p.noJSReviewBackground};
   padding: 1em;
   line-height: 1.5;
-  font-size: 1em;
+  font-size: 0.9rem;
   border-radius: ${BORDER_RADIUS};
   overflow: hidden;
   &:hover {
@@ -69,7 +69,7 @@ const ReviewContainer = styled.div`
   background: ${p => p.reviewBackground};
   padding: 1.2rem 1.2rem 2.6rem 1.2rem;
   line-height: 1.7;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   border-radius: ${BORDER_RADIUS};
   z-index: 1;
   overflow: hidden;
@@ -96,14 +96,14 @@ const ReviewMobile = styled.div`
 `
 
 const Length = styled.div`
-  font-size: 3rem;
+  font-size: 2.8rem;
   color: var(--readText);
   text-align: center;
   @media (max-width: 800px) {
     font-size: 1.5rem;
   }
   @media (max-width: 500px) {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 `
 
@@ -147,7 +147,7 @@ const TypeContainer = styled.div`
 
 const Type = styled.div`
   padding: 1.2rem;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
 
   @media (max-width: 500px) {
     font-size: 1.2rem;
@@ -160,7 +160,7 @@ const DropdownReviewContainer = styled.div`
   background: ${p => p.reviewBackground};
   padding: 2rem 5rem;
   line-height: 1.7;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   border-radius: ${BORDER_RADIUS};
   grid-row-start: 1;
   grid-row-end: 8;

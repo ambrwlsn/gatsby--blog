@@ -2,12 +2,14 @@ import styled from 'styled-components'
 
 const ContentWrapper = styled.div`
   max-width: 50rem;
-  margin: auto;
-  @media (max-width: 900px) {
+  margin: 1rem;
+
+  @media (min-width: 900px) {
     margin: 2rem;
   }
-  @media (max-width: 450px) {
-    margin: 1rem;
+
+  @media (min-width: 1200px) {
+    margin: auto;
   }
 `
 

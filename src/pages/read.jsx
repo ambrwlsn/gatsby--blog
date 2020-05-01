@@ -33,10 +33,6 @@ const Title = styled.h1`
   font-family: 'Courgette', sans-serif;
 `
 
-const TitleStyles = styled.span`
-  font-size: 1.25rem;
-`
-
 const Intro = styled.p`
   margin: 0 auto;
   line-height: 1.7;
@@ -49,23 +45,20 @@ const Intro = styled.p`
 `
 
 const IntroStyles = styled.span`
-  font-size: 1.25rem;
+  font-size: 1rem;
 `
 
 const Reading = () => {
   return (
     <Layout>
       <SEO title="All posts" keywords={['gatsby', 'javascript', 'react']} />
-      <TitleStyles>
-        <Title>Book Reviews</Title>
-      </TitleStyles>
+      <Title>Book Reviews</Title>
       <IntroStyles>
         <Intro>
           Here are the books I've read or listened to. Skip to a year using the
           dropdown menu! Each block contains a review, a picture, the book's
           length, format (audiobook, kindle, paperback), and summary of
-          characteristics. See{' '}
-          <Link to="/blog/books/">the books I read in 2018</Link> here :)
+          characteristics.
           <details className="learnDetails">
             <summary className="learnSummary">Select</summary>
             <ul className="dropdown_menu">
@@ -74,6 +67,9 @@ const Reading = () => {
               </li>
               <li>
                 <a href="#2019">2019</a>
+              </li>
+              <li>
+                <Link to="/blog/books">2018</Link>
               </li>
             </ul>
           </details>

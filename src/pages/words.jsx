@@ -18,7 +18,7 @@ const Intro = styled.div`
   text-align: center;
 `
 const Title = styled.h1`
-  font-size: 2em;
+  font-size: 1.8rem;
   margin: 1em 0;
 `
 const Blurb = styled.h2`
@@ -35,7 +35,7 @@ const Content = styled.div``
 const Article = styled.article`
   line-height: 1.7;
   position: relative;
-  font-size: 1.1em;
+  font-size: 1rem;
   padding: 35px;
   margin: 1em 0 3em;
   border: 5px solid #2f4f4f;
@@ -47,7 +47,7 @@ const Article = styled.article`
   overflow-wrap: break-word;
   &:nth-of-type(odd) {
     &:before {
-      font-size: 0.8em;
+      font-size: 0.7rm;
       content: '';
       position: absolute;
       bottom: -20px;
