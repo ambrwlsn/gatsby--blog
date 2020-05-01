@@ -21,7 +21,7 @@ const ArticleList = styled.ul`
 `
 const Title = styled.h1`
   font-family: 'Courgette', cursive;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   @media (max-width: 800px) {
     margin: 0;
     margin-bottom: 0.8em;
@@ -40,7 +40,7 @@ const BlogPostTimeToRead = styled.span`
 
 const PostData = styled.p`
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1rem;
   display: flex;
   align-items: flex-end;
   @media (max-width: 800px) {
@@ -59,7 +59,7 @@ const DotSeparator = styled.span`
 
 const Content = styled.article`
   line-height: 1.7;
-  font-size: 1.25em;
+  font-size: 1rem;
 `
 
 const ClockIcon = styled(Clock)`
@@ -80,6 +80,7 @@ const BlogPostTemplate = props => {
     new Date(post.frontmatter.date),
     'MMMM do, yyyy'
   )
+
   const clocks = post.timeToRead / 2
   return (
     <Layout>
