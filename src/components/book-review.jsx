@@ -88,7 +88,7 @@ const ReviewMobile = styled.div`
   display: none;
   @media (max-width: 500px) {
     max-height: 270px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     color: var(--readText);
     overflow: hidden;
     display: block;
@@ -150,7 +150,7 @@ const Type = styled.div`
   font-size: 0.9rem;
 
   @media (max-width: 500px) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `
 
@@ -190,7 +190,7 @@ const DropdownReviewMobile = styled.div`
     max-height: 100%;
     color: black;
     overflow: hidden;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin: 0;
     padding: 1rem 1rem 2.6rem 1rem;
     display: block;
