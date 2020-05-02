@@ -1,31 +1,43 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
+import { expandHitbox, visuallyHidden } from '@utils/utils'
 import Sun from './img/sun'
 import Moon from './img/moon'
 
-const Input = styled.input`
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-`
-const Wrapper = styled.label`
-  cursor: pointer;
-  text-align: right;
-  border: 1.5px solid var(--textColor);
-  padding: 0 5px;
-  border-radius: 25px;
-  display: inline-block;
-  width: 2.5em;
-  height: 1.5em;
-  @media (max-width: 800px) {
-    border: none;
-    width: 0.7rem;
+const HiddenToggle = styled.span`
+  position: relative;
+  @media (min-width: 800px) {
+    border: 1.5px solid var(--textColor);
+    padding: 0 5px;
+    border-radius: 18px;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
   }
+`
+
+const ToggleLabel = styled.label`
+  ${expandHitbox}
+`
+
+const ToggleLabelWrapper = styled.span`
+  ${visuallyHidden}
+`
+
+const ToggleInput = styled.input`
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+`
+
+const ToggleWrapper = styled.div`
+  position: relative;
   /* https://ghinda.net/article/mimic-native-focus-css/ */
   ${props =>
     props.focused &&
     css`
-      outline-width: 4px;
       outline-style: solid;
       outline-color: Highlight;
       @media (-webkit-min-device-pixel-ratio: 0) {
@@ -33,57 +45,48 @@ const Wrapper = styled.label`
         outline-style: auto;
       }
     `}
+  @media (min-width: 800px) {
+    border: 1.5px solid var(--textColor);
+    padding: 0 5px;
+    border-radius: 18px;
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 30px;
+  }
 `
 
-const HiddenWrapper = styled.span`
-  display: inline-block;
-  text-align: right;
-  visibility: hidden;
-  padding: 0 5px;
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
-  width: 2.5em;
-  height: 1.5em;
-  @media (max-width: 800px) {
-    border: none;
-    width: 0.7rem;
-  }
-`
-const Handle = styled.span`
-  position: relative;
-  right: -5px;
-  top: 5px;
+const IconWrapper = styled.span`
   display: inline-block;
   cursor: pointer;
-  will-change: transform;
-  transition: transform 400ms ease-out;
-  input:checked + & {
-    transform: translateX(-100%);
-  }
-  @media (max-width: 800px) {
-    transition: none;
+  margin-right: 0;
+  padding-top: 0.4rem;
+  height: 20px;
+  width: 20px;
+
+  @media (min-width: 800px) {
+    padding-top: 0.25rem;
+    will-change: transform;
+    transition: transform 400ms ease-out;
     input:checked + & {
-      transform: none;
+      transform: translateX(160%);
     }
   }
 `
-const SunToggle = styled(Sun)`
-  margin-right: 4px;
-  max-width: 100%;
-  @media (max-width: 800px) {
-    margin-right: 0;
-    width: 20px;
-  }
+
+const SunIcon = styled(Sun)`
+  pointer-events: none;
+  height: 20px;
+  width: 20px;
 `
-const MoonToggle = styled(Moon)`
-  margin-right: 9.4px;
-  max-width: 100%;
-  @media (max-width: 800px) {
-    margin-right: 0;
-    width: 20px;
-  }
+const MoonIcon = styled(Moon)`
+  pointer-events: none;
+  height: 20px;
+  width: 20px;
 `
 
-const ModeToggle = ({ checked, onChange, className }) => {
+const ModeToggle = ({ checked, onChange }) => {
   const [mounted, setMounted] = useState(false)
   const [focused, setFocused] = useState(false)
 
@@ -91,14 +94,17 @@ const ModeToggle = ({ checked, onChange, className }) => {
     setMounted(true)
   }, [])
 
-  if (!mounted) return <HiddenWrapper />
+  if (!mounted) return <HiddenToggle />
 
   return (
-    <Wrapper htmlFor="mode" className={className} focused={focused}>
-      <Input
+    <ToggleWrapper focused={focused}>
+      <ToggleLabel htmlFor="toggle">
+        <ToggleLabelWrapper>Light and dark mode toggle</ToggleLabelWrapper>
+      </ToggleLabel>
+      <ToggleInput
         type="checkbox"
-        id="mode"
-        name="mode"
+        id="toggle"
+        name="toggle"
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
         checked={checked}
@@ -106,8 +112,8 @@ const ModeToggle = ({ checked, onChange, className }) => {
           onChange(!checked)
         }}
       />
-      <Handle>{checked ? <SunToggle /> : <MoonToggle />}</Handle>
-    </Wrapper>
+      <IconWrapper>{checked ? <SunIcon /> : <MoonIcon />}</IconWrapper>
+    </ToggleWrapper>
   )
 }
 
