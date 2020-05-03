@@ -32,7 +32,13 @@ const NavigationList = styled.ul`
 `
 
 const NavigationListItem = styled.li`
-  margin-right: 1.8rem;
+  margin: 0 1rem 0 0;
+  &:last-of-type {
+    margin: 0;
+  }
+  @media (min-width: 800px) {
+    margin: 0 1.8rem 0 0;
+  }
 `
 
 const NavigationLink = styled(Link)`
