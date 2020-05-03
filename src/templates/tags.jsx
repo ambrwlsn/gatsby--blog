@@ -30,8 +30,8 @@ const Tags = ({ pageContext, data }) => {
         }}
         title="Tagged with"
       />
-      <Wrapper>
-        <Layout>
+      <Layout>
+        <Wrapper>
           <h1
             style={{
               paddingBottom: '.5em',
@@ -72,8 +72,8 @@ const Tags = ({ pageContext, data }) => {
           >
             All tags
           </Link>
-        </Layout>
-      </Wrapper>
+        </Wrapper>
+      </Layout>
     </Fragment>
   )
 }
