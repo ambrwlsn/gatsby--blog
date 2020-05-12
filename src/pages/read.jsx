@@ -20,6 +20,7 @@ import TheCatSanctuary from '@content/books/the-cat-sanctuary'
 import EinGanzesLeben from '@content/books/ein-ganzes-leben'
 import AnAmericanMarriage from '@content/books/an-american-marriage'
 import SongOfAchilles from '@content/books/song-of-achilles'
+import AbolishSiliconValley from '@content/books/abolish-silicon-valley'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -77,6 +78,7 @@ const Reading = () => {
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
+        <AbolishSiliconValley />
         <SongOfAchilles />
         <AnAmericanMarriage />
         <TheCatSanctuary />
