@@ -29,4 +29,6 @@ Perhaps this passage doesn’t make too much sense when read out of context of t
 
 I imagine my house elf is a bit like [Dobby](https://www.pottermore.com/explore-the-story/dobby) from Harry Potter. A kind creature who always has something nice to say, and helps keep me positive. I think we all need a positive house elf in our life. What do you think?
 
-![Dobby the house elf from Harry Potter](img/dobby.png)
+<div class="text-align-center-utility">
+    <img src="img/dobby.png" alt="Dobby the house elf from Harry Potter"/>
+</div>

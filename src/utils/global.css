@@ -37,6 +37,10 @@ li {
   margin-bottom: 1em;
 }
 
+img {
+  max-width: 100%;
+}
+
 /* for image caption */
 .image-caption {
   font-style: normal;
