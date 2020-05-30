@@ -32,6 +32,6 @@ Thanks to [Joschi](https://jkphl.is/) for inviting me and making my stay really 
 
 Looking forward to future IndieWebCamps - hopefully the next one will be in Brighton in September!
 
-![tollwerk](img/tollwerk.jpg) ![nuremberg](img/nuernberg.jpg) ![calum and joschi](img/calumjoschi.jpg) ![indie web camp](img/indiewebcamp2.jpg) ![intro one](img/intro1.jpg) ![intro two](img/intro2.jpg) ![talk topics](img/talks.jpg) ![stadtpark](img/stadtpark.jpg) ![discussion](img/discussion.jpg) ![at work](img/atwork.jpg)
+![tollwerk](img/tollwerk.jpg) ![nuremberg](img/nuernberg.jpg) ![calum and joschi](img/calumjoschi.jpg) ![indie web camp](img/indiewebcamp2.jpg) ![intro one](img/intro1.jpg) ![intro two](img/intro2.jpg) ![talk topics](img/talks.jpg) ![stadtpark](img/stadtpark.jpg) ![discussion](img/discussion_time.jpg) ![at work](img/atwork.jpg)
 
 

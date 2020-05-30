@@ -25,7 +25,8 @@ However, one site can contain bits of another, e.g. adverts. If you previously v
 
 See the following examples -
 
-<span class="image--smaller">[![cookies example](img/cookies2.png)](https://flic.kr/p/Tz2jHV) [![cookes example](img/cookies3.png)](https://flic.kr/p/StX1Dh)</span>
+- [Cookies example one](https://flic.kr/p/Tz2jHV)
+- [Cookies example two](https://flic.kr/p/StX1Dh)
 
 __Need more information?__ Some great resources exist on the privacy and security issues surrounding cookies. [This](http://www.cim.co.uk/more/cookies/) site explains how to opt out of cookies in different browsers. [This](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies#SameSite_cookies) MDN article covers security and how cookies are sent over HTTP response headers. [This](http://resources.infosecinstitute.com/securing-cookies-httponly-secure-flags/#gref) article provides very detailed information on how to keep information stored in cookies secure. [This](http://www.whatarecookies.com/) site contains a wide breadth of information and helpful tips.
 
