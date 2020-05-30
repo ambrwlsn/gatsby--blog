@@ -64,24 +64,15 @@ module.exports = {
     },
 
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-copy-linked-files",
+            resolve: 'gatsby-remark-copy-linked-files',
             options: {
               destinationDir: f => `${f.name}`,
-            },
-          },
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 500,
-              withWebp: true,
-              wrapperStyle: 'margin-left: 0!important;',
+              ignoreFileExtensions: [],
             },
           },
           {
