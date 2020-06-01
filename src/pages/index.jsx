@@ -4,6 +4,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import CatController from '@components/cat-controller'
+import Plant from '@components/img/plant'
 import GitHubSVG from './img/github'
 import TwitterSVG from './img/twitter'
 
@@ -11,9 +12,38 @@ const Cat = styled(CatController)`
   stroke: black;
   fill: #565252;
   position: absolute;
-  bottom: 5em;
-  right: 3em;
+  bottom: 5rem;
+  right: 0;
+
+  @media (min-width: 380px) {
+    bottom: 5rem;
+    right: 1rem;
+  }
+
+  @media (min-width: 500px) {
+    bottom: 5rem;
+    right: 3rem;
+  }
 `
+
+const PlantContainer = styled.div`
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+
+  @media (min-width: 380px) {
+    left: 1rem;
+  }
+
+  @media (min-width: 500px) {
+    left: 3rem;
+  }
+`
+
+const PlantPicture = styled(Plant)`
+  height: 8rem;
+`
+
 const Block = styled.div`
   width: 100vw;
   background-color: var(--backgroundColor);
@@ -94,6 +124,11 @@ function Index() {
           </Introduction>
         </IntroductionBox>
       </Layout>
+      <PlantContainer>
+        <Link to="/plants">
+          <PlantPicture />
+        </Link>
+      </PlantContainer>
       <Cat />
 
       <Block />
