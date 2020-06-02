@@ -2,7 +2,7 @@
 subject: Mexican Firecracker
 posttype: plant
 number: 1
-updated: May 2020
+updated: June 2020
 ---
 
 I got this cactus from an outdoor garden centre near my flat. I chose it amongst all the other catci because of its neat pattern of soft fuzzy leaves and minty-green colour. I had no idea what kind of cactus it was back then.
@@ -20,3 +20,7 @@ Out of all my plants, it loves getting plenty of direct sun from my south-facing
 To my delight, the long thin stem eventually developed a bunch of buds that I soon realised were developing flowers. Here's a picture of the developing flowers:
 
 <img src="img/mexican-firecracker.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">
+
+Here are the flowers a few days later (June 2nd):
+
+<img src="img/mexican-firecracker-flowers.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">
