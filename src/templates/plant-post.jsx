@@ -43,6 +43,9 @@ const PlantPostTemplate = props => {
         />
         <main>
           <Title className="p-name">{plantPost.frontmatter.subject}</Title>
+          <p
+            style={{ fontWeight: '600' }}
+          >{`Updated: ${plantPost.frontmatter.updated}`}</p>
           <Content dangerouslySetInnerHTML={{ __html: plantPost.html }} />
         </main>
         <hr />
@@ -106,6 +109,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         subject
+        updated
       }
     }
   }
