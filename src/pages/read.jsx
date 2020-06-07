@@ -19,6 +19,8 @@ import HowToBeRight from '@content/books/how-to-be-right'
 import TheCatSanctuary from '@content/books/the-cat-sanctuary'
 import EinGanzesLeben from '@content/books/ein-ganzes-leben'
 import AnAmericanMarriage from '@content/books/an-american-marriage'
+import HitchhikersGuide from '@content/books/the-hitchhikers-guide-to-the-galaxy'
+import DerBlutigePfad from '@content/books/der-blutige-pfad'
 import SongOfAchilles from '@content/books/song-of-achilles'
 import AbolishSiliconValley from '@content/books/abolish-silicon-valley'
 
@@ -34,7 +36,7 @@ const Title = styled.h1`
   font-family: 'Courgette', sans-serif;
 `
 
-const Intro = styled.p`
+const Intro = styled.div`
   margin: 0 auto;
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -56,10 +58,22 @@ const Reading = () => {
       <Title>Book Reviews</Title>
       <IntroStyles>
         <Intro>
-          Here are the books I've read or listened to. Skip to a year using the
-          dropdown menu! Each block contains a review, a picture, the book's
-          length, format (audiobook, kindle, paperback), and summary of
-          characteristics.
+          <p>
+            On this page are the books I've read or listened to in the last two
+            years. Skip to a year using the dropdown menu! Each block contains a
+            review, a picture, the book's length, format I read/heard it in
+            (audiobook, kindle, physical book), and summary of characteristics.
+          </p>
+          <p>
+            This images on this page total 500kb but to stop them being
+            downloaded all at once I added native lazy loading so they will only
+            load as you scroll! So, there is only ~150kb of images on page load
+            vs 500kb (
+            <a href="https://caniuse.com/#feat=loading-lazy-attr">
+              check browser support here{' '}
+            </a>
+            ).
+          </p>
         </Intro>
         <details className="learnDetails">
           <summary className="learnSummary">Select</summary>
@@ -80,6 +94,8 @@ const Reading = () => {
         <h2 id="2020">2020</h2>
         <AbolishSiliconValley />
         <SongOfAchilles />
+        <DerBlutigePfad />
+        <HitchhikersGuide />
         <AnAmericanMarriage />
         <TheCatSanctuary />
         <HowToBeRight />
