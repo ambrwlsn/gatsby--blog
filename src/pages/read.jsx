@@ -60,21 +60,21 @@ const Reading = () => {
           dropdown menu! Each block contains a review, a picture, the book's
           length, format (audiobook, kindle, paperback), and summary of
           characteristics.
-          <details className="learnDetails">
-            <summary className="learnSummary">Select</summary>
-            <ul className="dropdown_menu">
-              <li>
-                <a href="#2020">2020</a>
-              </li>
-              <li>
-                <a href="#2019">2019</a>
-              </li>
-              <li>
-                <Link to="/blog/books">2018</Link>
-              </li>
-            </ul>
-          </details>
         </Intro>
+        <details className="learnDetails">
+          <summary className="learnSummary">Select</summary>
+          <ul className="dropdown_menu">
+            <li>
+              <a href="#2020">2020</a>
+            </li>
+            <li>
+              <a href="#2019">2019</a>
+            </li>
+            <li>
+              <Link to="/blog/books">2018</Link>
+            </li>
+          </ul>
+        </details>
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
