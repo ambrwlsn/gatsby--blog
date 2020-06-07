@@ -6,21 +6,22 @@ const BORDER_RADIUS = '10px'
 
 const Container = styled.div`
   display: grid;
-  margin-bottom: 5em;
-  width: 800px;
-  height: 600px;
+  margin: 0 1em 3em 1em;
+  width: auto;
+  height: auto;
   grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-  grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+  grid-template-rows: 13rem 1rem 0.5fr 1rem 0.5fr;
   grid-template-areas:
-    'review review review . length length length'
-    'review review review . . . .'
-    'review review review . . . picture'
-    '. . . . . . picture'
-    'method . type type type . .';
+    'review review review review review review review'
+    '. . . . . . .'
+    'method method method . picture picture picture'
+    '. . . . . . .'
+    'type type type . length length length';
 
-  @media (max-width: 800px) {
+  @media (min-width: 500px) {
+    margin: 0 1em;
     width: 500px;
-    height: 600px;
+    height: auto;
     grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
     grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
     grid-template-areas:
@@ -31,18 +32,18 @@ const Container = styled.div`
       'method . type type type . .';
   }
 
-  @media (max-width: 500px) {
-    margin: 0 1em 3em 1em;
-    width: auto;
-    height: auto;
+  @media (min-width: 800px) {
+    margin-bottom: 5em;
+    width: 800px;
+    height: 600px;
     grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-    grid-template-rows: 1fr 1rem 0.5fr 1rem 0.5fr;
+    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
     grid-template-areas:
-      'review review review review review review review'
-      '. . . . . . .'
-      'method method method . picture picture picture'
-      '. . . . . . .'
-      'type type type . length length length';
+      'review review review . length length length'
+      'review review review . . . .'
+      'review review review . . . picture'
+      '. . . . . . picture'
+      'method . type type type . .';
   }
 `
 
@@ -76,34 +77,37 @@ const ReviewContainer = styled.div`
 `
 
 const ReviewDesktop = styled.div`
-  color: var(--readText);
-  overflow: hidden;
-  max-height: 100%;
-  @media (max-width: 500px) {
-    display: none;
+  display: none;
+  @media (min-width: 500px) {
+    display: block;
+    color: var(--readText);
+    overflow: hidden;
+    max-height: 100%;
   }
 `
 
 const ReviewMobile = styled.div`
-  display: none;
-  @media (max-width: 500px) {
-    max-height: 270px;
-    font-size: 0.9rem;
-    color: var(--readText);
-    overflow: hidden;
-    display: block;
+  max-height: 270px;
+  font-size: 0.9rem;
+  color: var(--readText);
+  overflow: hidden;
+  display: block;
+  @media (min-width: 500px) {
+    display: none;
   }
 `
 
 const Length = styled.div`
-  font-size: 2.8rem;
+  font-size: 1.7rem;
   color: var(--readText);
   text-align: center;
-  @media (max-width: 800px) {
+
+  @media (min-width: 500px) {
     font-size: 1.5rem;
   }
-  @media (max-width: 500px) {
-    font-size: 1.7rem;
+
+  @media (min-width: 800px) {
+    font-size: 2.8rem;
   }
 `
 
@@ -147,10 +151,10 @@ const TypeContainer = styled.div`
 
 const Type = styled.div`
   padding: 1.2rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 
-  @media (max-width: 500px) {
-    font-size: 1rem;
+  @media (min-width: 500px) {
+    font-size: 0.9rem;
   }
 `
 
@@ -158,7 +162,7 @@ const DropdownReviewContainer = styled.div`
   position: relative;
   grid-area: review;
   background: ${p => p.reviewBackground};
-  padding: 2rem 5rem;
+  padding: 1rem;
   line-height: 1.7;
   font-size: 0.9rem;
   border-radius: ${BORDER_RADIUS};
@@ -169,31 +173,32 @@ const DropdownReviewContainer = styled.div`
   z-index: 1;
   overflow: hidden;
 
-  @media (max-width: 800px) {
-    padding: 1rem;
+  @media (min-width: 800px) {
+    padding: 2rem 5rem;
   }
 `
 
 const DropdownReviewDesktop = styled.div`
-  color: black;
-  overflow: hidden;
-  max-height: 100%;
-  margin: 50px auto;
-  @media (max-width: 500px) {
-    display: none;
+  display: none;
+  @media (min-width: 500px) {
+    display: block;
+    color: black;
+    overflow: hidden;
+    max-height: 100%;
+    padding-bottom: 3rem;
   }
 `
 
 const DropdownReviewMobile = styled.div`
-  display: none;
-  @media (max-width: 500px) {
-    max-height: 100%;
-    color: black;
-    overflow: hidden;
-    font-size: 0.9rem;
-    margin: 0;
-    padding: 1rem 1rem 2.6rem 1rem;
-    display: block;
+  max-height: 100%;
+  color: black;
+  overflow: hidden;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 1rem 1rem 2.6rem 1rem;
+  display: block;
+  @media (min-width: 500px) {
+    display: none;
   }
 `
 
@@ -223,14 +228,15 @@ const ReadCta = styled.span`
 `
 
 const Title = styled.h1`
+  padding: 0 0.8rem;
   text-align: center;
   font-weight: 300;
   font-size: 1.5rem;
   font-family: 'Courgette', sans-serif;
   max-width: 400px;
   margin: 1rem auto;
-  @media (max-width: 500px) {
-    padding: 0 0.8rem;
+  @media (min-width: 500px) {
+    padding: 0;
   }
 `
 const BookReview = props => {
@@ -256,17 +262,17 @@ const BookReview = props => {
   const ReviewContainerInitial = ({ setDropdown }) => (
     <Flipped flipId="container">
       <ReviewContainer reviewBackground={reviewColour}>
-        <Button onClick={setDropdown} buttonBackground={buttonColour}>
-          <Flipped inverseFlipId="container">
-            <ReadCta>Read More…</ReadCta>
-          </Flipped>
-        </Button>
         <Flipped inverseFlipId="container">
           <ReviewDesktop>{getReviewExcerpt(review, 480)}</ReviewDesktop>
         </Flipped>
         <Flipped inverseFlipId="container">
           <ReviewMobile>{getReviewExcerpt(review, 150)}</ReviewMobile>
         </Flipped>
+        <Button onClick={setDropdown} buttonBackground={buttonColour}>
+          <Flipped inverseFlipId="container">
+            <ReadCta>Read More…</ReadCta>
+          </Flipped>
+        </Button>
       </ReviewContainer>
     </Flipped>
   )
@@ -274,9 +280,6 @@ const BookReview = props => {
   const ReviewContainerFinal = ({ setDropdown }) => (
     <Flipped flipId="container">
       <DropdownReviewContainer reviewBackground={reviewColour}>
-        <Button onClick={setDropdown} buttonBackground={buttonColour}>
-          <ReadCta>Read Less…</ReadCta>
-        </Button>
         <Flipped inverseFlipId="container">
           <DropdownReviewDesktop>
             {getFullReview(review, 480)}
@@ -286,6 +289,11 @@ const BookReview = props => {
           <DropdownReviewMobile>
             {getFullReview(review, 150)}
           </DropdownReviewMobile>
+        </Flipped>
+        <Flipped inverseFlipId="container">
+          <Button onClick={setDropdown} buttonBackground={buttonColour}>
+            <ReadCta>Read Less…</ReadCta>
+          </Button>
         </Flipped>
       </DropdownReviewContainer>
     </Flipped>
@@ -336,7 +344,7 @@ const BookReview = props => {
         </LengthContainer>
 
         <PictureContainer>
-          <Picture src={picture} alt={picAlt} />
+          <Picture loading="lazy" src={picture} alt={picAlt} />
         </PictureContainer>
 
         <MethodContainer methodBackground={methodColour}>
