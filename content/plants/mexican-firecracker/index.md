@@ -19,8 +19,8 @@ Out of all my plants, it loves getting plenty of direct sun from my south-facing
 
 To my delight, the long thin stem eventually developed a bunch of buds that I soon realised were developing flowers. Here's a picture of the developing flowers:
 
-<img src="img/mexican-firecracker.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">
+<img loading="lazy" src="img/mexican-firecracker.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">
 
 Here are the flowers a few days later (June 2nd):
 
-<img src="img/mexican-firecracker-flowers.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">
+<img loading="lazy" src="img/mexican-firecracker-flowers.jpg" alt="mexican firecracker cactus and the flowers at the end of its stem">

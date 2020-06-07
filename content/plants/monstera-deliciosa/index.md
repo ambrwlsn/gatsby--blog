@@ -11,19 +11,19 @@ I ordered mine online at the beginning of May from a company that would include 
 
 Here is my Monstera when it first arrived:
 
-<img loading="lazy" class="lazyload" src="img/monstera-fresh-and-new_400.jpg" alt="Monstera Deliciosa"/>
+<img loading="lazy" src="img/monstera-fresh-and-new_400.jpg" alt="Monstera Deliciosa"/>
 
 Here is a close-up:
 
-<img loading="lazy" class="lazyload" src="img/monstera-jungle.jpg" alt="Monstera Deliciosa close-up"/>
+<img loading="lazy" src="img/monstera-jungle.jpg" alt="Monstera Deliciosa close-up"/>
 
 On May 25th I noticed one of two newly-forming curled-up leaves!
 
-<img loading="lazy" class="lazyload" src="img/monstera-new-leaf-wrapped.jpg" alt="Monstera Deliciosa curled-up leaf"/>
+<img loading="lazy" src="img/monstera-new-leaf-wrapped.jpg" alt="Monstera Deliciosa curled-up leaf"/>
 
 Here is a picture from June 3rd and as you can see the leaf is unfurling!
 
-<img loading="lazy" class="lazyload" src="img/monstera-new-leaf-unfurl.jpg" alt="Monstera Deliciosa uncurling leaf"/>
+<img loading="lazy" src="img/monstera-new-leaf-unfurl.jpg" alt="Monstera Deliciosa uncurling leaf"/>
 
 
 
