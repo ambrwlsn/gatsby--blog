@@ -23,6 +23,7 @@ import HitchhikersGuide from '@content/books/the-hitchhikers-guide-to-the-galaxy
 import DerBlutigePfad from '@content/books/der-blutige-pfad'
 import SongOfAchilles from '@content/books/song-of-achilles'
 import AbolishSiliconValley from '@content/books/abolish-silicon-valley'
+import AGoodCatch from '@content/books/a-good-catch'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -92,6 +93,7 @@ const Reading = () => {
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
+        <AGoodCatch />
         <AbolishSiliconValley />
         <SongOfAchilles />
         <DerBlutigePfad />
