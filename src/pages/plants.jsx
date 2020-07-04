@@ -10,7 +10,7 @@ const PhotoGrid = styled.div`
   margin: 0 auto;
   width: 90%;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(2, auto);
+  grid-template-rows: repeat(auto, 100px);
 
   @media (min-width: 800px) {
     width: 55%;
@@ -79,6 +79,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
+      sort: { fields: [frontmatter___subject], order: ASC }
       filter: { fileAbsolutePath: { regex: "/content/plants/" } }
     ) {
       edges {
