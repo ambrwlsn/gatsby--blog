@@ -15,6 +15,7 @@ const TagsPage = () => {
         htmlAttributes={{
           class: context.isDarkTheme ? 'darkMode' : '',
         }}
+        description="Easily find the type of blog post you are looking for"
       />
       <Layout>
         <Fragment>

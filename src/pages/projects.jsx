@@ -20,6 +20,7 @@ const Projects = () => (
     <SEO
       title="Projects"
       keywords={['blog', 'gatsby', 'javascript', 'react']}
+      description="A list of accomplishments and my future to do list"
     />
     <Container>
       <div>

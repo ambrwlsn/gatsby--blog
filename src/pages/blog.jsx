@@ -98,6 +98,7 @@ const Blog = props => {
         <SEO
           title="All posts"
           keywords={['blog', 'gatsby', 'javascript', 'react']}
+          description="Amber's blog for thoughts and things"
         />
         <Tags minCount={5} className="hideOnMobile" />
         <RSSFeed>

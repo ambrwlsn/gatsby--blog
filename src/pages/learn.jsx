@@ -63,7 +63,11 @@ const KnowledgeNuggets = props => {
   return (
     <Layout>
       <ContentWrapper>
-        <SEO title="Knowledge Nuggets" />
+        <SEO
+          title="Knowledge Nuggets"
+          keywords={['learning', 'fun', 'javascript', 'react']}
+          description="Small snippets of learnings from the web world"
+        />
         <TitleStyles>
           <Title>Knowledge Nuggets 💛</Title>
         </TitleStyles>
