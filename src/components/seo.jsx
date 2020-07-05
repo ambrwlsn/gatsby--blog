@@ -13,8 +13,7 @@ function SEO({ description, lang, keywords, title, slug, tags }) {
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaDescription = description || ''
         const metaAuthor = data.site.siteMetadata.author
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
