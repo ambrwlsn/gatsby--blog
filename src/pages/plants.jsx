@@ -10,8 +10,6 @@ const PhotoGrid = styled.div`
   margin: 0 auto;
   width: 90%;
   grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(auto, 100px);
-
   @media (min-width: 800px) {
     width: 55%;
     margin-bottom: 1rem;
@@ -43,7 +41,11 @@ const Plants = props => {
 
   return (
     <Layout>
-      <SEO title="Plants I Own" keywords={['plants', 'plant collection']} />
+      <SEO
+        title="Plants I Own"
+        keywords={['plants', 'plant collection']}
+        description="Got addicted to buying house plants so here is the result. A page full of my admiration for all the wonderful little and large house plants in my life."
+      />
       <Title>Plants</Title>
       <IntroStyles>
         <Intro>
