@@ -2,8 +2,8 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import styled from 'styled-components'
 import JsonLd from '@components/jsonld'
-import ContentWrapper from '../components/content-wrapper'
-import Clock from '../components/img/clock'
+import ContentWrapper from '@components/content-wrapper'
+import Clock from '@components/img/clock'
 
 // Utilities
 import excerpt from '@helpers/excerpt'
@@ -60,6 +60,7 @@ const DotSeparator = styled.span`
 const Content = styled.article`
   line-height: 1.7;
   font-size: 1rem;
+  margin-top: 2.5rem;
 `
 
 const ClockIcon = styled(Clock)`
@@ -73,6 +74,16 @@ const ClockIcon = styled(Clock)`
   }
 `
 
+const RelatedLinksBlock = styled.p`
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+`
+
+const RelatedLinksBlockTitle = styled.h2`
+  font-size: 1.1rem;
+`
+
 const BlogPostTemplate = props => {
   const post = props.data.markdownRemark
   const { previous, next } = props.pageContext
@@ -80,6 +91,60 @@ const BlogPostTemplate = props => {
     new Date(post.frontmatter.date),
     'MMMM do, yyyy'
   )
+
+  const BlogImage = () => {
+    if (
+      !post.frontmatter.imageSrc ||
+      !post.frontmatter.imageAlt ||
+      !post.frontmatter.imageLink ||
+      !post.frontmatter.imageAuthor
+    ) {
+      return null
+    }
+
+    return (
+      <div className="blog-image">
+        <img src={post.frontmatter.imageSrc} alt={post.frontmatter.imageAlt} />
+        <em className="image-caption">
+          (Image by{' '}
+          <a href={post.frontmatter.imageLink}>
+            {post.frontmatter.imageAuthor})
+          </a>
+          .
+        </em>
+      </div>
+    )
+  }
+
+  const RelatedLinks = () => {
+    if (
+      !post.frontmatter.relatedLinks ||
+      post.frontmatter.relatedLinks.length === 0
+    ) {
+      return null
+    }
+
+    const links = (
+      <ul>
+        {post.frontmatter.relatedLinks.map(link => (
+          <li key={link.frontmatter.title}>
+            <Link to={`/blog${link.fields.slug}`}>
+              {link.frontmatter.title}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )
+
+    return (
+      <RelatedLinksBlock>
+        <React.Fragment>
+          <RelatedLinksBlockTitle>Related Links</RelatedLinksBlockTitle>
+          {links}
+        </React.Fragment>
+      </RelatedLinksBlock>
+    )
+  }
 
   const clocks = post.timeToRead / 2
   return (
@@ -120,6 +185,8 @@ const BlogPostTemplate = props => {
                 )}
               </BlogPostTimeToRead>
             </PostData>
+            <BlogImage />
+            <RelatedLinks />
           </section>
           <Content
             className="e-content, h-entry"
@@ -199,7 +266,19 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        relatedLinks {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
         date
+        imageSrc
+        imageAlt
+        imageAuthor
+        imageLink
         keywords
         tags
       }

@@ -8,6 +8,9 @@ module.exports = {
       twitter: 'ambrwlsn90',
     },
   },
+  mapping: {
+    'MarkdownRemark.frontmatter.relatedLinks': `MarkdownRemark.fields.slug`,
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-alias-imports`,

@@ -1,6 +1,11 @@
 ---
 title: In a Land Before Dev Tools
 date: '2020-08-05'
+imageSrc: "/img/dinosaur.jpg"
+imageAlt: "Toy dinosaur from toy story by Daiga Ellaby"
+imageAuthor: "Daiga Ellaby"
+imageLink: "https://unsplash.com/@daiga_ellaby"
+relatedLinks: [""]
 keywords:
   [
     amber wilson,
@@ -11,11 +16,6 @@ keywords:
     coding]
 tags: [web history]
 ---
-
-<span class="blog-image">
-<img src="img/dinosaur.jpg" alt="Toy dinosaur from toy story by Daiga Ellaby">
-<em class="image-caption">(Image by <a href="https://unsplash.com/@daiga_ellaby">Daiga Ellaby).</a></em>
-</span>
 
 A long, long time ago in a land before dev tools, there lived all of its predecessors. These ancestors were more basic and didn't offer the wealth of tools we enjoy today. But, they certainly paved the way!
 
