@@ -24,6 +24,8 @@ import DerBlutigePfad from '@content/books/der-blutige-pfad'
 import SongOfAchilles from '@content/books/song-of-achilles'
 import AbolishSiliconValley from '@content/books/abolish-silicon-valley'
 import AGoodCatch from '@content/books/a-good-catch'
+import EverythingInside from '@content/books/everything-inside'
+import TooMuchAndNeverEnough from '@content/books/too-much-and-never-enough'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -93,6 +95,8 @@ const Reading = () => {
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
+        <EverythingInside />
+        <TooMuchAndNeverEnough />
         <AGoodCatch />
         <AbolishSiliconValley />
         <SongOfAchilles />
