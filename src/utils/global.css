@@ -16,6 +16,7 @@ html {
   font-size: 112.5%;
   font-weight: 400;
   scroll-behavior: smooth;
+  word-wrap: break-word;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -45,7 +46,7 @@ img {
 .image-caption {
   font-style: normal;
   display: inherit;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .darkMode {

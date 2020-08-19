@@ -60,7 +60,7 @@ const DotSeparator = styled.span`
 const Content = styled.article`
   line-height: 1.7;
   font-size: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 `
 
 const ClockIcon = styled(Clock)`
@@ -110,7 +110,6 @@ const BlogPostTemplate = props => {
           <a href={post.frontmatter.imageLink}>
             {post.frontmatter.imageAuthor})
           </a>
-          .
         </em>
       </div>
     )
