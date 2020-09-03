@@ -6,7 +6,7 @@ import ThemeContext from '@context/theme-context'
 import cardImage from '@content/assets/favicon-32x32.png'
 import favicon from './img/favicon.ico'
 
-function SEO({ description, lang, keywords, title, slug, tags }) {
+function SEO({ canonical, description, lang, keywords, title, slug, tags }) {
   const context = useContext(ThemeContext)
 
   return (
@@ -14,6 +14,7 @@ function SEO({ description, lang, keywords, title, slug, tags }) {
       query={detailsQuery}
       render={data => {
         const metaDescription = description || ''
+        const metaCanonical = canonical || ''
         const metaAuthor = data.site.siteMetadata.author
         const siteUrl = data.site.siteMetadata.siteUrl
         const blogPostUrl = `${siteUrl}/blog${slug}`
@@ -37,7 +38,7 @@ function SEO({ description, lang, keywords, title, slug, tags }) {
               content={allKeywords.concat(allTags).toString()}
             />
             <meta name="robots" content="index,follow" />
-            <link rel="canonical" href={blogPostUrl} />
+            <link rel="canonical" href={blogPostUrl || metaCanonical} />
             <link rel="me" href="mailto:ambrwlsn90@gmail.com" />
             <meta name="DC.Title" content={title} />
             <meta name="DC.Creator" content={metaAuthor} />

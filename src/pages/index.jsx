@@ -97,7 +97,9 @@ function Index() {
     <Fragment>
       <Layout>
         <SEO
+          description="I'm Amber, a front end engineer based in Berlin. Talk to me about accessibility, performance, and your experiences in tech."
           title="Homepage"
+          canonical="https://amberwilson.co.uk"
           keywords={[
             'blog',
             'gatsby',
