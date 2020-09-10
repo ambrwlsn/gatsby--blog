@@ -26,6 +26,7 @@ import AbolishSiliconValley from '@content/books/abolish-silicon-valley'
 import AGoodCatch from '@content/books/a-good-catch'
 import EverythingInside from '@content/books/everything-inside'
 import TooMuchAndNeverEnough from '@content/books/too-much-and-never-enough'
+import EntangledLife from '@content/books/entangled-life'
 
 const ReviewSection = styled.article`
   display: flex;
@@ -95,6 +96,7 @@ const Reading = () => {
       </IntroStyles>
       <ReviewSection>
         <h2 id="2020">2020</h2>
+        <EntangledLife />
         <EverythingInside />
         <TooMuchAndNeverEnough />
         <AGoodCatch />
