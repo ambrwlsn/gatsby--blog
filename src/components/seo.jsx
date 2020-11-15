@@ -12,7 +12,7 @@ function SEO({ canonical, description, lang, keywords, title, slug, tags }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription = description || ''
         const metaCanonical = canonical || ''
         const metaAuthor = data.site.siteMetadata.author
@@ -37,7 +37,7 @@ function SEO({ canonical, description, lang, keywords, title, slug, tags }) {
               name="keywords"
               content={allKeywords.concat(allTags).toString()}
             />
-            <meta name="robots" content="index,follow" />
+            <meta name="robots" content="noindex, nofollow" />
             <link rel="canonical" href={blogPostUrl || metaCanonical} />
             <link rel="me" href="mailto:ambrwlsn90@gmail.com" />
             <meta name="DC.Title" content={title} />
